@@ -1,0 +1,49 @@
+<div class="content_title">
+	<h1>Developers</h1>
+</div>
+
+<% @developers.each do |d| %>
+	<div class="developers">
+		<%= link_to (image_tag 'M9_montreal.jpg'), developer_url(d) %>
+		<h2><%= d.developer %></h2>
+		<p><%= d.description %>.. <%= link_to 'more', developer_url(d) %></p>
+	</div>	
+<% end %>
+
+<!--div>
+	<ul id="developers_accordion">
+		<% @developers.each do |d| %>
+			<h3><%= d.developer %></h3>
+		
+			<% d.properties.each do |p |%>
+				<li><a href="#"><%= p.name %></a>
+					<ul>
+						<li><%= link_to (image_tag 'laman_met3.gif'), property_url(p) %>	<%#= link_to (image_tag p.photo.url(:medium)), property_url(p) %></li>						
+					</ul>
+				</li>
+			<% end %>
+		<% end %>
+	</ul>
+</div-->	
+
+
+<!--ul id="accordion">
+	<li><a href="#">Item 1</a>
+		<ul>
+			<li>Subitem 1</li>
+			<li>Subitem 2</li>
+			<li>Subitem 3</li>
+		</ul>
+	</li>
+	<li><a href="#">Item 2</a>
+		<ul>
+			<li>Subitem 4</li>
+		</ul>
+	</li>
+</ul-->
+
+<% if logged_in? %>
+	<div class="links">
+		<%= link_to 'New', new_developer_url %>
+	</div>
+<% end %>

@@ -1,0 +1,19 @@
+<div class="follow_us boxes gray_border">
+	<h2>Subscribe To Our Mailing List</h2>
+	
+	<p>Fill in the form to be updated of the latest news, events and promotions</p>
+	
+	<% form_tag '' do %>
+		<p><%= label_tag :full_name %><%= text_field_tag :full_name %></p>
+		<p><%= label_tag :email_address %><%= text_field_tag :email_address %></p>
+		<p><%= submit_tag %></p>
+	<% end %>
+	
+	<p>Or follow us on</p>
+	
+	<ul>
+		<li><%= link_to 'Twitter', 'http://www.twitter.com/cebucondolists', :class => 'twitter' %></li>
+		<%#= link_to 'Flickr', 'http://www.flickr.com/cebucondolistings', :class => 'flickr' %>
+		<li><%= link_to 'Facebook', 'http://www.facebook.com/#!/pages/Cebu-Condo-Listings/157402274291728', :class => 'facebook' %></li>
+	</ul>
+</div>

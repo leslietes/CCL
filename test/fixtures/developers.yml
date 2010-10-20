@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  developer: Ayala Land
+  permalink: ayala-land
+  description: Loren ipsum dolor
+
+two:
+  id: 2
+  developer: Primary Homes
+  permalink: primary-homes
+  description: Loren ipsum dolor

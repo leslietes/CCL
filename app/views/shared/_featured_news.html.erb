@@ -1,0 +1,14 @@
+<div class="featured_news boxes gray_border">
+	<h2>Upcoming Events</h2>
+	<ul>
+		<% 3.times do %>
+		<li>
+			<% @featured_articles.each do |a| %>
+				<p class="title"><%= link_to a.title, article_url(a) %></p>
+				<p class="published_on"><span>On <%= a.published_date %> in <%= a.published_at %></span></p>
+				<!--p class="teaser"><%= a.teaser %> <%= link_to '...', article_url(a) %></p-->
+			<% end %>
+		</li>
+		<% end %>
+	</ul>	
+</div>

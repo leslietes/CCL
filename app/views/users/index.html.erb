@@ -1,0 +1,30 @@
+<div class="users">
+	<h1>Users</h1>
+	
+	<table id="users">
+		<thead>
+			<tr>
+				<th>Login</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<% @users.each do |user| %>
+		<tr>
+			<td class="center"><%= user.login %></td>
+			<td class="center"><%= user.name %></td>
+			<td class="center"><%= user.email %></td>
+			<td class="center">
+				<%# link_to 'Show', user_url(user) %>
+				<%= link_to 'Edit', edit_user_url(user) %>
+				<%= link_to 'Delete', user_url(user), :method => :delete, :confirm => "Are you sure?" %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+	
+	<div class="links">
+		<%= link_to 'New', new_user_url %>
+	</div>
+</div>

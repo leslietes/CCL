@@ -1,0 +1,9 @@
+<div class="property">
+
+<h1>New Property</h1>
+<% form_for @property, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+
+</div>

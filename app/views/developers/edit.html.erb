@@ -1,0 +1,10 @@
+<div class="property">
+
+<h1>Edit Developer</h1>
+
+<% form_for :developer, :url => developer_url(@developer), :html => {:method => :put, :multipart => true} do |f| %>
+	<%= f.error_messages %>
+	<%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>	
+
+</div>

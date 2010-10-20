@@ -1,0 +1,10 @@
+<div class="developer">
+
+<h1>New Developer</h1>
+
+<% form_for @developer, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+
+</div>

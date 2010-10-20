@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+   area: Fuente Osmena
+
+two:
+   area: Mabolo
+   
+three:
+   area: I.T. Park
+
+four: 
+   area: Lahug
+
+five:
+   area: Cebu Business Park
+   
+six:
+   area: Mactan
+   
+seven:
+   area: Guadalupe

@@ -1,0 +1,6 @@
+<% if flash[:notice] && !flash[:notice].blank? %>
+	<div class="flash gray_border">
+		<%= flash[:notice] %>
+		<%= flash[:error] %>	
+	</div>
+<% end %>

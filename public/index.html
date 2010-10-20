@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Site under construction</title>
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<!--script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script-->
+<script type="text/javascript" src="/javascripts/jquery.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.countdown.js"></script>
+<!--script type="text/javascript" src="/javascripts/jcarousellite1.0.1_min.js"></script-->
+
+
+<!-- jquery countdown-->
+<script type="text/javascript">
+$(function () {
+	var austDay = new Date(2010, 10, 15, 0, 0, 0); // countdown to Nov 15 (1month after date- don't understand why)
+	//austDay = new Date(austDay.getFullYear() + 2, 0, 0);
+	$('#defaultCountdown').countdown({until: austDay, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, and {sn} {sl}'});
+	//$('#year').text(austDay.getFullYear());
+	});
+</script>
+
+
+<!-- jquery slider -->
+<script type="text/javascript">
+
+$(function() {
+   /* $("#slidertext").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev"
+    });*/
+});
+
+</script>
+
+<!--script for IE6-image transparency recover-->
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.7a-min.js"></script>
+<script>
+  /* EXAMPLE */
+  DD_belatedPNG.fix('#logo img,#main,.counter,.twitter,.flickr,.facebook,.youtube,#submit_button,.prev img,.next img,#email_input');
+  
+</script>
+<![endif]--> 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container">
+	
+    <div id="header">
+    
+    	<div id="logo">
+    		<h1>Cebu Condo Listings</h1>
+        	<!--a href="index.html"><img src="images/logo.png" alt="logo"/></a-->
+        </div><!--end logo-->
+            
+        <div id="contact_details">
+        	<p><a href="#">inquiries@cebucondolistings.com</a></p>
+			<!--p><a href="#">phone : 555-534-231</a></p-->
+		</div><!--end contact details-->     
+                
+	</div><!--end header-->
+              <div style="clear:both"></div> 
+              
+	<div id="main">
+
+		 <div id="content">
+                    
+              <div class="text">
+              <h2>This website is under construction</h2>
+              </div><!--end text-->
+                  
+              <div class="counter">
+              <h3>Estimated Time Remaining Before Launch:</h3>
+              <div id="defaultCountdown"></div>
+
+         </div><!--end counter-->
+                 
+         <div class="details">
+              <!--slider prev button-->    
+            <!--a class="prev" href="#"><img src="images/prev.png" alt="" /> 
+            </a-->
+
+                  <div id="sliderwrap">
+                  		<div id="slidertext"><!-- The slider -->
+                            
+                                <ul>
+                                     <li>
+                                         <h3>You may find us below:</h3>
+                                         <div class="social">
+                                         <a href="http://twitter.com/cebucondolists" target="_blank" class="twitter"></a>
+                                         <a href="http://www.flickr.com/photos/cebucondolistings" target="_blank" class="flickr"></a>
+                                         <a href="http://www.facebook.com/#!/pages/Cebu-Condo-Listings/157402274291728" target="_blank" class="facebook"></a>
+                                         <!--a href="#" class="youtube"></a-->
+                                         </div>
+                                     </li><!-- Slider item -->
+                            
+                                	 <li>
+                                        <h3>Type your email id to get the updates!</h3>
+                                       
+                                       
+                                       <!-- <form action="emailhandler.php" method="post" id="email">
+                                        <div id="submitwrapper">
+                                        <div ><input type="text" name="email" size="30" value="Enter Your E-mail" onfocus="if(this.value=='Enter Your E-mail'){this.value=''};" 	onblur="if(this.value==''){this.value='Enter Your E-mail'};" id="email_input" /> 
+                                        </div> 
+                                        <div ><input type="submit" name="Submit" value="Submit" border="none" id="submit_button"/>
+                                        </div>
+                                        </div>
+                                        </form> -->
+
+
+                                       
+                                       
+                                       
+                                     <form method="post" id="subscribeform" action="emailform.php">
+                                        <p>
+                                        <div id="email_input"><input name="email" type="text" size="30" value="Enter Your E-mail" onfocus="if(this.value=='Enter Your E-mail'){this.value=''};" 	onblur="if(this.value==''){this.value='Enter Your E-mail'};" id="email" /> 
+                                        <input type="submit" id="submit_button" value="Submit" size="80" />
+                                        </div>
+                                        <br />
+                                        
+                                        </p>
+                                        
+                                        </form>
+
+
+                                 
+                                 	</li><!-- Slider item -->
+                                 
+                                 	<li>
+                                         <h3>Some words about us</h3>
+                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.</p>
+                                        
+                                 
+                                	 </li><!-- Slider item -->
+                            
+                                </ul>
+                            
+             	 </div><!-- End of slidertext -->
+    
+              </div><!-- End of sliderwrap -->
+
+					<!--slider next button-->
+             	<!--a class="next" href="#"><img src="images/next.png" alt=""/></a-->
+
+                  
+                  </div><!--end details-->  
+                </div><!--end content-->
+            
+</div><!--end main-->
+
+</div><!--end class container-->
+
+</body>
+
+</html>

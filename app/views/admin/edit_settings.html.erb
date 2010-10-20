@@ -1,0 +1,9 @@
+<div class="settings">
+	<h1>Settings</h1>
+	
+	<% form_for @setting, :url => edit_settings_url, :html => {:method => :post} do |f| %>
+		<p><%= f.label :production_email %><br><%= f.text_field :production_email %></p>
+		<%# f.label :about_us %><br><%# f.text_area :about_us %>
+		<p><%= submit_tag 'Save' %></p>
+	<% end %>
+</div>

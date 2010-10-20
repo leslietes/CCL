@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%= page_title %></title>
+  
+  <%= stylesheet_link_tag 'reset', 'application', 'demo_table' %>
+  <%= javascript_include_tag 'jquery', 'jquery.dataTables.min', 'hover.accordion.v5.minified', 'application' %>
+  <%# csrf_meta_tag %>
+</head>
+<body>
+	<div class="container">
+		<%= render :partial => 'layouts/header' %>
+		<div class="content">
+			<div class="main">
+				<%= render :partial => 'layouts/flash_message'%>
+				<%= yield %>	
+			</div>
+			<div class="right_column">
+				<%= render :partial => 'shared/right_column' %>
+			</div>
+		</div>
+		<%= render :partial => 'layouts/footer' %>
+	</div>		
+</body>
+</html>

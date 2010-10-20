@@ -1,0 +1,44 @@
+<div class="settings">
+	<h1>Settings</h1>
+	
+	<p><%= label_tag :email_address %><br><%= @setting.production_email %></p>
+	<%# label_tag :about_us %><%# @setting.about_us %>
+
+	<% form_tag edit_settings_url do %>
+		<%= text_field_tag :production_email %>
+		<%= submit_tag 'Change' %>
+	<% end %>
+		
+	<!--div class="links">
+		<%# link_to 'Edit', edit_settings_url %>
+	</div-->
+	
+	<h1>Locations</h1>
+	
+	<ul class="bullets">
+		<% @locations.each do |location| %>
+		<li><%= location.area %> <%= link_to '[remove]', remove_location_url(location) %></li>
+		<% end %>
+	</ul>
+	
+	<% form_tag add_location_url do  %>
+		<%= text_field_tag :location %>
+		<%= submit_tag 'Add' %>
+	<% end %>
+	
+	<h1>Price Range</h1>
+	
+	<ul class="bullets">
+		<% @price_range.each do |pr| %>
+		<li><%= pr.range %> <%= link_to '[remove]', remove_price_range_url(pr) %></li>
+		<% end %>
+	</ul>
+	
+	<% form_tag add_price_range_url do  %>
+		<%= text_field_tag :price_range %>
+		<%= text_field_tag :sort_value %>
+		<br><%= submit_tag 'Add' %>
+	<% end %>
+	
+</div>
+

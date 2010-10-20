@@ -1,0 +1,61 @@
+<div class="property">
+
+<h1><%= @property.name %></h1>
+<%= image_tag @property.photo.url(:thumb) %>
+
+<p>
+  <%= label_tag :developer %><%= @property.developer_name %>
+</p>	
+
+<p>  
+  <%= label_tag :location %><%= @property.location %>
+</p>  
+
+<p>  
+  <%= label_tag :address %><div class="indented_text"><%= @property.address %></div>
+</p>
+
+<p><%= label_tag :target_completion_date %><%= @property.target_completion_date %>
+
+<p>
+  <%= label_tag :description %><%= @property.description %>
+</p> 
+
+<p>
+	<%= label_tag :unit_types %><br>
+	<div class="indented_text"><%= display_all_unit_types(@property.all_unit_types) %></div>
+</p>
+
+<p>
+	<%= label_tag :unit_sizes %><br><%= @property.unit_sizes %>
+</p>
+
+<p>
+	<%= label_tag :price_range %><%= @property.price_range %>
+</p>	
+
+<p>
+	<%= label_tag :amenities %><br><div class="indented_text"><%= @property.amenities%></div>
+</p>
+
+<p>
+	<%= label_tag :unit_specifications %><br><div class="indented_text"><%= @property.unit_specifications %></div>
+</p>
+
+<p><%= label_tag :payment_terms %><%= @property.payment_terms %></p>
+
+<p>
+	<%= label_tag :as_low_as %><%= @property.as_low_as %>
+</p>	
+
+<p><%= label_tag :reservation_fee %><%= @property.reservation_fee %></p>
+
+<% if logged_in? %>
+<div class="links">
+	<%= link_to 'Edit', edit_property_url(@property) %> |
+	<%= link_to 'Delete', property_url(@property), :method => :delete, :confirm => "Are you sure?" %>
+</div>	
+<% end %>
+
+</div>
+

@@ -1,0 +1,27 @@
+<div id="logo">
+	<h1>domain name</h1>
+	<div class="social">
+	</div>		
+	<div id="links">
+		<ul>
+			<% if logged_in? %>
+			<li>Logged in as <%= current_user.login %></li>
+			<li><%= link_to 'Users', users_url %></li>
+			<li><%= link_to 'Inquiries', contact_us_list_url %></li>
+			<li><%= link_to 'Settings', settings_url %></li>
+			<li><%= link_to 'Logout', logout_url %></li>
+			<% else %>
+			<%# link_to 'Login', login_url %>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
+<ul id="nav">
+	<li><%= link_to 'Home', root_url %></li>
+	<%#= link_to 'About Us', about_url %>
+	<li><%= link_to 'Developers', developers_url %></li>
+	<li><%= link_to 'Properties', properties_url %></li>
+	<li><%= link_to 'Upcoming Events', news_url %></li>
+	<li><%= link_to 'Contact Us', contact_us_url %></li>
+</ul>	

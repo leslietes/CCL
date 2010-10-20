@@ -1,0 +1,23 @@
+<div class="articles gray_border">
+	
+	<p class="title"><%= @article.title %></p>
+	
+	<p class="published_on"><span>On <%= @article.published_date %> in <%= @article.published_at %></span></p>
+	
+	<p class="teaser"><%= @article.teaser %></p>
+	
+	<p class="image">
+		<%= image_tag '21scollard550_2-2.jpg' %>
+		<span>caption caption caption</span>	
+	</p>
+	
+	<p class="body">
+		<%= @article.body %>
+	</p>
+	
+	<% if logged_in? %>
+	<div class="links">
+		<%= link_to 'Edit', edit_article_url(@article) %> <%= link_to 'Delete' %>
+	</div>
+	<% end %>	
+</div>

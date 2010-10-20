@@ -1,0 +1,28 @@
+<% content_for :property_listings do %>
+
+<h1>Inquiries</h1>
+
+<table id="inquiries">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Contact No</th>
+			<th>Email Address</th>
+			<th>Message</th>
+			<th>Date Sent</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @contacts.each do |c| %>
+			<tr>
+				<td><%= c.name %></td>
+				<td><%= c.contact_no %></td>
+				<td><%= c.email %></td>
+				<td><%= c.message %></td>
+				<td><%= format_date(c.created_at) %></td>
+			</tr>
+		<% end %>	
+	</tbody>
+</table>
+
+<% end %>

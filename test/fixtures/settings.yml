@@ -1,0 +1,5 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ one:
+   production_email: inquiries@cebucondolistings.com
+   about_us: Cebucondolistings.com is the premier site for the most comprehensive and up-to-date listings of new and upcoming condominium development projects in Cebu City and nearby areas.

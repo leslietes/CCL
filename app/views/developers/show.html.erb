@@ -1,0 +1,27 @@
+<div class="developer">
+
+<%#= image_tag @developer.image.url(:medium) %>
+
+<h1><%= @developer.developer%></h1>
+
+<p>
+	<%= label_tag :description %><%= @developer.description %>
+</p>
+
+<p>
+	<%= label_tag :projects %><br>
+	<% @developer.properties.each do |p| %>
+    <ul>
+    	<li><%= p.name %></li>
+    </ul>
+	<% end %>
+</p>
+
+<% if logged_in? %>
+	<div class="links">
+		<%= link_to 'Edit', edit_developer_url(@developer) %> |
+		<%= link_to 'Delete', developer_url(@developer), :method => :delete, :confirm => "Are you sure?" %>
+	</div>	
+<% end %>
+
+</div>

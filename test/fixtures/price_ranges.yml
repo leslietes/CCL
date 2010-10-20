@@ -1,0 +1,26 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+   range: 500,000 - 1,000,000
+   sort_value: 500,000
+
+two:
+   range: 1,000,000 - 2,000,000
+   sort_value: 1,000,000
+
+three:
+   range: 2,000,000 - 3,000,000
+   sort_value: 2,000,000
+
+four:
+   range: More than 10,000,000
+   sort_value: 10,000,000
+
+five:
+   range: 4,000,000 - 5,000,000
+   sort_value: 4,000,000
+
+six:
+   range: 5,000,000 - 10,000,000
+   sort_value: 5,000,000
+    

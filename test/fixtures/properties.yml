@@ -1,0 +1,79 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  developer_id: 1
+  name: Avida
+  permalink: avida
+  address: Asiatown I.T. Park<br>Apas, Lahug<br>Cebu City
+  location: I.T. Park
+  completed: false
+  target_completion_date: December 2012
+  description: Loren ipsum dolor
+  unit_types:
+  unit_sizes:
+  price_range:
+  amenities:
+  unit_specifications:
+  payment_terms:
+  as_low_as: 10,000/month
+  reservation_fee: 20,000
+  
+three:
+  id: 3
+  developer_id: 2
+  name: La Guardia Flats 1
+  permalink: la-guardia-flats-1
+  address: Asiatown I.T. Park<br>Apas, Lahug<br>Cebu City
+  location: I.T. Park
+  completed: false
+  target_completion_date: December 2012
+  description: Loren ipsum dolor
+  unit_types:
+  unit_sizes:
+  price_range:
+  amenities:
+  unit_specifications:
+  payment_terms:
+  as_low_as: 10,000/month
+  reservation_fee: 20,000
+  
+four:
+  id: 4
+  developer_id: 2
+  name: La Guardia Flats 2
+  permalink: la-guardia-flats-2
+  address: Asiatown I.T. Park<br>Apas, Lahug<br>Cebu City
+  location: I.T. Park
+  completed: false
+  target_completion_date: December 2012
+  description: Loren ipsum dolor
+  unit_types:
+  unit_sizes:
+  price_range:
+  amenities:
+  unit_specifications:
+  payment_terms:
+  as_low_as: 10,000/month
+  reservation_fee: 20,000
+  
+five:
+  id: 5
+  developer_id: 2
+  name: Avalon
+  permalink: avalon
+  address: Cebu Business Park
+  location: Cebu Business Park
+  completed: false
+  target_completion_date: December 2012
+  description: Loren ipsum dolor
+  unit_types:
+  unit_sizes:
+  price_range:
+  amenities:
+  unit_specifications:
+  payment_terms:
+  as_low_as: 10,000/month
+  reservation_fee: 20,000
+  
+  

@@ -1,0 +1,31 @@
+<div id="page_header" class="gray_border"">
+
+</div>
+
+<!--div id="latest">
+	<h1>Latest Properties</h1>
+	<ul>
+		<% @developers.each do |d| %>
+		<li>
+			<h3><%= link_to d.developer, developer_url(d) %></h3>
+			<%= image_tag '68yorkville_regencyh.jpg' %>
+			<p><%= d.description %></p>
+		</li>
+		<% end %>
+		<div class="clear"></div>
+	</ul>
+</div-->	
+
+<div id="featured"  class="gray_border">
+	<h1>Featured Properties</h1>
+	<ul>
+		<% @properties.each do |p| %>
+		<li>
+			<h3><%= link_to p.name, property_url(p) %></h3>
+			<%= image_tag '68yorkville_regencyh.jpg' %>
+			<p><%= p.description %></p>
+		</li>
+		<% end %>
+		<div class="clear"></div>
+	</ul>
+</div>
