@@ -17,7 +17,7 @@
 	
 	<% if logged_in? %>
 	<div class="links">
-		<%= link_to 'Edit', edit_article_url(@article) %> <%= link_to 'Delete' %>
+		<%= link_to 'Edit', edit_article_url(@article) %> <%= link_to 'Delete', article_url(@article), :method => :delete, :confirm => 'Are you sure?' %>
 	</div>
 	<% end %>	
 </div>

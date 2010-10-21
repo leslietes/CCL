@@ -80,7 +80,8 @@ ul#nav li a {  }
 .developer, .property, .article { line-height:2em;padding:0 20px 20px; }
 .property p { clear:left;}
 .property ul li { list-style:square inside;}
-
+.property .one, .property .two { float:left;margin-right:10px;width:48%; } /* property form */
+/*.property input[type='submit'] { margin-left:0; }  property form */
 
 /* contact us */
 .contact_us, .settings { margin-bottom:20px;padding:20px; }

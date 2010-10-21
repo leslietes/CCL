@@ -3,9 +3,11 @@ class PropertiesController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   before_filter :developers, :only => [:new,:create,:edit,:update]
   before_filter :select_unit_types, :only => [:new, :create, :edit, :update]
+  before_filter :select_locations,  :only => [:new, :create, :edit, :update]
+  before_filter :select_price_range,:only => [:new, :create, :edit, :update]
   
-  layout "application", :except => [:index] # :application doesn't work
-  #layout "properties"
+  #layout "application", :only => [:search] # :application doesn't work
+  layout "properties", :except => [:search]
   
   def index
     @properties = Property.all
@@ -63,7 +65,9 @@ class PropertiesController < ApplicationController
     location  = params[:location]
     price_range = params[:price_range]
     
-    @properties = Property.find(:all, :conditions => "")
+    @properties = Property.find(:all, 
+                                :conditions => ["unit_type = ? and location = ? and price_range = ?", unit_type, location, price_range])
+    render :layout => "application"
   end
   
   private
@@ -81,6 +85,14 @@ class PropertiesController < ApplicationController
     @unit_types << ['3 bedroom']
     @unit_types << ['penthouse']
     @unit_types
+  end
+  
+  def select_locations
+    @locations = Location.all.collect{|a| a.area }
+  end
+  
+  def select_price_range
+    @price_range = PriceRange.all.sort_by{|p| p.sort_value}.collect{|p| p.range }
   end
 
 end

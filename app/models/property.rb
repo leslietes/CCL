@@ -4,10 +4,8 @@ class Property < ActiveRecord::Base
 
   has_attached_file :photo, :styles => { :medium => "256x257>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
-                    
-  
-  validates_presence_of :developer_id, :name, :permalink, :address, :location
 
+  validates_presence_of :developer_id, :name, :permalink, :location, :target_completion_date, :price_range
   validates_uniqueness_of :permalink
   
   def to_param
