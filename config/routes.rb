@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :properties, :collection => {:search => :post }
   map.resources :users
   map.resources :articles
+  map.resources :contacts
   map.resource :session
   
   # Sample of regular route:
@@ -19,9 +20,10 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
   
   map.about 'about_us', :controller => 'home', :action =>'about'
-  map.contact_us 'contact_us', :controller => 'home', :action => 'contact_us'
-  map.contact_us_list '/admin/contact_us', :controller => 'admin', :action => 'contact_us_list'
-  map.news '/news', :controller => 'articles', :action => 'index'
+  map.contact_us 'contact_us', :controller => 'contacts', :action => 'new'
+  #map.contact_us 'contact_us', :controller => 'home', :action => 'contact_us'
+  #map.contact_us_list '/admin/contact_us', :controller => 'admin', :action => 'contact_us_list'
+  map.news '/events', :controller => 'articles', :action => 'index'
   map.read_news '/news/:id', :controller => 'articles', :action => 'show'
   
   map.settings '/admin/settings', :controller => 'admin', :action => 'settings'

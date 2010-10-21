@@ -31,11 +31,6 @@ class AdminController < ApplicationController
     redirect_to settings_url
   end
   
-  def contact_us_list
-    @contacts = Contact.all
-    render :layout => 'properties'
-  end
-  
   def add_location
     location = Location.new(:area => params[:location])
     if location.save

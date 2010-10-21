@@ -1,7 +1,6 @@
 class Emailer < ActionMailer::Base
   
-  def inquiry(name,email,message,subject='No subject')
-    puts "====inquiry"
+  def inquiry(name,email,message,subject='General Inquiry')
     setup_email
     @subject = "[CebuCondoListings] #{subject}"
     @body[:message] = message
