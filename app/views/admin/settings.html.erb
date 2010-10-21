@@ -35,10 +35,12 @@
 	</ul>
 	
 	<% form_tag add_price_range_url do  %>
-		<%= text_field_tag :price_range %>
-		<%= text_field_tag :sort_value %>
+		Price Range<%= text_field_tag :price_range %><br>
+		<i>e.g. 100,000 - 500,000</i><br>
+		Sort Value	<%= text_field_tag :sort_value %><br>
+		<i>e.g. 100,000</i>
 		<br><%= submit_tag 'Add' %>
 	<% end %>
-	
+		
 </div>
 

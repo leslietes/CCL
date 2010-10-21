@@ -2,13 +2,13 @@
 	<h2>Search</h2>
 	<% form_tag :controller => 'properties', :action => 'search' do %>
 		<p>
-			<%= label_tag :location %><%= select_tag "location", options_from_collection_for_select(@locations,"area","area"), :multiple => true %>
+			<%= label_tag :location %><%= select_tag "location", options_for_select(@search_location), :multiple => false %>
 		</p>
 		<p>
-			<%= label_tag :price_range %><%= select_tag "price_range", options_from_collection_for_select(@price_range,"range","range") %>
+			<%= label_tag :price_range %><%= select_tag "price_range", options_for_select(@search_price) %>
 		</p>
 		<p>
-			<%= label_tag :unit_type %><%= select_tag "unit_type", options_for_select(@unit_types), :multiple => true %>
+			<%= label_tag :unit_type %><%= select_tag "unit_type", options_for_select(@search_type), :multiple => false %>
 		</p>
 		<p><%= submit_tag 'Search' %></p>
 		

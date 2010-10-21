@@ -15,9 +15,9 @@ class ApplicationController < ActionController::Base
     @featured_articles = Article.featured_articles
     @properties = Property.all
     # for search box
-    @locations  = Location.all(:order => "area ASC")
-    @price_range= PriceRange.all(:order => "sort_value ASC")
-    @unit_types = Setting.unit_types
+    @search_location  = Location.all.collect{|a| a.area }.sort.insert(0,"")
+    @search_price  = PriceRange.all.sort_by{|p| p.sort_value }.collect{|p| [p.range,p.sort_value]}.insert(0,["",""])
+    @search_type   = Setting.unit_types.insert(0,"")
   end
   
   protected
