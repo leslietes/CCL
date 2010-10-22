@@ -3,7 +3,14 @@
 <div class="property">
 
 <h1><%= @property.name %></h1>
-<%= image_tag @property.photo.url(:thumb) %>
+<%= image_tag @property.photo.url(:medium) %>
+<%= image_tag @property.logo.url(:medium) %>
+<%= image_tag @property.location.url(:medium) %>
+<%= image_tag @property.studio_layout.url(:medium) %>
+<%= image_tag @property.one_bedroom_layout.url(:medium) %>
+<%= image_tag @property.two_bedroom_layout.url(:medium) %>
+<%= image_tag @property.three_bedroom_layout.url(:medium) %>
+<%= image_tag @property.penthouse_layout.url(:medium) %>
 
 <p>
   <%= label_tag :developer %><%= @property.developer_name %>
