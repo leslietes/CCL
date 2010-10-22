@@ -18,6 +18,10 @@
 	</p>	
 	
 	<p>
+		<%= f.label :location_map %><%= f.file_field :location_map %>
+	</p>	
+	
+	<p>
 	  <%= f.label :developer %><%= select("property","developer_id", @developers, {:include_blank => true}) %>
 	</p>
 	
