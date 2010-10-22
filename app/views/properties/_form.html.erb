@@ -9,12 +9,17 @@
 	</p>	
 	
 	<p>
-	  <%= f.label :developer %><%= select("property","developer_id", @developers, {:include_blank => true}) %>
-	</p>	
+		<%= f.label :logo %><%= f.file_field :logo %>
+	</p>
+		
 	
 	<p>
 	  <%= f.label :photo %><%= f.file_field :photo %>
 	</p>	
+	
+	<p>
+	  <%= f.label :developer %><%= select("property","developer_id", @developers, {:include_blank => true}) %>
+	</p>
 	
 	<p>
 		<%= f.label :location %><%= select("property","location", @locations, {:include_blank => true}) %>
@@ -89,6 +94,32 @@
 		2 Bedroom: <%= f.text_field :two_bedroom_price %><br>
 		3 Bedroom: <%= f.text_field :three_bedroom_price %><br>
 		Penthouse: <%= f.text_field :penthouse_price %>
+		</div>
+	</p>
+	
+	<p></p>
+	
+	<p>
+		<%= label_tag :floor_plans%><br>
+		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:268px;">
+		Studio: <%= f.file_field :studio_layout %><br>
+		1 Bedroom: <%= f.file_field :one_bedroom_layout %><br>
+		2 Bedroom: <%= f.file_field :two_bedroom_layout %><br>
+		3 Bedroom: <%= f.file_field :three_bedroom_layout %><br>
+		Penthouse: <%= f.file_field :penthouse_layout %>
+		</div>
+	</p>
+	
+	<p></p>
+	
+	<p>
+		<%= label_tag :captions %><br>
+		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:268px;">
+			Studio: <%= f.text_field :studio_layout_caption %><br>
+			1 Bedroom: <%= f.text_field :one_bedroom_layout_caption %><br>
+			2 Bedroom: <%= f.text_field :two_bedroom_layout_caption %><br>
+			3 Bedroom: <%= f.text_field :three_bedroom_layout_caption %><br>
+			Penthouse: <%= f.text_field :penthouse_layout_caption %>
 		</div>
 	</p>
 	
