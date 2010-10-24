@@ -3,7 +3,11 @@ class DevelopersController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   
   def index
-    @developers = Developer.all
+    if logged_in?
+      @developers = Developer.all
+    else
+      @developers = Developer.show_all_visible  
+    end
   end
   
   def show

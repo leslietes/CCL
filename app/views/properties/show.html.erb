@@ -60,6 +60,9 @@
 <p><%= label_tag :reservation_fee %><%= @property.reservation_fee %></p>
 
 <% if logged_in? %>
+
+<p><%= label_tag :hidden %><%= @property.hidden %></p>
+
 <div class="links">
 	<%= link_to 'Edit', edit_property_url(@property) %> |
 	<%= link_to 'Delete', property_url(@property), :method => :delete, :confirm => "Are you sure?" %>

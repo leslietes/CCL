@@ -37,6 +37,7 @@ class CreateProperties < ActiveRecord::Migration
       t.text :payment_terms
       t.string :as_low_as
       t.string :reservation_fee
+      t.boolean :hidden, :default => false
       t.timestamps
     end
   end

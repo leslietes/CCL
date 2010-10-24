@@ -8,7 +8,15 @@ class Developer < ActiveRecord::Base
   validates_presence_of :developer, :permalink, :description
   validates_uniqueness_of :permalink
   
-  #validates_attachment_presence :photo  
+  # including hidden
+  def self.show_all
+    Developer.all  
+  end
+  
+  # not including hidden
+  def self.show_all_visible
+    Developer.find(:all, :conditions => ["hidden = ?", false])
+  end
 
   def to_param
     permalink

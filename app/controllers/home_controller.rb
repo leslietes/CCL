@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @developers = Developer.all
   end
 
 #  def about

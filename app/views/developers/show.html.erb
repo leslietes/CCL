@@ -18,6 +18,10 @@
 </p>
 
 <% if logged_in? %>
+	<p>
+		<%= label_tag :hidden %><%= @developer.hidden %>
+	</p>
+
 	<div class="links">
 		<%= link_to 'Edit', edit_developer_url(@developer) %> |
 		<%= link_to 'Delete', developer_url(@developer), :method => :delete, :confirm => "Are you sure?" %>

@@ -29,6 +29,16 @@ class Property < ActiveRecord::Base
   validates_presence_of :developer_id, :name, :permalink, :location, :target_completion_date, :price_range
   validates_uniqueness_of :permalink
   
+  # include hidden
+  def self.show_all
+    Property.all
+  end
+  
+  # do not include hidden
+  def self.show_all_visible
+    Property.find(:all, :conditions => ["hidden = ?", false])
+  end
+  
   def to_param
     permalink
   end

@@ -10,7 +10,12 @@ class PropertiesController < ApplicationController
   layout "properties", :except => [:search]
   
   def index
-    @properties = Property.all
+    if logged_in?
+      @properties = Property.show_all
+    else
+      @properties = Property.show_all_visible  
+    end
+    
     render :layout => 'properties'
   end
   
@@ -83,6 +88,7 @@ class PropertiesController < ApplicationController
     @unit_types << ['1 bedroom']
     @unit_types << ['2 bedroom']
     @unit_types << ['3 bedroom']
+    @unit_types << ['loft']
     @unit_types << ['penthouse']
     @unit_types
   end

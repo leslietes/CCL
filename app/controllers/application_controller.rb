@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   
   def retrieve_objects
     @featured_articles = Article.featured_articles
-    @properties = Property.all
+    @properties = Property.show_all_visible
     # for search box
     @search_location  = Location.all.collect{|a| a.area }.sort.insert(0,"")
     @search_price  = PriceRange.all.sort_by{|p| p.sort_value }.collect{|p| [p.range,p.sort_value]}.insert(0,["",""])
