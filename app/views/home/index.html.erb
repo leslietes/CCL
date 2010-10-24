@@ -1,17 +1,31 @@
-<div id="page_header" class="gray_border"">
-
+<div id="s3slider">
+	<ul id="s3sliderContent">
+		<li class="s3sliderImage">
+			<%= link_to (image_tag 'slider/1.jpg'), property_url('avida') %>
+			<span>Loren ipsum dolor</span>
+		</li>
+		<li class="s3sliderImage">
+			<%= link_to (image_tag 'slider/2.jpg'), property_url('avalon') %>
+			<span>Loren ipsum dolor</span>
+		</li>	
+		<li class="s3sliderImage">
+			<%= image_tag 'slider/3.jpg' %>
+			<span>Loren ipsum dolor</span>
+		</li>
+		<div class="clear s3sliderImage"></div>
+	</ul>
 </div>
 
 <!--div id="latest">
 	<h1>Latest Properties</h1>
 	<ul>
-		<% @developers.each do |d| %>
+		<%# @developers.each do |d| %>
 		<li>
-			<h3><%= link_to d.developer, developer_url(d) %></h3>
-			<%= image_tag '68yorkville_regencyh.jpg' %>
-			<p><%= d.description %></p>
+			<h3><%#= link_to d.developer, developer_url(d) %></h3>
+			<%#= image_tag '68yorkville_regencyh.jpg' %>
+			<p><%#= d.description %></p>
 		</li>
-		<% end %>
+		<%# end %>
 		<div class="clear"></div>
 	</ul>
 </div-->	
