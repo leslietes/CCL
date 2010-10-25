@@ -37,10 +37,15 @@ form p { padding:.5em 0; }
 
 table { border:1px solid #cecece;width:100%;}
 table th, td { border:1px solid #cecece;height:40px;vertical-align:middle; }
+
 /* used in search form */
 select { width:200px; }
+
 /* used in settings page */
 ul.bullets { list-style:square inside;padding-left:20px; }
+.settings form label { width:80px; }
+.settings form span { font-style:italic;margin-left:80px; }
+.settings form input[type='submit'] { margin-left:80px;margin-top:10px; }
 
 /*.fix { display:block; }*/
 .clear { clear:both; }
@@ -80,8 +85,17 @@ ul#nav li a {  }
 .developer, .property, .article { line-height:2em;padding:0 20px 20px; }
 .property p { clear:left;}
 .property ul li { list-style:square inside;}
+.property ul.submenu { margin-bottom:20px; }
+.property ul.submenu li { display:inline;list-style:none;border:1px solid #ccc;padding:5px 20px; }
 .property .one, .property .two { float:left;margin-right:10px;width:48%; } /* property form */
-/*.property input[type='submit'] { margin-left:0; }  property form */
+
+#gallery ul li { list-style:none;display:inline; }
+#gallery ul li a img { height:90px;width:160px;}
+
+/* property inquiry form */
+.inquiry label { width:100px; }
+.inquiry input[type='submit'] { margin-left:100px; }
+.inquiry textarea { width:85%;height:120px; }
 
 /* contact us */
 .contact_us, .settings { margin-bottom:20px;padding:20px; }

@@ -1,10 +1,11 @@
 class PropertiesController < ApplicationController
   
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:index, :show, :gallery, :search]
   before_filter :developers, :only => [:new,:create,:edit,:update]
   before_filter :select_unit_types, :only => [:new, :create, :edit, :update]
   before_filter :select_locations,  :only => [:new, :create, :edit, :update]
   before_filter :select_price_range,:only => [:new, :create, :edit, :update]
+  before_filter :inquiry_form, :only => [:show, :gallery]
   
   #layout "application", :only => [:search] # :application doesn't work
   layout "properties", :except => [:search]
@@ -15,12 +16,17 @@ class PropertiesController < ApplicationController
     else
       @properties = Property.show_all_visible  
     end
-    
-    render :layout => 'properties'
   end
   
   def show
+    @partial  = 'information'
     @property = Property.find_by_permalink(params[:id])
+  end
+  
+  def gallery
+    @partial  = 'gallery'
+    @property = Property.find_by_permalink(params[:id])
+    render :template => 'properties/show'
   end
   
   def new
@@ -64,14 +70,16 @@ class PropertiesController < ApplicationController
   end
   
   def search
-    puts "===#{params.inspect}"
-    
     unit_type = params[:unit_type]
     location  = params[:location]
     price_range = params[:price_range]
     
-    @properties = Property.find(:all, 
-                                :conditions => ["unit_type = ? and location = ? and price_range = ?", unit_type, location, price_range])
+    conditions = "#{unit_type} = true" if !unit_type.blank?
+    
+    puts "sql: #{sql + conditions}"
+    
+    @properties = Property.find_by_sql("SELECT * FROM properties WHERE"  + conditions)
+                                
     render :layout => "application"
   end
   
@@ -99,6 +107,10 @@ class PropertiesController < ApplicationController
   
   def select_price_range
     @price_range = PriceRange.all.sort_by{|p| p.sort_value}.collect{|p| p.range }
+  end
+  
+  def inquiry_form
+    @contact = Contact.new
   end
 
 end

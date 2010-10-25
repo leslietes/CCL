@@ -1,74 +1,28 @@
 <% content_for :property_listings do %>
 
-<div class="property">
+	<div class="property">
+	
+		<h1><%= @property.name %></h1>
+		
+		<ul class="submenu">
+			<li><%= link_to 'Information', property_url(@property) %></li>
+			<li><%= link_to 'Gallery', property_gallery_url(@property) %></li>
+		</ul>
 
-<h1><%= @property.name %></h1>
-<%= image_tag @property.photo.url(:medium) %>
-<%= image_tag @property.logo.url(:medium) %>
-<%= image_tag @property.location_map.url(:medium) %>
-<%= image_tag @property.studio_layout.url(:medium) %>
-<%= image_tag @property.one_bedroom_layout.url(:medium) %>
-<%= image_tag @property.two_bedroom_layout.url(:medium) %>
-<%= image_tag @property.three_bedroom_layout.url(:medium) %>
-<%= image_tag @property.penthouse_layout.url(:medium) %>
+		<%= render :partial => "#{@partial}" %>
 
-<p>
-  <%= label_tag :developer %><%= @property.developer_name %>
-</p>	
-
-<p>  
-  <%= label_tag :location %><%= @property.location %>
-</p>  
-
-<p>  
-  <%= label_tag :address %><div class="indented_text"><%= @property.address %></div>
-</p>
-
-<p><%= label_tag :target_completion_date %><%= @property.target_completion_date %>
-
-<p>
-  <%= label_tag :description %><%= @property.description %>
-</p> 
-
-<p>
-	<%= label_tag :unit_types %><br>
-	<div class="indented_text"><%= display_all_unit_types(@property.all_unit_types) %></div>
-</p>
-
-<p>
-	<%= label_tag :unit_sizes %><br><%= @property.unit_sizes %>
-</p>
-
-<p>
-	<%= label_tag :price_range %><%= @property.price_range %>
-</p>	
-
-<p>
-	<%= label_tag :amenities %><br><div class="indented_text"><%= @property.amenities%></div>
-</p>
-
-<p>
-	<%= label_tag :unit_specifications %><br><div class="indented_text"><%= @property.unit_specifications %></div>
-</p>
-
-<p><%= label_tag :payment_terms %><%= @property.payment_terms %></p>
-
-<p>
-	<%= label_tag :as_low_as %><%= @property.as_low_as %>
-</p>	
-
-<p><%= label_tag :reservation_fee %><%= @property.reservation_fee %></p>
-
-<% if logged_in? %>
-
-<p><%= label_tag :hidden %><%= @property.hidden %></p>
-
-<div class="links">
-	<%= link_to 'Edit', edit_property_url(@property) %> |
-	<%= link_to 'Delete', property_url(@property), :method => :delete, :confirm => "Are you sure?" %>
-</div>	
-<% end %>
-
-</div>
-
+		<div class="inquiry gray_border clear">
+			<% form_for @contact do |f| %>
+				<%= f.error_messages %>
+				<%= f.hidden_field :subject, :value => @property.name %>
+				<p><label>Your Full Name</label><%= f.text_field :name%></p>
+				<p><label>Contact Number</label><%= f.text_field :contact_no %></p>
+				<p><label>Email Address</label><%= f.text_field :email%></p>
+				<p><label>Your Message</label><%= f.text_area :message %></p>
+				<%= recaptcha_tags %>
+				<p><%= f.submit 'Send' %></p>
+			<% end %>
+		</div>	
+	
+	</div>
 <% end %>
