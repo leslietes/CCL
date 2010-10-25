@@ -13,7 +13,7 @@ background: transparent;
 background-color:#aaaaaa;}  
 body
  {
- 	background:#aaaaaa url(/images/background_gradient.png) repeat-x scroll 0 0;
+ 	background:#aaaaaa url(/images/under_construction/background_gradient.png) repeat-x scroll 0 0;
 	}
 body {
 	line-height: 1;
@@ -48,7 +48,7 @@ margin: 0 auto;
  
  
 #main {
-    background: url(/images/page_background.png) no-repeat scroll 0 0; 
+    background: url(/images/under_construction/page_background.png) no-repeat scroll 0 0; 
 	margin:0 auto;
 	padding:0;
 	height:430px;
@@ -121,7 +121,7 @@ margin: 0 auto;
 	}
 .counter
 {
-	background:url(/images/counter_bg.png) no-repeat scroll center 57px;
+	background:url(/images/under_construction/counter_bg.png) no-repeat scroll center 57px;
 	width:797px;
 	height:150px;
 	border-top:1px solid #666666;
@@ -229,22 +229,22 @@ margin:auto;
 	}
 #slidertext ul li a.twitter
 {
-	background:url(/images/twitter.png) no-repeat scroll 0 0;
+	background:url(/images/under_construction/twitter.png) no-repeat scroll 0 0;
 	
 	}
 #slidertext ul li a.flickr
 {
-	background:url(/images/flickr.png) no-repeat scroll 0 0;
+	background:url(/images/under_construction/flickr.png) no-repeat scroll 0 0;
 	
 	}
 #slidertext ul li a.facebook
 {
-	background:url(/images/facebook.png) no-repeat scroll 0 0;
+	background:url(/images/under_construction/facebook.png) no-repeat scroll 0 0;
 	
 	}
 #slidertext ul li a.youtube
 {
-	background:url(/images/youtube.png) no-repeat scroll 0 0;
+	background:url(/images/under_construction/youtube.png) no-repeat scroll 0 0;
 	
 	}
 
@@ -263,7 +263,7 @@ margin-right:50px;
 
 }
 #email_input{
-background:transparent url(/images/mailform_background.png) no-repeat scroll  center 0; 
+background:transparent url(/images/under_construction/mailform_background.png) no-repeat scroll  center 0; 
 height:40px;
 
 
