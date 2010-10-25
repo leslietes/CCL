@@ -4,7 +4,7 @@ class DevelopersController < ApplicationController
   
   def index
     if logged_in?
-      @developers = Developer.all
+      @developers = Developer.show_all
     else
       @developers = Developer.show_all_visible  
     end

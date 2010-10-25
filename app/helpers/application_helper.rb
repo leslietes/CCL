@@ -9,4 +9,9 @@ module ApplicationHelper
     date.strftime("%b %d, %Y")
     #date.strftime("#{abbreviated ? '%b' : '%B'} %d, %Y")
   end
+  
+  def has_featured?
+    setting = Setting.first
+    !setting.featured1.blank? && !setting.featured2.blank? && !setting.featured3.blank? && !setting.featured4.blank? && !setting.featured5.blank?
+  end
 end

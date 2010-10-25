@@ -1,11 +1,49 @@
 <div class="settings">
 	<h1>Settings</h1>
 	
-	<p><%= label_tag :email_address %><br><%= @setting.production_email %></p>
-	<%# label_tag :about_us %><%# @setting.about_us %>
-
-	<% form_tag edit_settings_url do %>
-		<%= text_field_tag :production_email %>
+	<p><%= label_tag :email_address %><%= @setting.production_email %></p>
+	<p>
+		<%= label_tag :featured_1 %><%= image_tag @setting.featured1.url, :height => "60", :width => "150" %><%#= @setting.featured1_file_name %><br>
+		<%= label_tag :featured_2 %><%= image_tag @setting.featured2.url, :height => "60", :width => "150" %><%#= @setting.featured2_file_name %><br>
+		<%= label_tag :featured_3 %><%= image_tag @setting.featured3.url, :height => "60", :width => "150" %><%#= @setting.featured3_file_name %><br>
+		<%= label_tag :featured_4 %><%= image_tag @setting.featured4.url, :height => "60", :width => "150" %><%#= @setting.featured4_file_name %><br>
+		<%= label_tag :featured_5 %><%= image_tag @setting.featured5.url, :height => "60", :width => "150" %><%#= @setting.featured5_file_name %><br>
+	</p>
+	
+	<br>
+	
+	<% form_for :setting, :url => edit_settings_url, :html => {:method => :put, :multipart => true} do |f| %>
+		<p><%= label_tag :email%><%= f.text_field :production_email %><p>
+		
+		<p>
+			<%= label_tag :featured_1 %><%= f.file_field :featured1 %>
+			<label>Caption</label><%= f.text_field :featured1_caption%><br>
+			<label>URL</label><%= f.text_field :featured1_link %>
+		</p>
+		
+		<p>
+			<%= label_tag :featured_2 %><%= f.file_field :featured2 %>
+			<label>Caption</label><%= f.text_field :featured2_caption%><br>
+			<label>URL</label><%= f.text_field :featured2_link %>
+		</p>
+		
+		<p>
+			<%= label_tag :featured_3 %><%= f.file_field :featured3 %>
+			<label>Caption</label><%= f.text_field :featured3_caption%><br>
+			<label>URL</label><%= f.text_field :featured3_link %>
+		</p>
+		
+		<p>
+			<%= label_tag :featured_4 %><%= f.file_field :featured4 %>
+			<label>Caption</label><%= f.text_field :featured4_caption%><br>
+			<label>URL</label><%= f.text_field :featured4_link %>
+		</p>
+		
+		<p>
+			<%= label_tag :featured_5 %><%= f.file_field :featured5 %>
+			<label>Caption</label><%= f.text_field :featured5_caption%><br>
+			<label>URL</label><%= f.text_field :featured5_link %>
+		</p>
 		<%= submit_tag 'Change' %>
 	<% end %>
 		
@@ -21,8 +59,10 @@
 		<% end %>
 	</ul>
 	
+	<br>
+	
 	<% form_tag add_location_url do  %>
-		<%= text_field_tag :location %>
+		<label>Location</label><%= text_field_tag :location %><br>
 		<%= submit_tag 'Add' %>
 	<% end %>
 	
@@ -34,11 +74,13 @@
 		<% end %>
 	</ul>
 	
+	<br>
+	
 	<% form_tag add_price_range_url do  %>
-		Price Range<%= text_field_tag :price_range %><br>
-		<i>e.g. 100,000 - 500,000</i><br>
-		Sort Value	<%= text_field_tag :sort_value %><br>
-		<i>e.g. 100,000</i>
+		<label>Price Range</label><%= text_field_tag :price_range %><br>
+		<span>e.g. 100,000 - 500,000</span><br>
+		<label>Sort Value</label><%= text_field_tag :sort_value %><br>
+		<span>e.g. 100,000</span>
 		<br><%= submit_tag 'Add' %>
 	<% end %>
 		

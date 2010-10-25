@@ -10,12 +10,12 @@ class Developer < ActiveRecord::Base
   
   # including hidden
   def self.show_all
-    Developer.all  
+    Developer.find(:all, :order => "developer ASC")  
   end
   
   # not including hidden
   def self.show_all_visible
-    Developer.find(:all, :conditions => ["hidden = ?", false])
+    Developer.find(:all, :conditions => ["hidden = ?", false], :order => "developer ASC")
   end
 
   def to_param

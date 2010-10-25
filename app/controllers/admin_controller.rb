@@ -22,11 +22,12 @@ class AdminController < ApplicationController
     #  render :action => 'settings'
     #end
     setting = Setting.first
-    setting.production_email = params[:production_email]
+    setting.update_attributes(params[:setting])
+    #setting.production_email = params[:production_email]
     if setting.save
-      flash[:notice] = "Updated email address"
+      flash[:notice] = "Updated site settings"
     else
-      flash[:error] = "Unable to update email address"
+      flash[:error] = "Unable to update site settings"
     end
     redirect_to settings_url
   end

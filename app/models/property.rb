@@ -31,12 +31,12 @@ class Property < ActiveRecord::Base
   
   # include hidden
   def self.show_all
-    Property.all
+    Property.find(:all, :order => "name ASC")
   end
   
   # do not include hidden
   def self.show_all_visible
-    Property.find(:all, :conditions => ["hidden = ?", false])
+    Property.find(:all, :conditions => ["hidden = ?", false], :order => "name ASC")
   end
   
   def to_param

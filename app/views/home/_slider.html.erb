@@ -1,0 +1,51 @@
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		$('#s3slider').s3Slider({
+			timeOut: 2000
+		});
+	});
+</script>
+
+<% if has_featured? %>
+<div id="s3slider">
+	<ul id="s3sliderContent">
+		
+		<% if @setting.featured1? %>
+		<li class="s3sliderImage">
+			<%= link_to (image_tag @setting.featured1.url), "#{eval(@setting.featured1_link)}" %>
+			<span><%= @setting.featured1_caption %></span>
+		</li>
+		<% end %>
+		
+		<% if @setting.featured2? %>
+		<li class="s3sliderImage">
+			<%= link_to (image_tag @setting.featured2.url), "#{eval(@setting.featured2_link)}" %>
+			<span><%= @setting.featured2_caption %></span>
+		</li>
+		<% end %>
+		
+		<% if @setting.featured3? %>
+		<li class="s3sliderImage">
+			<%= link_to (image_tag @setting.featured3.url), "#{eval(@setting.featured3_link)}" %>
+			<span><%= @setting.featured3_caption %></span>
+		</li>
+		<% end %>
+		
+		<% if @setting.featured4? %>
+		<li class="s3sliderImage">
+			<%= link_to (image_tag @setting.featured4.url), "#{eval(@setting.featured4_link)}" %>
+			<span><%= @setting.featured4_caption %></span>
+		</li>
+		<% end %>
+		
+		<% if @setting.featured5? %>
+		<li class="s3sliderImage">
+			<%= link_to (image_tag @setting.featured5.url), "#{eval(@setting.featured5_link)}" %>
+			<span><%= @setting.featured5_caption %></span>
+		</li>
+		<% end %>
+		
+		<div class="clear s3sliderImage"></div>
+	</ul>
+</div>
+<% end %>
