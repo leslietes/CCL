@@ -1,14 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
- one:
-   id: 1   
-   title: Sleeping with light on may lead to weight gain—study
-   permalink: sleeping-with-light-on-may-lead-to-weight-gain
-   teaser:
-   body: WASHINGTON—Too much light at night appears to lead to weight gain, according to a report released Monday, based on studies of mice that provide fresh clues on obesity.<br>The researchers found that mice exposed to a dim light at night over eight weeks had a weight gain that was about 50 percent more than other mice that lived in a standard light-dark cycle.<br>"Although there were no differences in activity levels or daily consumption of food, the mice that lived with light at night were getting fatter than the others," said Laura Fonken, lead author of the study and a researcher at Ohio State University.<br>The study, which appears in the Proceedings of the National Academy of Sciences journal, said the weight gain could be a sign that light has an effect on the metabolism.<br>"Something about light at night was making the mice in our study want to eat at the wrong times to properly metabolize their food," said Randy Nelson, co-author of the study and professor of neuroscience and psychology at Ohio State.<br>If these results are confirmed in humans, it would suggest that late-night eating might be a particular risk factor for obesity, Nelson said.<br>
-   featured: true
-   published_date: 2010-10-12
-   published_at: PDI
+# one:
+#   id: 1   
+#   title: Sleeping with light on may lead to weight gain—study
+#   permalink: sleeping-with-light-on-may-lead-to-weight-gain
+#   teaser:
+#   body: WASHINGTON—Too much light at night appears to lead to weight gain, according to a report released Monday, based on studies of mice that provide fresh clues on obesity.<br>The researchers found that mice exposed to a dim light at night over eight weeks had a weight gain that was about 50 percent more than other mice that lived in a standard light-dark cycle.<br>"Although there were no differences in activity levels or daily consumption of food, the mice that lived with light at night were getting fatter than the others," said Laura Fonken, lead author of the study and a researcher at Ohio State University.<br>The study, which appears in the Proceedings of the National Academy of Sciences journal, said the weight gain could be a sign that light has an effect on the metabolism.<br>"Something about light at night was making the mice in our study want to eat at the wrong times to properly metabolize their food," said Randy Nelson, co-author of the study and professor of neuroscience and psychology at Ohio State.<br>If these results are confirmed in humans, it would suggest that late-night eating might be a particular risk factor for obesity, Nelson said.<br>
+#   featured: true
+#   published_date: 2010-10-12
+#   published_at: PDI
 
 # two:
 #   column: value

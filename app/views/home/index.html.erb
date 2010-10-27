@@ -7,7 +7,7 @@
 		<li>
 			<h3><%= link_to p.name, property_url(p) %></h3>
 			<%= image_tag '68yorkville_regencyh.jpg' %>
-			<p><%= p.description %></p>
+			<p><%= truncate(p.description, :length => 120, :omission => '...') %></p>
 		</li>
 		<% end %>
 		<div class="clear"></div>

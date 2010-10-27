@@ -33,6 +33,7 @@ class CreateProperties < ActiveRecord::Migration
       t.string :penthouse_price
 
       t.text :amenities
+      t.text :features
       t.text :unit_specifications
       t.text :payment_terms
       t.string :as_low_as

@@ -26,8 +26,8 @@ class Property < ActiveRecord::Base
   has_attached_file :penthouse_layout, :styles => { :medium => "256x257>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  validates_presence_of :developer_id, :name, :permalink, :location, :target_completion_date, :price_range
-  validates_uniqueness_of :permalink
+  #validates_presence_of :developer_id, :name, :permalink, :location, :target_completion_date, :price_range
+  #validates_uniqueness_of :permalink
   
   # include hidden
   def self.show_all

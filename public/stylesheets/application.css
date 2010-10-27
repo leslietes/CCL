@@ -72,7 +72,7 @@ ul#nav li a {  }
 #featured ul {  }
 #featured ul li { float:left;padding:0 10px 15px 10px;width:160px;margin:0 10px 10px; }
 #featured ul li img { height:90px;width:160px; }
-#featured ul li p { text-align:justify;}
+#featured ul li p { text-align:left;}
 
 #footer { padding:20px;text-align:center; }
 
@@ -85,6 +85,7 @@ ul#nav li a {  }
 .developer, .property, .article { line-height:2em;padding:0 20px 20px; }
 .property p { clear:left;}
 .property ul li { list-style:square inside;}
+.property ol li { list-style:decimal inside;}
 .property ul.submenu { margin-bottom:20px; }
 .property ul.submenu li { display:inline;list-style:none;border:1px solid #ccc;padding:5px 20px; }
 .property .one, .property .two { float:left;margin-right:10px;width:48%; } /* property form */
