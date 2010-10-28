@@ -17,6 +17,7 @@ class CreateProperties < ActiveRecord::Migration
       t.boolean :two_bedroom
       t.boolean :three_bedroom
       t.boolean :penthouse
+      t.boolean :loft
       
       t.text :unit_sizes
       t.string :studio_size
@@ -24,6 +25,7 @@ class CreateProperties < ActiveRecord::Migration
       t.string :two_bedroom_size
       t.string :three_bedroom_size
       t.string :penthouse_size
+      t.string :loft_size
       
       t.text :price_range
       t.string :studio_price
@@ -31,6 +33,7 @@ class CreateProperties < ActiveRecord::Migration
       t.string :two_bedroom_price
       t.string :three_bedroom_price
       t.string :penthouse_price
+      t.string :loft_price
 
       t.text :amenities
       t.text :features
@@ -38,6 +41,7 @@ class CreateProperties < ActiveRecord::Migration
       t.text :payment_terms
       t.string :as_low_as
       t.string :reservation_fee
+      t.boolean :condotel, :default => false
       t.boolean :hidden, :default => false
       t.timestamps
     end

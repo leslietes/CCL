@@ -13,8 +13,8 @@ allan:
   id:                        2
   login:                     allan
   email:                     allanum@yahoo.com
-  salt:                      ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4 # SHA1('1')
-  crypted_password:          4dc8c9abd2be577a7948c0f28ce6778c137b6069 # 'monkey'
+  salt:                      1b6453892473a467d07372d45eb05abc2031647a # SHA1('0') #ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4 # SHA1('1')
+  crypted_password:          954a575bb2f41b6008601c333602986b57b74adf # 'monkey'
   created_at:                <%= 1.days.ago.to_s :db %>
   remember_token_expires_at: 
   remember_token:            
@@ -24,8 +24,8 @@ leslie:
   id:                        3
   login:                     leslie
   email:                     leslie_tanengsy@yahoo.com
-  salt:                      7e3041ebc2fc05a40c60028e2c4901a81035d3cd
-  crypted_password:          4dc8c9abd2be577a7948c0f28ce6778c137b6069 # 'monkey' #00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  salt:                      1b6453892473a467d07372d45eb05abc2031647a # SHA1('0') #7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password:          954a575bb2f41b6008601c333602986b57b74adf # 'monkey' #00742970dc9e6319f8019fd54864d3ea740f04b1 # test
   created_at:                <%= 1.days.ago.to_s :db %>
 
 

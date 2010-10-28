@@ -10,6 +10,9 @@
 		<p>
 			<%= label_tag :unit_type %><%= select_tag "unit_type", options_for_select(@search_type), :multiple => false %>
 		</p>
+		<p>
+			<%= label_tag :type %><%= select_tag "type", options_for_select(@type) %>
+		</p>	
 		<p><%= submit_tag 'Search' %></p>
 		
 	<% end %>

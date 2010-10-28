@@ -1,55 +1,561 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+avida:
   id: 1
   developer_id: 1
-  name: Avida
+  name: Avida Towers
   permalink: avida
-  address: Asiatown I.T. Park<br>Apas, Lahug<br>Cebu City
-  location: I.T. Park
+  address: Asiatown IT Park<br>Apas, Lahug<br>Cebu City
+  location: Asiatown IT Park
   completed: false
-  target_completion_date: December 2012
-  description: Loren ipsum dolor
-  as_low_as: 10,000/month
-  reservation_fee: 20,000
-  
-three:
-  id: 3
-  developer_id: 2
-  name: La Guardia Flats 1
-  permalink: la-guardia-flats-1
-  address: Asiatown I.T. Park<br>Apas, Lahug<br>Cebu City
-  location: I.T. Park
-  completed: false
-  target_completion_date: December 2012
-  description: Loren ipsum dolor
-  as_low_as: 10,000/month
-  reservation_fee: 20,000
-  
-four:
-  id: 4
-  developer_id: 2
-  name: La Guardia Flats 2
-  permalink: la-guardia-flats-2
-  address: Asiatown I.T. Park<br>Apas, Lahug<br>Cebu City
-  location: I.T. Park
-  completed: false
-  target_completion_date: December 2012
-  description: Loren ipsum dolor
-  as_low_as: 10,000/month
-  reservation_fee: 20,000
-  
-five:
-  id: 5
+  target_completion_date: <ul><li>Tower 1 - 3rd Quarter 2013</li><li>Tower 2 - 4th Quarter 2013</li></ul>
+  description: The project is located within Asiatown IT Park, an integrated special economic zone and modern trading center in Cebu City. This connects to major thoroughfares that lead to the Mactan International Airport and Cebu International Port. It has easy access to shopping areas, restaurants, schools, hotels, hospitals, churches, and golf courses.
+  unit_types:
+  studio: true
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: false
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 22 sq. m.
+  one_bedroom_size: 36 sq. m.
+  two_bedroom_size: 52 sq. m.
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price: as low as P1.584M
+  one_bedroom_price: as low as P2.355M
+  two_bedroom_price: as low as P3.845M
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Adult & Kiddie Swimming Pool (200 capacity)</li><li>Clubhouse with Function hall for 150 guests</li><li>Children's Play Area</li><li>Outdoor Gym</li><li>Garden Area (maximized green area and open spaces)</li></ul>
+  features: <ul><li>Main lobby for each building</li><li>Three Elevator units</li><li>Admin room</li><li>Utility room</li><li>Emergency power</li><li>Garbage Chute/ room per level</li><li>Fire protection/ fire alarm system</li><li>Mailbox per unit located at the lobby</li><li>Units are electricity, telephone, cable television & internet ready</li><li>Transformer Vault & Genset Room to be located at the ground floor level</li></ul>
+  unit_specifications: <ul><li>Flooring - vinyl planks,ceramic tiles</li><li>Aluminum windows</li><li>Unit partitions (CHB - walls painted)</li><li>Interior - (gypsum board painted)</li><li>Complete kitchen, countertop, fixtures, overhead and undersink cabinets, greasetrap</li><li>Note - Complete toilet and bath fixtures for 2 bedroom units ONLY.</li></ul>
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+
+avalon:
+  id: 2
   developer_id: 2
   name: Avalon
   permalink: avalon
   address: Cebu Business Park
   location: Cebu Business Park
   completed: false
-  target_completion_date: December 2012
-  description: Loren ipsum dolor
-  as_low_as: 10,000/month
-  reservation_fee: 20,000
+  target_completion_date:
+  description: Avalon is a 19-storey condominium consisting of 200 units with Modern-Asian architecture. It features first-class amenities to suit those meticulous in taste and will provide utter respite for a fast-paced lifestyle.<br>The name Avalon is derived from the mythical legend of King Arthur. It was a retirement island reserved for a royalty. And with that saying, this upcoming high-end residential address is exclusive for those who deserve a home spelled as luxurious elegance.<br>But the best thing about Avalon, it awards the chosen few to rightfully own a residential property remarkably valued as a crown jewel. Being located in one of the most prime locations of the metropolis, the overall value of the estate increases through time. And so will your investment yield more returns.
+  unit_types: 
+  studio: false
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: true
+  penthouse: true
+  loft:
+  unit_sizes:
+  studio_size:
+  one_bedroom_size: 60 sq. m.
+  two_bedroom_size: 89 sq. m.
+  three_bedroom_size: 125 sq. m.
+  penthouse_size: 230 sq. m.
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price: P5.8M - P6.7M
+  two_bedroom_price: P8.5M - P10.3M
+  three_bedroom_price: P12.0M - P13.9M
+  penthouse_price: P23.0M - P25.0M
+  loft_price:
+  amenities: <ul><li>Adult and kiddie swimming pools</li><li>Main lobby and Reception area</li><li>High-speed passenger elevator units</li><li>1 Heavy-duty service elevator unit</li><li>Top of the line fire alarm and sprinkler systems with fire exits</li><li>24/7 Security and Closed Circuit Television (CCTV) systems</li><li>100% Back-up power generation</li><li>Centrally located garbage system per floor</li><li>Individual mailbox for each unit</li><li>Function rooms</li><li>Business center</li><li>Fitness gym and Sauna</li><li>Landscaped gardens</li><li>Daycare center</li><li>Perimeter fence</li><li>4 Levels of basement parking and visitors parking slots</li></ul>
+  features:
+  unit_specifications: <ul><li>Partitions</li><li>Painted interiors</li><li>Engineered wood (HDF) for bedrooms</li><li>High-quality ceramic tiles (living, dining and kitchen areas)</li><li>Kitchen cabinets</li><li>Shower enclosure</li><li>Provisions for air conditioning unit</li><li>Tiled toilet and bath with bathroom fixtures</li><li>Hot water provision</li><li>Bathtub (except for one bedroom unit)</li><li>Telephone, cable/HDTV, WiFi ready</li><li>Servant's quarter or service area</li></ul>
+  payment_terms: <ol><li>Spot cash (net of 10% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)</li></ol>
+  as_low_as:
+  reservation_fee:
+  condotel:
+  hidden: false
   
+lgf1:
+  id: 3
+  developer_id: 2
+  name: La Guardia Flats 1
+  permalink: la_guardia1
+  address: AsiatownLa Guardia<br>Lahug, Cebu City
+  location: Asiatown IT Park
+  completed: false
+  target_completion_date: 1st Quarter of 2011
+  description: La Guardia Flats I is a 14-storey condominium with over 250 units. Featuring modular design to cater different tastes, each unit can be expanded to freely allow buyers a wider space. A private balcony is also included with a view of the landscaped open inner court, the hills and the city.<br>Less than 10 minutes away from Asiatown I.T. Park, the development is also in close proximity to famous landmarks such as schools, hotel, malls and recreational centers.<br>Convenient and affordable luxury, that is La Guardia Flats I.
+  unit_types:
+  studio: true
+  one_bedroom: false
+  two_bedroom: false
+  three_bedroom: false
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 22 sq. m.
+  one_bedroom_size:
+  two_bedroom_size:
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price: P1.5M - P1.9M
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Lobby and reception area</li><li>Two elevator units</li><li>Indoor parking area</li><li>Open interior court</li><li>Roof deck</li><li>Fire alarm and sprinkler system with fire exits</li><li>CCTV System</li><li>Commercial area for cafeteria, laundry service and internet cafe</li></ul>
+  features:
+  unit_specifications: <ul><li>Finished walls and floors</li><li>Tiled toilet and bath with bathroom fixtures</li><li>Separate toilet and bath</li><li>Private balcony</li></ul>
+  payment_terms: <ol><li>Spot cash (net of 12% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)</li></ol>
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
   
+lgf2:
+  id: 4
+  developer_id: 2
+  name: La Guardia Flats 2
+  permalink: la_guardia2
+  address: 1st Street La Guardia,<br>Lahug, Cebu City
+  location: Asiatown IT Park
+  completed: false
+  target_completion_date: 2nd Quarter of 2012
+  description: La Guardia Flats II is a testament to the success of the first tower. Because of the unprecedented response, management decided to come up with a sequel equipped with better features.<br>Still composed of 14 floors, this condominium offers over 200 studio units that are modular in design. Perfect for young professionals, it allows a wider market to own a home located in an address that will let one just easily drive around the metropolis in a short span of time. Not to mention, ideal for those who plan to enter the booming rental business.<br>With what La Guardia Flats II has to offer, it is definitely a worthwhile investment.
+  unit_types:
+  studio: true
+  one_bedroom: false
+  two_bedroom: false
+  three_bedroom: false
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 22 sq. m.
+  one_bedroom_size:
+  two_bedroom_size:
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price: P1.5M - P1.9M
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Lobby and Reception area</li><li>Two elevator units</li><li>Indoor parking area</li><li>Viewing roofdeck</li><li>Fire alarm and sprinkler system</li><li>CCTV system</li><li>Commercial area for convenience shop, laundry service and internet cafe</li></ul>
+  features:
+  unit_specifications: <ul><li>Finished walls and floors</li><li>Tiled toilet and bath with bathroom fixtures</li><li>Separate toilet and bath</li><li>Private balcony</li></ul>
+  payment_terms: <ol><li>Spot cash (net of 12% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)</li></ol>
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+
+woodcrest:
+  id: 5
+  developer_id: 2
+  name: Woodcrest Residences
+  permalink: woodcrest
+  address: Don Quijada Street,<br>Guadalupe, Cebu City
+  location: Guadalupe
+  completed: false
+  target_completion_date: February 2011
+  description: Woodcrest Residences features premium quality units that redefines the meaning of clean city living. Nestled in the serene nook of Guadalupe, it casts harmony between your dynamic lifestyle and your pursuit to gracious living and comfort in a well-planned, mid-rise residential condominium.<br>A home at this condominium project lets you experience the benefits of architectural ingenuity in the maximization of surrounding natural elements. Breathe in fresh air, and enjoy the lush view of the outdoors from the generous bliss of spacious corridors or revel on it all from your private balcony.<br>Woodcrest Residences is more than just a space for rest at the end of each day, it's an experience of living life in a home that's complete with convenience that work around your lifestyle. More importantly, it's a place you can truly call your own
+  unit_types:
+  studio: true
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: false
+  penthouse: false
+  loft: true
+  unit_sizes:
+  studio_size: 32 sq. m.
+  one_bedroom_size: 40 sq. m.
+  two_bedroom_size: 63 sq. m.
+  three_bedroom_size:
+  penthouse_size:
+  loft_size: 122 sq. m.
+  price_range:
+  studio_price: P2.2M
+  one_bedroom_price: P2.8M
+  two_bedroom_price: P4.7M
+  three_bedroom_price:
+  penthouse_price:
+  loft_price: P8.7M
+  amenities: <ul><li>Grand entrance gate and guardhouse</li><li>Clubhouse with functional rooms</li><li>Swimming pool with kid's wading pool</li><li>Fitness gym</li><li>Manicured gardens and strolling lane</li><li>Overhead water tank</li><li>Underground electrical and telephone system</li><li>Waste water treatment facility</li><li>Perimeter fence</li><li>Main lobby and Reception area</li><li>Two elevator units</li><li>Multi-level parking area</li><li>Mailbox for each unit located at the main lobby</li><li>Garbage chute</li><li>Fire alarm and sprinkler system with fire exits</li><li>Standby generator set for selected outlets</li><li>Telephone, cable and internet ready</li><li>Closed circuit television (CCTV)</li></ul>
+  features:
+  unit_specifications: <ul><li>Painted walls, partitions and ceiling</li><li>Tiled floors</li><li>Tiled toilet and bath with bathroom fixtures</li><li>Electrical provision for water heater for all showers</li><li>Bedroom closets</li><li>Kitchen sink, counter top and cabinets</li><li>Private balconies</li><li>Service area with washing machine and dryer</li><li>Provision for aircon openings and outlets</li><li>Individual porches for privacy and convenience</li></ul>
+  payment_terms: <ol><li>Spot cash (net of 12% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)"<li></ol>
+  as_low_as:
+  reservation_fee:
+  condotel: true
+  hidden: false
+
+cityscape1:
+  id: 6
+  developer_id: 3
+  name: Cityscape Tower 1
+  permalink: cityscape1
+  address: F. Cabahug Street, Mandaue City
+  location: Mandaue
+  completed: false
+  target_completion_date: June 2011
+  description: A new 16-storey Condo Residential Hotel will soon rise in F.Cabahug St., Mandaue City. This modern type Residential-Hotel Building is strategically located near Sykes Call Center. It is 5 to 10 minutes drive to SM City and Ayala Business Center and just minutes away from schools, medical centers, shopping malls, golf courses, hotels and much more. A major access road from Cebu to Mandaue and Vice Versa.
+  unit_types:
+  studio: true
+  one_bedroom: false
+  two_bedroom: false
+  three_bedroom: false
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size:
+  one_bedroom_size:
+  two_bedroom_size:
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Hotel Lobby Reception Area</li><li>Two (2) high-speed elevator units</li><li>Indoor Parking</li><li>Wide Roof Deck area with Swimming Pool, function rooms, viewing deck</li><li>Landscape / Zen Garden</li><li>Automatic Fire alarm and sprinkler system</li><li>CCTV Monitoring System</li><li>100% Standby Generator for the whole building</li><li>Prime Commercial Areas (for Lease)- open for Restaurant, Coffee House etc.</li></ul>
+  features:
+  unit_specifications: <ul><li>Studio Type</li><li>Completely Tiled Kitchen and Bathroom Floors</li><li>Granite Kitchen Countertop and Cabinets with sink & faucet</li><li>Balcony & windows</li><li>Water Closet & Lavatory</li><li>Provision for Telephone and CATV</li><li>Modular Type- can combine 2 or more adjacent units for 2 or more bedrooms</li></ul>
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+
+cityloft:
+  id: 7
+  developer_id: 4
+  name: City Loft
+  permalink: city_loft
+  address: General Maxilom Avenue
+  location:
+  completed: false
+  target_completion_date:
+  description: A 17-storey residential condominium that’s located in a prime area of the city. It’s in close proximity to schools, offices and shopping malls.This property offers an investment opportunity with its strong leasing potential brought about by its prime location in the city and a year-round tenant demand.
+  unit_types:
+  studio:
+  one_bedroom:
+  two_bedroom:
+  three_bedroom:
+  penthouse:
+  loft:
+  unit_sizes:
+  studio_size:
+  one_bedroom_size:
+  two_bedroom_size:
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Video Intercom from Unit to Lobby</li><li>24-hour Security System</li><li>Standby Generator Set</li><li>High-Speed Elevators</li><li>Broadband Ready</li><li>Studio-type Design</li></ul>
+  features:
+  unit_specifications:
+  payment_terms: <ul><li>4 years to pay at 0 interest</li></ul>
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+
+ramostower:
+  id: 8
+  developer_id: 4
+  name: Ramos Tower
+  permalink: ramos_tower
+  address: Ramos Avenue
+  location:
+  completed: false
+  target_completion_date:
+  description: Fuente Triangle Realty Development Corporation is introducing the second installment to luxurious city living to young urban professionals or single individuals located at Ramos Avenue. Ultima Residences Ramos Tower is a wise investment to embody one’s success story. It’s a lifestyle within the city central, within walking distance to all major commercial, business and entertainment district of Cebu. It’s a lifestyle so exciting, so complete you can’t ask for more.
+  unit_types:
+  studio: true
+  one_bedroom: false
+  two_bedroom: false
+  three_bedroom: false
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 28 - 66 sq. m.
+  one_bedroom_size:
+  two_bedroom_size:
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Close Circuit TV</li><li>Automatic Generator Set</li><li>Automatic Sprinkler System</li><li>Internet Connection</li><li>Video Intercom</li><li>High-Speed elevators</li><li>Multi-level basement parking </li></ul>
+  features: <ul><li>400 condominium units</li><li>28 - 66 sq. meter area</li><li>Units available w/ balcony</li><li>Priority buyers are Club Ultima member and future members</li></ul>
+  unit_specifications:
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+
+ultima_prime:
+  id: 9
+  developer_id: 4
+  name: Ultima Prime Residences (Fuente Tower 4)
+  permalink: ultima_prime
+  address: F. Ramos Street, Cebu City
+  location:
+  completed: false
+  target_completion_date:
+  description:
+  unit_types:
+  studio:
+  one_bedroom:
+  two_bedroom:
+  three_bedroom:
+  penthouse:
+  loft:
+  unit_sizes:
+  studio_size:
+  one_bedroom_size:
+  two_bedroom_size:
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities:
+  features:
+  unit_specifications:
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+  
+grand_cenia:
+  id: 10
+  developer_id: 5
+  name: Grand Cenia
+  permalink: grand_cenia
+  address:
+  location: Cebu Business Park
+  completed: false
+  target_completion_date:
+  description:
+  unit_types:
+  studio: true
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: true
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 24.54 sq. m.
+  one_bedroom_size: 50.52 sq. m.
+  two_bedroom_size: 76.14 sq. m.
+  three_bedroom_size: 107.37 sq. m.
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price: starts at P3.064M
+  one_bedroom_price: starts at P5.494M
+  two_bedroom_price: starts at P7.962M
+  three_bedroom_price: starts at P11.333M
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Adult and kiddie pools</li><li>Landscaped garden</li><li>Function rooms</li><li>Business center</li><li>Coffee shops/restaurant</li></ul>
+  features:
+  unit_specifications:
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: true
+  hidden: false
+  
+one_oasis:
+  id: 11
+  developer_id: 5
+  name: One Oasis
+  permalink: one_oasis
+  address: Brgy. Mabolo, Cebu City
+  location: Mabolo
+  completed: false
+  target_completion_date:
+  description:
+  unit_types:
+  studio: true
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: false
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 22 sq. m.
+  one_bedroom_size: 34.54 sq. m.
+  two_bedroom_size: 38.38 sq. m.
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range: 
+  studio_price: starts at P1.379M
+  one_bedroom_price: starts at P2.333M
+  two_bedroom_price: starts at P2.383M
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Multi-purpose clubhouse</li><li>Adult and kiddie pools</li><li>Basketball court</li></ul>
+  features: <ul><li>Resort-inspired landscaping</li><li>Exclusive entrance gate</li><li>24 hour security</li></ul>
+  unit_specifications:
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+  
+asia_premier:
+  id: 12
+  developer_id: 6
+  name: Asia Premier Residences
+  permalink: asia_premier_residences
+  address: Asiatown IT Park
+  location: Asiatown IT Park
+  completed: false
+  target_completion_date:
+  description: Located right in the heart of booming Asiatown IT Park, Asia Premier Residences offers easy access to a complete and convenient lifestyle.<br>Live in a vibrant, landscaped park brimming with a wide variety of dining and entertainment options. Whether for career or leisure, everything you need is here. Truly, it is the premier residence in the city.
+  unit_types:
+  studio: true
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: true
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 28.86 sq. m.
+  one_bedroom_size: 52.82 sq. m.
+  two_bedroom_size: 95.23 sq. m.
+  three_bedroom_size: 105.46 sq. m.
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Basement, 2, 3, 4th floor parking</li><li>Retail Area</li><li>Mail Room</li><li>Laundry Room</li><li>Driver's Lounge</li><li>Gym</li><li>Swimming Pool</li><li>Pool Deck</li><li>Function Room</li><li>Roof Deck/Open Deck</li><li>Drying Area</li></ul>
+  features:
+  unit_specifications:
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+
+padgett_place:
+  id: 13
+  developer_id: 7
+  name: The Padgett Place
+  permalink: the_padgett_place
+  address: Molave Street, Cebu City
+  location: Lahug
+  completed: false
+  target_completion_date: 2013
+  description:
+  unit_types:
+  studio: false
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: true
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size:
+  one_bedroom_size: 45 - 60.20 sq. m.
+  two_bedroom_size: 79.05 sq. m.
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>Sunbathing area</li><li>Kiddie pool</li><li>Poolside Lanai</li><li>Lap Pool</li><li>Garden Gazebo</li><li>Jogging Trail</li><li>Entrance Water Feature</li><li>Lobby and coffee shop</li><li>Garden deck</li><li>Fitness Facility</li><li>Clubhouse()</li><li>Skygardens</li></ul>
+  features:
+  unit_specifications:
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false
+
+lot_8:
+  id: 14
+  developer_id: 8
+  name: Lot 8
+  permalink: lot_8
+  address: Almendras Street, Mabolo
+  location: Mabolo
+  completed: false
+  target_completion_date:
+  description:
+  unit_types:
+  studio: true
+  one_bedroom: true
+  two_bedroom: true
+  three_bedroom: false
+  penthouse: false
+  loft: false
+  unit_sizes:
+  studio_size: 18.77 sq. m.
+  one_bedroom_size: 24.94 sq. m.
+  two_bedroom_size: 41.85 - 48.4 sq. m.
+  three_bedroom_size:
+  penthouse_size:
+  loft_size:
+  price_range:
+  studio_price:
+  one_bedroom_price:
+  two_bedroom_price:
+  three_bedroom_price:
+  penthouse_price:
+  loft_price:
+  amenities: <ul><li>An elegant infinity lap pool on the third level</li><li>Commercial spaces that will serve every necessity of the residents such as - mini marts, laundry shops and others</li><li>5 floors parking area</li><li>100% backup power (generator)</li><li>A spacious multi purpose hall on the rooftop</li><li>An expert team of property management will be at your service</li></ul>
+  features:
+  unit_specifications: <ul><li>All units are provided with balcony and windows</li><li>Sliding glass doors are provided for the balcony entrance and same with the glass windows</li><li>All are fitted with all water and electrical provisions</li><li>Floors are embedded with tiles</li><li>Kitchen sinks and cupboards are all in</li><li>All rooms are provided with wall-mounted shelves</li></ul>
+  payment_terms:
+  as_low_as:
+  reservation_fee:
+  condotel: false
+  hidden: false

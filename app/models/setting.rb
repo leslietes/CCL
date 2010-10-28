@@ -12,4 +12,8 @@ class Setting < ActiveRecord::Base
     [['Studio','studio'],['1 Bedroom','one_bedroom'],['2 Bedroom', 'two_bedroom'],['3 Bedroom','three_bedroom'],['Loft', 'loft'],['Penthouse','penthouse']]
   end
   
+  def self.types
+    [['Condominium'],['Condotel']]
+  end
+  
 end

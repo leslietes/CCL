@@ -2,12 +2,48 @@
 
 one:
   id: 1
-  developer: Ayala Land
-  permalink: ayala-land
-  description: Loren ipsum dolor
+  developer: Ayala Land, Inc.
+  permalink: ayala_land
+  description:
 
 two:
   id: 2
-  developer: Primary Homes
-  permalink: primary-homes
-  description: Loren ipsum dolor
+  developer: Primary Homes, Inc.
+  permalink: primary_homes
+  description:
+
+three:
+  id: 3
+  developer: Myvan Properties
+  permalink: myvan_properties
+  description:
+  
+four:
+  id: 4
+  developer: Fuente Triangle Dev't Corp.
+  permalink: fuente_triangle
+  description:
+  
+five:
+  id: 5
+  developer: Filinvest Land Inc.
+  permalink: filinvest_land
+  description:
+  
+six:
+  id: 6
+  developer: Cebu Landmasters Inc.
+  permalink: cebu_landmasters
+  description:
+  
+seven:
+  id: 7
+  developer: Cebu Green Peaks Development Inc.
+  permalink: cebu_green_peaks
+  description:
+  
+eight:
+  id: 8
+  developer: Majestic Legacy Development Corp.
+  permalink: majestic_legacy
+  description: 
