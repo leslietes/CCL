@@ -1,6 +1,7 @@
 <% if !@featured_articles.empty? %>
 <div class="featured_news boxes gray_border">
-	<h2>Upcoming Events</h2>
+	<h1>Upcoming Events</h1>
+	<div class="box_content">
 	<ul>
 		<li>
 			<% @featured_articles.each do |a| %>
@@ -10,5 +11,6 @@
 			<% end %>
 		</li>
 	</ul>	
+	</div>
 </div>
 <% end %>

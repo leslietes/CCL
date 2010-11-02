@@ -1,10 +1,13 @@
-<div class="article">
+<div class="gray_border">
 	
 	<h1>Edit Article</h1>
+	
+	<div class="article">
 	
 	<% form_for :article, :url => article_url(@article), :html => {:method => :put, :multipart => true} do |f| %>
 		<%= f.error_messages %>
 		<%= render :partial => 'form', :locals => {:f => f} %>
 	<% end %>
 
+	</div>
 </div>	

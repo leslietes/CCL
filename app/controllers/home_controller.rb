@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @properties = Property.show_all_visible
+    @properties = Property.show_all_featured
     @setting = Setting.first
   end
 

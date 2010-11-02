@@ -1,14 +1,34 @@
-<div class="content_title">
+<div class="gray_border developers">
+	
 	<h1>Developers</h1>
+	
+	<ul>
+		<% @developers.each do |d| %>
+		  	<li><%= link_to d.developer %></li>
+		<% end %>
+  	</ul>	
+	
+	<br><br>
+	
+	<% @developers.each do |d| %>
+		<div class="developer">
+			<h2><%= d.developer %></h2><hr>
+			<div class="logo"><%= image_tag 'logo.png' 	%></div>
+			<div class="details">
+				<h3>Details</h3>
+				<p>Loren ipsum dolor</p>
+				
+				<ul>
+					<% d.properties.each do |p| %>
+						<li><%= p.name %></li>
+					<% end %>	
+				</ul>
+				
+			</div>
+			<div class="clear"></div>
+		</div>	
+	<% end %>
 </div>
-
-<% @developers.each do |d| %>
-	<div class="developers">
-		<%= link_to (image_tag 'M9_montreal.jpg'), developer_url(d) %>
-		<h2><%= d.developer %></h2>
-		<p><%= d.description %>.. <%= link_to 'more', developer_url(d) %></p>
-	</div>	
-<% end %>
 
 <!--div>
 	<ul id="developers_accordion">
@@ -47,3 +67,5 @@
 		<%= link_to 'New', new_developer_url %>
 	</div>
 <% end %>
+
+<br>

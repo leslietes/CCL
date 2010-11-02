@@ -6,8 +6,15 @@
 		<% @properties.each do |p| %>
 		<li>
 			<h3><%= link_to p.name, property_url(p) %></h3>
-			<%= image_tag '68yorkville_regencyh.jpg' %>
-			<p><%= truncate(p.description, :length => 120, :omission => '...') %></p>
+			<div class="image"><%= image_tag p.photo.url(:thumb) %></div>
+			
+			<% if p.completed? %>
+			<div class="completed">completed</div>
+			<% else %>
+			<div class="turnover">est. delivery Jan 2011</div>
+			<% end %>
+			
+			<div class="price">As low as P10,000/month</div>
 		</li>
 		<% end %>
 		<div class="clear"></div>

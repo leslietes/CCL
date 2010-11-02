@@ -1,6 +1,6 @@
-<div class="contact_us">
-	<h1>Contact Us</h1>
-	
+<div class="gray_border contact_us">
+	<h2>Contact Us</h2>
+	<br>
 	<% form_for @contact do |f| %>
 		<%= f.error_messages %>
 		<p><label>Your Full Name</label><br><%= f.text_field :name%></p>
@@ -10,4 +10,7 @@
 		<%= recaptcha_tags %>
 		<p><%= f.submit 'Send' %></p>
 	<% end %>
+	
 </div>
+
+<br>

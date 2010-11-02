@@ -1,8 +1,10 @@
 <% content_for :property_listings do %>
 
-<div class="property">
+<div class="properties gray_border">
 
 <h1>Edit Property</h1>
+
+<div class="property_form">
 
 <% form_for :property, :url => property_url(@property), :html => {:method => :put, :multipart => true} do |f| %>
 	<%= f.error_messages %>
@@ -10,5 +12,8 @@
 <% end %>
 
 </div>
+</div>
+
+<br>
 
 <% end %>

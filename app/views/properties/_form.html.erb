@@ -83,7 +83,7 @@
 	
 	<p>
 		<%= label_tag :sizes %><br>
-		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:268px;">
+		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:280px;">
 		Studio: <%= f.text_field :studio_size %><br>
 		1 Bedroom: <%= f.text_field :one_bedroom_size %><br>
 		2 Bedroom: <%= f.text_field :two_bedroom_size %><br>
@@ -96,7 +96,7 @@
 	
 	<p>
 		<%= label_tag :prices %><br>
-		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:268px;">
+		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:280px;">
 		Studio: <%= f.text_field :studio_price %><br>
 		1 Bedroom: <%= f.text_field :one_bedroom_price %><br>
 		2 Bedroom: <%= f.text_field :two_bedroom_price %><br>
@@ -109,7 +109,7 @@
 	
 	<p>
 		<%= label_tag :floor_plans%><br>
-		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:268px;">
+		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:280px;">
 		Studio: <%= f.file_field :studio_layout %><br>
 		1 Bedroom: <%= f.file_field :one_bedroom_layout %><br>
 		2 Bedroom: <%= f.file_field :two_bedroom_layout %><br>
@@ -122,7 +122,7 @@
 	
 	<p>
 		<%= label_tag :captions %><br>
-		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:268px;">
+		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:280px;">
 			Studio: <%= f.text_field :studio_layout_caption %><br>
 			1 Bedroom: <%= f.text_field :one_bedroom_layout_caption %><br>
 			2 Bedroom: <%= f.text_field :two_bedroom_layout_caption %><br>
@@ -145,5 +145,7 @@
 		<%= f.label :reservation_fee %><%= f.text_field :reservation_fee %>
 	</p>	
 </div>
+
+<div class="clear"></div>
 
 <p><%= f.submit 'Save' %></p>

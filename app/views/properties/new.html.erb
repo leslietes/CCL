@@ -1,13 +1,18 @@
 <% content_for :property_listings do %>
 
-<div class="property">
+<div class="gray_border properties">
 
 <h1>New Property</h1>
+
+<div class="property_form">
 <% form_for @property, :html => {:multipart => true} do |f| %>
   <%= f.error_messages %>
   <%= render :partial => 'form', :locals => {:f => f} %>
 <% end %>
 
 </div>
+
+</div>
+<br>
 
 <% end %>

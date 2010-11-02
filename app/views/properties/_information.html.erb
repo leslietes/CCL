@@ -1,58 +1,79 @@
-		<%= image_tag @property.photo.url(:medium) %>
-		<%= image_tag @property.logo.url(:medium) %>
-		<%= image_tag @property.location_map.url(:medium) %>
-		<%= image_tag @property.studio_layout.url(:medium) %>
-		<%= image_tag @property.one_bedroom_layout.url(:medium) %>
-		<%= image_tag @property.two_bedroom_layout.url(:medium) %>
-		<%= image_tag @property.three_bedroom_layout.url(:medium) %>
-		<%= image_tag @property.penthouse_layout.url(:medium) %>
+		<%#= image_tag @property.photo.url(:medium) %>
+		<%#= image_tag @property.logo.url(:medium) %>
+		<%#= image_tag @property.location_map.url(:medium) %>
+		<%#= image_tag @property.studio_layout.url(:medium) %>
+		<%#= image_tag @property.one_bedroom_layout.url(:medium) %>
+		<%#= image_tag @property.two_bedroom_layout.url(:medium) %>
+		<%#= image_tag @property.three_bedroom_layout.url(:medium) %>
+		<%#= image_tag @property.penthouse_layout.url(:medium) %>
 		
-		<p>
-		  <%= label_tag :developer %><%= @property.developer_name %>
-		</p>	
+		<div>
+			<%= label_tag :description %><br>
+			<div class="logo"><%= image_tag @property.logo.url %></div>
+			<p><%= @property.description%></p>
+			
+		</div>
 		
-		<p>  
-		  <%= label_tag :location %><%= @property.location %>
-		</p>  
+		<div>
+		  <%= label_tag :developer %>
+		  <p class="indented"><%= @property.developer_name %></p>
+		</div>	
 		
-		<p>  
-		  <%= label_tag :address %><div class="indented_text"><%= @property.address %></div>
-		</p>
+		<div>  
+		  <%= label_tag :location %>
+		  <p  class="indented"><%= @property.location %></p>
+		</div>  
 		
-		<p><%= label_tag :target_completion_date %><%= @property.target_completion_date %>
+		<div>  
+		  <%= label_tag :address %>
+		  <p class="indented"><%= @property.address %></p>
+		</div>
 		
-		<p>
-		  <%= label_tag :description %><%= @property.description %>
-		</p> 
+		<div>
+			<%= label_tag :target_completion_date %>
+			<p  class="indented"><%= @property.target_completion_date %></p>
+		</div>
 		
-		<p>
+		<div>
 			<%= label_tag :unit_types %><br>
-			<div class="indented_text"><%= display_all_unit_types(@property.all_unit_types) %></div>
-		</p>
+			<%= display_unit_info(@property.all_unit_info) %>
+		</div>	
 		
-		<p>
-			<%= label_tag :unit_sizes %><br><%= @property.unit_sizes %>
-		</p>
+		<%#= label_tag :unit_types %>
+		<%#= display_all_unit_types(@property.all_unit_types) %>
 		
-		<p>
-			<%= label_tag :price_range %><%= @property.price_range %>
-		</p>	
+		<%#= label_tag :unit_sizes %>
+		<%#= display_all_unit_prices(@property.all_unit_prices) %>
 		
-		<p>
-			<%= label_tag :amenities %><br><div class="indented_text"><%= @property.amenities%></div>
-		</p>
+		<div>
+			<%= label_tag :price_range %>
+			<p class="indented"><%= @property.price_range %></p>
+		</div>	
 		
-		<p>
-			<%= label_tag :unit_specifications %><br><div class="indented_text"><%= @property.unit_specifications %></div>
-		</p>
+		<div>
+			<%= label_tag :amenities %><br>
+			<%= @property.amenities%>
+		</div>
 		
-		<p><%= label_tag :payment_terms %><%= @property.payment_terms %></p>
+		<div>
+			<%= label_tag :unit_specifications %><br>
+			<%= @property.unit_specifications %>
+		</div>
 		
-		<p>
-			<%= label_tag :as_low_as %><%= @property.as_low_as %>
-		</p>	
+		<div>
+			<%= label_tag :payment_terms %>
+			<%= @property.payment_terms %>
+		</div>
 		
-		<p><%= label_tag :reservation_fee %><%= @property.reservation_fee %></p>
+		<div>
+			<%= label_tag :as_low_as %>
+			<p><%= @property.as_low_as %></p>
+		</div>	
+		
+		<div>
+			<%= label_tag :reservation_fee %>
+			<p><%= @property.reservation_fee %></p>
+		</div>
 		
 		<% if logged_in? %>
 			<p><%= label_tag :hidden %><%= @property.hidden %></p>

@@ -12,6 +12,7 @@ module ApplicationHelper
   
   def has_featured?
     setting = Setting.first
-    !setting.featured1.blank? && !setting.featured2.blank? && !setting.featured3.blank? && !setting.featured4.blank? && !setting.featured5.blank?
+    !setting.featured1_file_name.nil? || !setting.featured2_file_name.nil? || !setting.featured3_file_name.nil? || !setting.featured4_file_name.nil? || !setting.featured5_file_name.nil?
+    
   end
 end

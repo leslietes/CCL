@@ -1,9 +1,10 @@
 <% content_for :property_listings do %>
-<h1>Properties</h1>
+<div class="gray_border properties">
+<h1>Properties</h1><br>
 
 <table id="properties">
 	<thead>
-		<tr>
+		<tr style="height:20px;">
 			<th>Name</th>
 			<th>Developer</th>
 			<th>Location</th>
@@ -18,9 +19,9 @@
 	</thead>
 	<% @properties.each do |property| %>
 	<tr>
-		<td class="center"><%= link_to property.name, property_url(property) %></td>
-		<td class="center" width="120px"><%= property.developer_name %></td>
-		<td class="center" width="120px"><%= property.location %></td>
+		<td class="left" style="padding-left:5px"><%= link_to property.name, property_url(property) %></td>
+		<td class="center" width="150px"><%= property.developer_name %></td>
+		<td class="center" width="150px"><%= property.location %></td>
 		<td class="center" width="100px"><%= show_all_unit_types(property.all_unit_types) %></td>
 		<td class="center" width="90px"><%= property.unit_sizes %></td>
 		<td class="center" width="110px"><%= property.price_range %></td>
@@ -35,11 +36,12 @@
 	</tr>
 	<% end %>
 </table>
-
-
-<% if logged_in? %>
-<div class="links">
-	<%= link_to 'New', new_property_url %>
 </div>
-<% end %>
+
+	<% if logged_in? %>
+	<div class="links">
+		<%= link_to 'New', new_property_url %>
+	</div>
+	<% end %>
+
 <% end %>

@@ -1,8 +1,9 @@
+<div class="gray_border">
 <h1>Upcoming Events</h1>
 
 <% @articles.each do |article |%>
-	<div class="articles">
-		<p class="title"><%= link_to article.title, article_url(article) %></p>
+	<div class="article">
+		<h2><%= link_to article.title, article_url(article) %></h2>
 		<p class="published_on"><span>On <%= article.published_date %> in <%= article.published_at %></span></p>
 		<p class="teaser"><%= article.teaser %> <%= link_to '...', article_url(article) %></p>
 		
@@ -15,23 +16,11 @@
 	</div>	
 <% end %>
 
-<% 3.times do %>
-  <div class="articles">
-		<p class="title"><%= link_to 'Title' %></p>
-		<p class="published_on"><span>On January 1, 2010 in PDI</span></p>
-		<p class="teaser">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit <%= link_to '...' %></p>
-		
-		<% if logged_in? %>
-		<div class="links">
-			<%= link_to 'Edit' %>
-			<%= link_to 'Delete' %>
-		</div>
-		<% end %>
-	</div>	
-<% end %>
+</div>
 
 <% if logged_in? %>
 <div class="links">
 	<%= link_to 'New', new_article_url %>
 </div>	
 <% end %>
+

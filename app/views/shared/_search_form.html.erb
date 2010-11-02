@@ -1,5 +1,6 @@
 <div class="search boxes gray_border">
-	<h2>Search</h2>
+	<h1>Search</h1>
+	<div class="box_content">
 	<% form_tag :controller => 'properties', :action => 'search' do %>
 		<p>
 			<%= label_tag :location %><%= select_tag "location", options_for_select(@search_location), :multiple => false %>
@@ -17,4 +18,5 @@
 		
 	<% end %>
 	<p>For a list of all properties, click <%= link_to 'here', properties_url %></p>
+	</div>
 </div>	

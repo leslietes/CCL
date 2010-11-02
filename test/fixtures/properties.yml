@@ -38,6 +38,7 @@ avida:
   as_low_as:
   reservation_fee:
   condotel: false
+  featured: true
   hidden: false
 
 avalon:
@@ -78,6 +79,7 @@ avalon:
   as_low_as:
   reservation_fee:
   condotel:
+  featured: true
   hidden: false
   
 lgf1:

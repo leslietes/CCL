@@ -1,17 +1,26 @@
 <% content_for :property_listings do %>
-
-	<div class="property">
+<div class="gray_border properties">
+	<h1><%= "Property Details" %></h1>
 	
-		<h1><%= @property.name %></h1>
+	<br>
+	
+	<div class="property">
+		
+		<h2><%= @property.name %></h2><hr>
 		
 		<ul class="submenu">
-			<li><%= link_to 'Information', property_url(@property) %></li>
-			<li><%= link_to 'Gallery', property_gallery_url(@property) %></li>
+			<li><%= link_to_unless_current 'Information', property_url(@property) %></li> |
+			<li><%= link_to_unless_current 'Gallery', property_gallery_url(@property) %></li>
 		</ul>
 
 		<%= render :partial => "#{@partial}" %>
+		
+		<div class="clear"></div>
+		
+		<hr>
 
-		<div class="inquiry gray_border clear">
+		<div class="inquiry clear">
+			<h2>Inquire About This Property</h2>
 			<% form_for @contact do |f| %>
 				<%= f.error_messages %>
 				<%= f.hidden_field :subject, :value => @property.name %>
@@ -25,4 +34,8 @@
 		</div>	
 	
 	</div>
+</div>
+	
+<br>
+
 <% end %>

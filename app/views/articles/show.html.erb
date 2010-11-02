@@ -1,13 +1,13 @@
-<div class="articles gray_border">
+<div class="gray_border article">
 	
-	<p class="title"><%= @article.title %></p>
+	<h2><%= @article.title %></h2>
 	
 	<p class="published_on"><span>On <%= @article.published_date %> in <%= @article.published_at %></span></p>
 	
 	<p class="teaser"><%= @article.teaser %></p>
 	
 	<p class="image">
-		<%= image_tag '21scollard550_2-2.jpg' %>
+		<%= image_tag '21scollard550_2-2.jpg' %><br>
 		<span>caption caption caption</span>	
 	</p>
 	
@@ -21,3 +21,5 @@
 	</div>
 	<% end %>	
 </div>
+
+<br>

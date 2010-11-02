@@ -1,5 +1,5 @@
 #s3slider {
-   width: 610px; /* important to be same as image width */
+   /*width: 610px; important to be same as image width */
    height: 300px; /* important to be same as image height */
    position: relative; /* important */
    overflow: hidden; /* important */
@@ -21,7 +21,8 @@
 .s3sliderImage span {
    position: absolute; /* important */
    left: 0;
-   font: 10px/15px Arial, Helvetica, sans-serif;
+   font: 15px Arial, Helvetica, sans-serif;
+   font-weight:normal;
    padding: 10px 13px;
    width: 610px;
    background-color: #000;
