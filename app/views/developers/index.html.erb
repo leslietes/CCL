@@ -1,19 +1,20 @@
-<div class="gray_border developers">
+<div class="gray_box">
+	<div class="header">
+		<h1>Developers</h1>	
+	</div>
+	<div class="content">
+		<ul>
+			<% @developers.each do |d| %>
+			  	<li><%= link_to d.developer %></li>
+			<% end %>
+	  	</ul>	
 	
-	<h1>Developers</h1>
-	
-	<ul>
+		<br><br>
+		
 		<% @developers.each do |d| %>
-		  	<li><%= link_to d.developer %></li>
-		<% end %>
-  	</ul>	
-	
-	<br><br>
-	
-	<% @developers.each do |d| %>
 		<div class="developer">
 			<h2><%= d.developer %></h2><hr>
-			<div class="logo"><%= image_tag 'logo.png' 	%></div>
+			<div class="logo"><%= image_tag d.image.url	%></div>
 			<div class="details">
 				<h3>Details</h3>
 				<p>Loren ipsum dolor</p>
@@ -27,45 +28,15 @@
 			</div>
 			<div class="clear"></div>
 		</div>	
-	<% end %>
-</div>
-
-<!--div>
-	<ul id="developers_accordion">
-		<% @developers.each do |d| %>
-			<h3><%= d.developer %></h3>
-		
-			<% d.properties.each do |p |%>
-				<li><a href="#"><%= p.name %></a>
-					<ul>
-						<li><%= link_to (image_tag 'laman_met3.gif'), property_url(p) %>	<%#= link_to (image_tag p.photo.url(:medium)), property_url(p) %></li>						
-					</ul>
-				</li>
-			<% end %>
 		<% end %>
-	</ul>
-</div-->	
-
-
-<!--ul id="accordion">
-	<li><a href="#">Item 1</a>
-		<ul>
-			<li>Subitem 1</li>
-			<li>Subitem 2</li>
-			<li>Subitem 3</li>
-		</ul>
-	</li>
-	<li><a href="#">Item 2</a>
-		<ul>
-			<li>Subitem 4</li>
-		</ul>
-	</li>
-</ul-->
-
-<% if logged_in? %>
-	<div class="links">
-		<%= link_to 'New', new_developer_url %>
+	
+		<% if logged_in? %>
+			<div class="links">
+				<%= link_to 'New', new_developer_url %>
+			</div>
+		<% end %>
 	</div>
-<% end %>
+	<div class="footer"></div>
+</div>
 
 <br>

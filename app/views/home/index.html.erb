@@ -1,22 +1,31 @@
 <%= render :partial => 'slider' %>
 
-<div id="featured"  class="gray_border">
-	<h1>Featured Properties</h1>
-	<ul>
-		<% @properties.each do |p| %>
-		<li>
-			<h3><%= link_to p.name, property_url(p) %></h3>
-			<div class="image"><%= image_tag p.photo.url(:thumb) %></div>
-			
-			<% if p.completed? %>
-			<div class="completed">completed</div>
-			<% else %>
-			<div class="turnover">est. delivery Jan 2011</div>
+<div class="gray_box boxes">
+	<div class="header">
+		<h1>Featured Properties</h1>	
+	</div>
+	<div class="content">
+		<div id="featured">
+		<ul>
+			<% @properties.each do |p| %>
+			<li>
+				<h3><%= link_to p.name, property_url(p) %></h3>
+				<div class="image"><%= image_tag p.photo.url(:thumb) %></div>
+				
+				<div class="info">
+					<div class="left">
+						<p>Estimated delivery on: July 2012</p>
+					</div>
+					<div class="right">
+						<p>P12,000/mo*</p>
+					</div>		
+				</div>	
+				
+			</li>
 			<% end %>
-			
-			<div class="price">As low as P10,000/month</div>
-		</li>
-		<% end %>
-		<div class="clear"></div>
-	</ul>
+			<div class="clear"></div>
+		</ul>
+		</div>
+	</div>
+	<div class="footer"></div>
 </div>

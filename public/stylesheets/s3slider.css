@@ -1,12 +1,12 @@
 #s3slider {
-   /*width: 610px; important to be same as image width */
-   height: 300px; /* important to be same as image height */
+   width: 612px; /*important to be same as image width */
+   height: 275px; /* important to be same as image height */
    position: relative; /* important */
    overflow: hidden; /* important */
 }
 
 #s3sliderContent {
-   width: 610px; /* important to be same as image width or wider */
+   width: 612px; /* important to be same as image width or wider */
    position: absolute; /* important */
    top: 0; /* important */
    margin-left: 0; /* important */
