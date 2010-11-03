@@ -2,26 +2,31 @@
 	<div class="header">
 		<h1>Developers</h1>	
 	</div>
-	<div class="content">
-		<ul>
+	<div class="content developers">
+		<ul class="styled">
 			<% @developers.each do |d| %>
-			  	<li><%= link_to d.developer %></li>
+			  	<li><%= link_to d.developer, {:anchor => d.permalink } %></li>
 			<% end %>
 	  	</ul>	
 	
 		<br><br>
 		
 		<% @developers.each do |d| %>
-		<div class="developer">
+		<div class="developer" id="<%= d.permalink %>">
 			<h2><%= d.developer %></h2><hr>
 			<div class="logo"><%= image_tag d.image.url	%></div>
 			<div class="details">
 				<h3>Details</h3>
 				<p>Loren ipsum dolor</p>
 				
-				<ul>
+				
+				<ul class="styled">
+					<h3>Projects</h3>
 					<% d.properties.each do |p| %>
-						<li><%= p.name %></li>
+						<li>
+							<%= link_to p.name, property_url(p) %>
+							<div class="image"><%= link_to (image_tag p.photo.url(:thumb)), property_url(p) %></div>
+						</li>
 					<% end %>	
 				</ul>
 				

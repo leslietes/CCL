@@ -16,7 +16,6 @@ body {
 /*.content { min-height:250px; }*/
 .main { position:relative;width:618px;float:left;margin-left:15px;margin-right:15px;margin-top:15px; }
 .right_column { position:relative;width:295px;float:left;min-height:500px;clear:right;margin-right:15px;margin-left:0;margin-top:15px; }
-.gray_border { border:1px solid;border-color:#ccc #aaa #aaa #ccc;border-right:none; }
 .flash { margin-bottom:20px; }
 
 h1, h2, h3, h4, h5, h6 { color:#000;font-weight:normal;line-height:1.4em;margin:0;padding:0;}
@@ -29,6 +28,7 @@ h4 { margin:1.12em 0; }
 h5 { font-size:.83em;margin:1.5em 0; }
 h6 { font-size:.75em;margin:1.67em 0; }
 a { text-decoration:none;font-weight:normal;color:#003366; }
+hr { color:#fff;background-color:#fff;height:1px;margin-bottom:10px; }
 
 label { float:left;width:70px;font-weight:bold;clear:left; }
 input { width:200px;border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%; }
@@ -36,6 +36,7 @@ input[type='submit'] { width:100px;margin-left:70px; }
 input[type='file'] { width:200px; }
 textarea { vertical-align:top;border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%;height:150px; }
 form p { padding:.5em 0; }
+ul.styled { list-style:square inside; }
 
 .indented_text { margin-left:70px; }
 
@@ -74,8 +75,9 @@ ul#nav li a { font-weight:bold;color:#fff; }
 
 .gray_box { width:100%;	 }
 .gray_box .header { background:url(/images/drop_shadow_top.jpg) no-repeat scroll bottom right; }
-.gray_box .header h1 { width:96%;color:#fff;border:none;border-top:1px solid #ccc;border-left:1px solid #ccc;background-color:#3366ff; }
+.gray_box .header h1 { width:96%;color:#fff;border:none;border-top:1px solid #ccc;border-left:1px solid #ccc;background:url(/images/nav_bg.jpg) repeat-x; }
 .gray_box .header#third_column h1 { width:269px; }
+.gray_box .header#full_page h1 { width:904px; }
 .gray_box .content { padding:10px;background:url(/images/drop_shadow_middle.jpg) repeat-y scroll top right;border-left:1px solid #ccc; }
 .gray_box .footer { background:url(/images/box_bottom.jpg) no-repeat;height:10px; }
 
@@ -95,14 +97,16 @@ ul#nav li a { font-weight:bold;color:#fff; }
 
 .links { position:relative;clear:both;padding-top:10px; }
 
-/* index page 
+/* index page */
+
 .developers .logo { float:right: }
 .developers .logo img { height:120px;width:145px;float:left;border:1px solid #dedede; }
 .developers .details { float:left;margin:0 10px; }
-.developers ul { padding:10px; }
-.developers ul li { list-style:square inside; }
 
-.developer { line-height:2em;padding:0 10px 20px; }*/
+.developer { line-height:2em;padding:0 10px 20px 0; }
+.developer h2, .developer h3 { color:#3366ff; }
+.developer .details ul li { clear:right; }
+.developer .details ul li div.image { border:1px solid #ccc;width:100px;height:100px;float:right;margin:0 0 10px 10px; }
 
 .properties, .inquiries { position:relative;margin-left:15px;margin-right:15px;margin-top:15px; } /*same as .main except for width */
 /* dataTables */
@@ -118,13 +122,13 @@ table#properties tr { height:100px; }
 .property div.logo { border:1px solid #dedede;float:right;width:145px;height:120px;margin-left:10px; }
 .property div.logo img { min-height:120px;min-width:145px; }
 .property div label { width:150px;}
-.property div ul li { padding-left:150px; }
+.property div ul li, .property div ol li { padding-left:150px; }
 .property div table { width:40%;margin-left:150px; }
 .property div th, .property div td { height:25px;text-align:center; }
 .property div p.indented { padding-left:150px; }
 .property ul li { list-style:square inside;}
 .property ol li { list-style:decimal inside;}
-.property ul.submenu { float:right;position:relative;top:-35px; }
+.property ul.submenu { float:left;position:relative; }
 .property ul.submenu li { display:inline;list-style:none;padding:0px 5px;color:#003366; }
 .property ul.submenu li a { font-weight:normal;color:#b6b6b6;text-decoration:underline; }
 
@@ -162,7 +166,7 @@ table#properties tr { height:100px; }
 
 .follow_us label { width:85px; }
 .follow_us input { width:180px; }
-.follow_us input[type='submit'] { width:90px;margin:10px 0 10px 85px; }
+.follow_us input[type='submit'] { width:90px;margin:10px 0 10px 0px; }
 
 .follow_us ul { margin:0 auto;height:45px;width:90px;}
 .follow_us ul li { display:inline;float:left;width:45px;height:45px; }
