@@ -27,6 +27,7 @@ ActionController::Routing::Routes.draw do |map|
   #map.contact_us_list '/admin/contact_us', :controller => 'admin', :action => 'contact_us_list'
   map.news '/events', :controller => 'articles', :action => 'index'
   map.read_news '/news/:id', :controller => 'articles', :action => 'show'
+  map.subscribe '/subscribe', :controller => 'users', :action => 'subscribe'
   
   map.settings '/admin/settings', :controller => 'admin', :action => 'settings'
   map.edit_settings '/admin/settings/edit', :controller => 'admin', :action => 'edit_settings' # not used

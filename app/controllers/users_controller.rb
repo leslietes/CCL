@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   
-  before_filter :login_required, :except => [:new, :create]
+  before_filter :login_required, :except => [:new, :create, :subscribe]
 
   # render new.rhtml
   def new
@@ -57,5 +57,18 @@ class UsersController < ApplicationController
       flash[:error] = "Error in deleting user"
     end
     redirect_to users_url
+  end
+  
+  def subscribe
+    return unless request.post?
+    
+    @subscriber = Subscription.new(:full_name => params[:full_name],
+                                   :email     => params[:email])
+    if @subscriber.save
+      flash[:notice] = "Thank you for signing up!"
+    else
+      flash[:error] = "Error"
+    end
+    redirect_to root_url
   end
 end

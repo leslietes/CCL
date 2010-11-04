@@ -5,9 +5,9 @@
 	<div class="content follow_us">
 		<p>Fill in the form to be updated of the latest news, events and promotions</p>
 	
-		<% form_tag '' do %>
+		<% form_tag subscribe_url, :method => :post do |f| %>
 			<p><%= label_tag :full_name %><%= text_field_tag :full_name %></p>
-			<p><%= label_tag :email_address %><%= text_field_tag :email_address %></p>
+			<p><%= label_tag :email %><%= text_field_tag :email %></p>
 			<p><%= submit_tag 'Subscribe' %></p>
 		<% end %>
 		
