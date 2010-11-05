@@ -6,12 +6,12 @@
 		<%#= image_tag @property.two_bedroom_layout.url(:medium) %>
 		<%#= image_tag @property.three_bedroom_layout.url(:medium) %>
 		<%#= image_tag @property.penthouse_layout.url(:medium) %>
+
 		
 		<div>
 			<%= label_tag :description %><br>
 			<div class="logo"><%= image_tag @property.logo.url %></div>
 			<p><%= @property.description%></p>
-			
 		</div>
 		
 		<div>
@@ -21,7 +21,7 @@
 		
 		<div>  
 		  <%= label_tag :location %>
-		  <p  class="indented"><%= @property.location %></p>
+		  <p  class="indented"><%= @property.location %> <%= link_to '>>' %></p>
 		</div>  
 		
 		<div>  
@@ -37,6 +37,7 @@
 		<div>
 			<%= label_tag :unit_types %><br>
 			<%= display_unit_info(@property.all_unit_info) %>
+			<p class="indented"><%= link_to '>> View floor plans' %></p>
 		</div>	
 		
 		<%#= label_tag :unit_types %>

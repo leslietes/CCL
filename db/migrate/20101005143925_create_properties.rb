@@ -34,6 +34,13 @@ class CreateProperties < ActiveRecord::Migration
       t.string :three_bedroom_price
       t.string :penthouse_price
       t.string :loft_price
+      
+      t.string :studio_monthly
+      t.string :one_bedroom_monthly
+      t.string :two_bedroom_monthly
+      t.string :three_bedroom_monthly
+      t.string :penthouse_monthly
+      t.string :loft_monthly
 
       t.text :amenities
       t.text :features

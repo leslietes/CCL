@@ -8,7 +8,7 @@ avida:
   address: Asiatown IT Park<br>Apas, Lahug<br>Cebu City
   location: Asiatown IT Park
   completed: false
-  target_completion_date: <ul><li>Tower 1 - 3rd Quarter 2013</li><li>Tower 2 - 4th Quarter 2013</li></ul>
+  target_completion_date: 3rd Quarter 2013
   description: The project is located within Asiatown IT Park, an integrated special economic zone and modern trading center in Cebu City. This connects to major thoroughfares that lead to the Mactan International Airport and Cebu International Port. It has easy access to shopping areas, restaurants, schools, hotels, hospitals, churches, and golf courses.
   unit_types:
   studio: true

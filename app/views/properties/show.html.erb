@@ -3,19 +3,24 @@
 <div class="properties">
 
 <div class="gray_box">
-	<div class="header" id="full_page">
-		<h1><%= "Property Details" %></h1>	
+	<div class="header property_tab" id="full_page">
+		<h1>
+			<%= "Property Details" %>
+			<ul class="submenu">
+				<li><%= link_to_unless_current 'Information', property_url(@property) %></li>
+				<li><%= link_to_unless_current 'Gallery', property_gallery_url(@property) %></li>
+			</ul>
+		</h1>	
 	</div>
 
 	<div class="content property">
 		<h2><%= @property.name %></h2>
 		
-		<ul class="submenu">
-			<li><%= link_to_unless_current 'Information', property_url(@property) %></li> |
-			<li><%= link_to_unless_current 'Gallery', property_gallery_url(@property) %></li>
-		</ul>
+		<hr>
 		
-		<%= render :partial => "#{@partial}" %>
+		<div class="details">
+			<%= render :partial => "#{@partial}" %>
+		</div>
 		
 		<div class="clear"></div>
 		

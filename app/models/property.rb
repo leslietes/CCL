@@ -79,12 +79,12 @@ class Property < ActiveRecord::Base
   
   def all_unit_info
     types = []
-    types << ['Studio',   "#{self.studio_price}",       "#{self.studio_size}"]      if self.studio?
-    types << ['1 Bedroom',"#{self.one_bedroom_price}",  "#{self.one_bedroom_size}"] if self.one_bedroom?
-    types << ['2 Bedroom',"#{self.two_bedroom_price}",  "#{self.two_bedroom_size}"] if self.two_bedroom?
-    types << ['3 Bedroom',"#{self.three_bedroom_price}","#{self.three_bedroom_size}"] if self.three_bedroom?
-    types << ['Penthouse',"#{self.penthouse_price}",    "#{self.penthouse_size}"] if self.penthouse?
-    types << ['Loft',     "#{self.loft_price}",         "#{self.loft_size}"]      if self.loft?
+    types << ['Studio',   "#{self.studio_price}",       "#{self.studio_size}", "#{self.studio_monthly}"]      if self.studio?
+    types << ['1 Bedroom',"#{self.one_bedroom_price}",  "#{self.one_bedroom_size}", "#{self.one_bedroom_monthly}"] if self.one_bedroom?
+    types << ['2 Bedroom',"#{self.two_bedroom_price}",  "#{self.two_bedroom_size}", "#{self.two_bedroom_monthly}"] if self.two_bedroom?
+    types << ['3 Bedroom',"#{self.three_bedroom_price}","#{self.three_bedroom_size}","#{self.three_bedroom_monthly}"] if self.three_bedroom?
+    types << ['Penthouse',"#{self.penthouse_price}",    "#{self.penthouse_size}", "#{self.penthouse_monthly}"] if self.penthouse?
+    types << ['Loft',     "#{self.loft_price}",         "#{self.loft_size}", "#{self.loft_monthly}"]      if self.loft?
     types
   end
 end

@@ -24,7 +24,7 @@
    font: 15px Arial, Helvetica, sans-serif;
    font-weight:normal;
    padding: 10px 13px;
-   width: 610px;
+   width: 612px;
    background-color: #000;
    filter: alpha(opacity=70); /* here you can set the opacity of box with text */
    -moz-opacity: 0.7; /* here you can set the opacity of box with text */

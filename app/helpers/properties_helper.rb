@@ -26,7 +26,7 @@ module PropertiesHelper
     html = "<table><thead><tr><th>Unit Type</th><th>Unit Size</th><th>Unit Price</th><th>Monthly</th></tr></thead><tbody>"
     units.each do |u|
       html += "<tr>"
-      html += "<td>#{u[0]}</td><td>#{u[1]}</td><td>#{u[2]}</td>"
+      html += "<td>#{u[0]}</td><td>#{u[2]}</td><td>#{u[1]}</td><td></td>"
       html += "</tr>"
     end
     html += "</tbody></table>"
