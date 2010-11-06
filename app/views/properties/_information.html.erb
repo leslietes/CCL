@@ -39,12 +39,10 @@
 		<div>
 			<%= label_tag :unit_types %><br>
 			<%= display_unit_info(@property.all_unit_info) %>
-			<% if @property.has_floor_plans? %>
-				<p class="indented">
-					<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin"></a>
-					<a href="#" id="floor_plans" class="small">View layouts</a>
-				</p>
-			<% end %>
+			<p class="indented">
+				<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin"></a>
+				<a href="#" id="floor_plans" class="small">View layouts</a>
+			</p>
 		</div>	
 		
 		<%#= label_tag :unit_types %>
