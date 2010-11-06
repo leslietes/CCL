@@ -1,13 +1,16 @@
 class ArticlesController < ApplicationController
   
   before_filter :login_required, :except => [:index, :show]
+  layout "properties", :except => [:index, :show]
   
   def index
     @articles = Article.all
+    render :layout => "application"
   end
   
   def show
     @article = Article.find_by_permalink(params[:id])
+    render :layout => "application"
   end
   
   def new

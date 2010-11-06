@@ -1,8 +1,14 @@
-<div class="gray_border">
+<% content_for :admin_pages do %>
+
+<div class="article_full">
+<div class="gray_box">
 	
-	<h1>Edit Article</h1>
+	<div class="header" id="full_page">
+		<h1>Edit Article</h1>	
+	</div>
+
 	
-	<div class="article">
+	<div class="content">
 	
 	<% form_for :article, :url => article_url(@article), :html => {:method => :put, :multipart => true} do |f| %>
 		<%= f.error_messages %>
@@ -10,4 +16,7 @@
 	<% end %>
 
 	</div>
+	<div class="footer" id="full"></div>
 </div>	
+</div>
+<% end %>

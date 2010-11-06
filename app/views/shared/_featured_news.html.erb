@@ -1,16 +1,25 @@
 <% if !@featured_articles.empty? %>
-<div class="featured_news boxes gray_border">
-	<h1>Upcoming Events</h1>
-	<div class="box_content">
+<div class="featured_news boxes gray_box">
+	<div class="header" id="third_column">
+		<h1>Upcoming Events</h1>	
+	</div>
+	
+	<div class="content">
 	<ul>
 		<li>
 			<% @featured_articles.each do |a| %>
 				<p class="title"><%= link_to a.title, article_url(a) %></p>
-				<p class="published_on"><span>On <%= a.published_date %> in <%= a.published_at %></span></p>
-				<!--p class="teaser"><%= a.teaser %> <%= link_to '...', article_url(a) %></p-->
+				<p class="published_on">
+					<% if a.teaser? %>
+						<span class="teaser"><%= a.teaser %></span><br>
+					<% end %>
+					<span>On <%= a.published_date %> in <%= a.published_at %></span>
+				</p>
+				<p class="teaser"></p>
 			<% end %>
 		</li>
 	</ul>	
 	</div>
+	<div class="footer" id="boxes"></div>
 </div>
 <% end %>

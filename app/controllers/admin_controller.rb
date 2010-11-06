@@ -1,6 +1,7 @@
 class AdminController < ApplicationController
   
   before_filter :login_required
+  layout "properties"
   
   def settings
     @setting = Setting.first
@@ -72,5 +73,9 @@ class AdminController < ApplicationController
       end
     end
     redirect_to settings_url
+  end
+  
+  def view_subscriptions
+    @subscriptions = Subscription.all
   end
 end

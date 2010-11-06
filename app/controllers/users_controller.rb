@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   include AuthenticatedSystem
   
   before_filter :login_required, :except => [:new, :create, :subscribe]
+  layout "properties"
 
   # render new.rhtml
   def new
