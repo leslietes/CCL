@@ -3,6 +3,7 @@
    height: 275px; /* important to be same as image height */
    position: relative; /* important */
    overflow: hidden; /* important */
+  margin-bottom:20px;
 }
 
 #s3sliderContent {
