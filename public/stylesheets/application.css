@@ -63,6 +63,8 @@ ul.bullets { list-style:square inside;padding-left:20px; }
 .right { text-align:right; }
 .center { text-align:center; }
 
+.small { font-size:smaller; }
+
 #logo { border:1px solid #fff;height:106px; }
 #logo #links { float:right;position:relative;z-index:999; }
 #logo #links ul li { display:inline; }
@@ -129,12 +131,15 @@ table#properties tr { height:100px; }
 .property h2 { color:#3366ff; }
 .property div { clear:left;padding-bottom:10px; }
 .property div.logo { border:1px solid #dedede;float:right;width:145px;height:120px;margin-left:10px;margin-right:10px; }
-.property div.logo img { min-height:120px;min-width:145px; }
+.property div.logo img { height:120px;width:145px; }
 .property div label { width:150px;color:#3366ff;font-weight:normal; }
 .property div ul li, .property div ol li { padding-left:150px; }
+.property table, .property th, .property td { border:1px solid #cecece; }
 .property div table { width:40%;margin-left:150px; }
 .property div th, .property div td { height:25px;text-align:center; }
 .property div p.indented { padding-left:150px; }
+.property div p a { display:inline-block; }
+.property div p a span { width:10px; }
 .property ul li { list-style:square inside;}
 .property ol li { list-style:decimal inside;}
 /*.property ul.submenu { text-align:right;float:left;position:relative;width:100%;height:25px; }

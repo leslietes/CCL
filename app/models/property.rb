@@ -87,4 +87,8 @@ class Property < ActiveRecord::Base
     types << ['Loft',     "#{self.loft_price}",         "#{self.loft_size}", "#{self.loft_monthly}"]      if self.loft?
     types
   end
+  
+  def has_floor_plans?
+    !studio_layout_file_name.nil? || !one_bedroom_layout_file_name.nil? || !two_bedroom_layout_file_name.nil? || !three_bedroom_layout_file_name.nil? || !penthouse_layout_file_name.nil? 
+  end
 end

@@ -13,4 +13,18 @@ jQuery(document).ready(function(){
 	$('.developer').accordion({
 		"autoHeight": false
 	});
+	
+	/* property page */
+	$('a#floor_plans').click(function(){
+		$('#floor_plans a').click();
+		return false;
+	});
+	$('a#location_map').click(function(){
+		$('#location_map a').click();
+		return false;
+	});
+	$('#floor_plans a').lightBox();
+	$('#location_map a').lightBox();
 });
+
+

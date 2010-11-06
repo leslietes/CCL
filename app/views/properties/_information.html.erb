@@ -21,7 +21,9 @@
 		
 		<div>  
 		  <%= label_tag :location %>
-		  <p  class="indented"><%= @property.location %> <%= link_to '>>' %></p>
+		  <p  class="indented"><%= @property.location %>
+		  	<a href="#" id="location_map" class="ui-icon ui-icon-newwin"></a>
+		  </p>
 		</div>  
 		
 		<div>  
@@ -37,7 +39,12 @@
 		<div>
 			<%= label_tag :unit_types %><br>
 			<%= display_unit_info(@property.all_unit_info) %>
-			<p class="indented"><%= link_to '>> View floor plans' %></p>
+			<% if @property.has_floor_plans? %>
+				<p class="indented">
+					<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin"></a>
+					<a href="#" id="floor_plans" class="small">View layouts</a>
+				</p>
+			<% end %>
 		</div>	
 		
 		<%#= label_tag :unit_types %>
@@ -75,6 +82,9 @@
 			<%= label_tag :reservation_fee %>
 			<p><%= @property.reservation_fee %></p>
 		</div>
+		
+		<%= render :partial => 'floor_plans' %>
+	
 		
 		<% if logged_in? %>
 			<p><%= label_tag :hidden %><%= @property.hidden %></p>
