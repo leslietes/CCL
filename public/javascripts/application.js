@@ -8,4 +8,9 @@ jQuery(document).ready(function(){
 	$('#inquiries').dataTable();
 	$('#subscriptions').dataTable();
 	$('#gallery a').lightBox();
+	
+	$('.calendar').datepicker();
+	$('.developer').accordion({
+		"autoHeight": false
+	});
 });
