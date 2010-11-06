@@ -10,7 +10,7 @@
 		
 		<div>
 			<%= label_tag :description %><br>
-			<div class="logo"><%= image_tag @property.logo.url %></div>
+			<div class="logo"><%= image_tag @property.logo.url(:thumb) %></div>
 			<p><%= @property.description%></p>
 		</div>
 		

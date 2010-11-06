@@ -2,28 +2,28 @@ class Property < ActiveRecord::Base
   
   belongs_to :developer
 
-  has_attached_file :photo, :styles => { :medium => "256x257>", :thumb => "130x195>" },
+  has_attached_file :photo, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :logo, :styles => { :medium => "256x257>", :thumb => "100x100>" },
+  has_attached_file :logo, :styles => { :medium => "800x535>", :thumb => "120x140>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :location_map, :styles => { :medium => "256x257>", :thumb => "100x100>" },
+  has_attached_file :location_map, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :studio_layout, :styles => { :medium => "256x257>", :thumb => "100x100>" },
+  has_attached_file :studio_layout, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :one_bedroom_layout, :styles => { :medium => "256x257>", :thumb => "100x100>" },
+  has_attached_file :one_bedroom_layout, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :two_bedroom_layout, :styles => { :medium => "256x257>", :thumb => "100x100>" },
+  has_attached_file :two_bedroom_layout, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :three_bedroom_layout, :styles => { :medium => "256x257>", :thumb => "100x100>" },
+  has_attached_file :three_bedroom_layout, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :penthouse_layout, :styles => { :medium => "256x257>", :thumb => "100x100>" },
+  has_attached_file :penthouse_layout, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
   #validates_presence_of :developer_id, :name, :permalink, :location, :target_completion_date, :price_range
