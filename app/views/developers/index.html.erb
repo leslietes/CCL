@@ -14,7 +14,9 @@
 					<p><span>Details</span><br></>Loren ipsum dolor</p>	
 					<ul><span>Projects</span>
 						<% d.properties.each do |property| %>
-						<li><%= link_to property.name, property_url(property) %></li>
+						<li><%= link_to property.name, property_url(property) %>
+							<%= link_to property.name, property_url(property), :class => "ui-icon ui-icon-newwin" %>
+						</li>
 						<% end %>
 					</ul>
 					</div>

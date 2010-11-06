@@ -110,7 +110,7 @@ ul#nav li a { font-weight:bold;color:#fff; }
 .developer p { margin-bottom:10px; }
 .developer span { color:#3366FF; }
 .developer ul li { list-style:square inside;padding-left:15px; }
-.developer ul li a { color:#E17009;}
+.developer ul li a { display:inline-block;}
 
 /*
 .developer { line-height:2em;padding:0 10px 20px 0; }
