@@ -137,7 +137,7 @@ table#properties tr { height:100px; }
 /* show page */
 .property { line-height:2em;padding:0 20px 20px;position:relative; }
 .property h2 { color:#3366ff; }
-.property div { clear:left;padding-bottom:10px; }
+.property div { clear:left;padding-bottom:0px; }
 .property div.logo { border:1px solid #dedede;float:right;width:145px;height:120px;margin-left:10px;margin-right:10px; }
 .property div.logo img { height:120px;width:145px; }
 .property div label { width:150px;color:#3366ff;font-weight:normal; }
