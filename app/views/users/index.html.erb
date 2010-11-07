@@ -1,6 +1,13 @@
+<% content_for :admin_pages do %>
+
 <div class="users">
-	<h2>Users</h2>
+<div class="gray_box ">
 	
+	<div class="header" id="full_page">
+		<h1>Users</h1>	
+	</div>	
+	
+	<div class="content">
 	<table id="users">
 		<thead>
 			<tr>
@@ -27,4 +34,9 @@
 	<div class="links">
 		<%= link_to 'New', new_user_url %>
 	</div>
+	</div>
+	<div class="footer" id="full"></div>
+	<br>
 </div>
+
+<% end %>

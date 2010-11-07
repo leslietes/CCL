@@ -1,10 +1,19 @@
-<div class="gray_border users">
-	<h2>Add a new user</h2>
-	<% @user.password = @user.password_confirmation = nil %>
-	
-	<% form_for :user, :url => users_path do |f| -%>
-	<%= f.error_messages%>
-	<%= render :partial => 'form', :locals => {:f => f} %>
-	<p><%= f.submit 'Sign up' %></p>
-	<% end -%>
-</div>
+<% content_for :admin_pages do %>
+	<div class="users">
+	<div class="gray_box">
+		<div class="header" id="full_page">
+			<h1>New User</h1>	
+		</div>
+		<div class="content">		
+		<% @user.password = @user.password_confirmation = nil %>
+		
+		<% form_for :user, :url => users_path do |f| -%>
+		<%= f.error_messages%>
+		<%= render :partial => 'form', :locals => {:f => f} %>
+		<p><%= f.submit 'Sign up' %></p>
+		<% end -%>
+		</div>
+		<div class="footer" id="full"></div>
+	</div></div>
+	<br>
+<% end %>
