@@ -1,35 +1,44 @@
-<% content_for :property_listings do %>
+<% content_for :admin_pages do %>
 
-<div class="gray_border inquiries">
-<h1>Inquiries</h1>
+<div class="inquiries">
+	<div class="gray_box">
+		<div class="header" id="full_page">
+			<h1>Inquiries</h1>	
+		</div>
+		<div class="content">		
 
-<table id="inquiries">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Contact No</th>
-			<th>Email Address</th>
-			<th>Subject</th>
-			<th>Message</th>
-			<th>Date Sent</th>
-			<th>Actions</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @contacts.each do |c| %>
-			<tr>
-				<td><%= c.name %></td>
-				<td><%= c.contact_no %></td>
-				<td><%= c.email %></td>
-				<td><%= c.subject %>
-				<td><%= c.message %></td>
-				<td><%= format_date(c.created_at) %></td>
-				<td>
-					<%= link_to 'Delete', contact_url(c), :method => :delete, :confirm => "Are you sure?" %>
-				</td>
-			</tr>
-		<% end %>	
-	</tbody>
-</table>
+			<table id="inquiries">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Contact No</th>
+						<th>Email Address</th>
+						<th>Subject</th>
+						<th>Message</th>
+						<th>Date Sent</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @contacts.each do |c| %>
+						<tr>
+							<td><%= c.name %></td>
+							<td><%= c.contact_no %></td>
+							<td><%= c.email %></td>
+							<td><%= c.subject %>
+							<td><%= c.message %></td>
+							<td><%= format_date(c.created_at) %></td>
+							<td>
+								<%= link_to 'Delete', contact_url(c), :method => :delete, :confirm => "Are you sure?" %>
+							</td>
+						</tr>
+					<% end %>	
+				</tbody>
+			</table>
+			<div class="clear"></div>
+		</div>
+		<div class="footer" id="full"></div>
+	</div>
 </div>
+<br>
 <% end %>

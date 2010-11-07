@@ -51,18 +51,18 @@ ul.styled { list-style:square inside; }
 
 .indented_text { margin-left:70px; }
 
-table#properties, table#users { border:1px solid #cecece;width:100%;}
-table#properties th, table#properties td, table#users th, table#users td { border:1px solid #cecece;height:40px;vertical-align:middle; }
+table#properties, table#users, table#inquiries { border:1px solid #cecece;width:100%;}
+table#properties th, table#properties td, table#users th, table#users td, table#inquiries th, table#inquiries td { border:1px solid #cecece;height:40px;vertical-align:middle; }
 
 /* used in search form */
 select { width:200px; }
 
 /* used in settings page */
 ul.bullets { list-style:square inside;padding-left:20px; }
-.settings { margin-bottom:20px;padding:10px; }
+.settings { position:relative;margin-left:15px;margin-right:15px;margin-top:15px; }
 .settings form label, .settings label { width:80px; }
 .settings form span { font-style:italic;margin-left:80px; }
-.settings form input[type='submit'] { margin-left:80px;margin-top:10px; }
+.settings input[type='submit'] { margin-left:80px;margin-top:10px; }
 
 .clear { clear:both; }
 .clear_left { clear:left;}

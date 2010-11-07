@@ -1,8 +1,13 @@
 <% content_for :admin_pages do %>
-<div class="gray_border">
-	<h1>Settings</h1>
+<div class="settings">
+<div class="gray_box">
 	
-	<div class="settings">
+	<div class="header" id="full_page">
+		<h1>Settings</h1>	
+	</div>	
+
+		
+	<div class="content">
 		
 		<p><%= label_tag :email_address %><%= @setting.production_email %></p>
 		<p>
@@ -19,84 +24,81 @@
 			<p><%= label_tag :email%><%= f.text_field :production_email %><p>
 			
 			<p>
-				<%= label_tag :featured_1 %><%= f.file_field :featured1 %>
+				<%= label_tag :featured_1 %><%= f.file_field :featured1 %><br>
 				<label>Caption</label><%= f.text_field :featured1_caption%><br>
 				<label>URL</label><%= f.text_field :featured1_link %>
 			</p>
 			
 			<p>
-				<%= label_tag :featured_2 %><%= f.file_field :featured2 %>
+				<%= label_tag :featured_2 %><%= f.file_field :featured2 %><br>
 				<label>Caption</label><%= f.text_field :featured2_caption%><br>
 				<label>URL</label><%= f.text_field :featured2_link %>
 			</p>
 			
 			<p>
-				<%= label_tag :featured_3 %><%= f.file_field :featured3 %>
+				<%= label_tag :featured_3 %><%= f.file_field :featured3 %><br>
 				<label>Caption</label><%= f.text_field :featured3_caption%><br>
 				<label>URL</label><%= f.text_field :featured3_link %>
 			</p>
 			
 			<p>
-				<%= label_tag :featured_4 %><%= f.file_field :featured4 %>
+				<%= label_tag :featured_4 %><%= f.file_field :featured4 %><br>
 				<label>Caption</label><%= f.text_field :featured4_caption%><br>
 				<label>URL</label><%= f.text_field :featured4_link %>
 			</p>
 			
 			<p>
-				<%= label_tag :featured_5 %><%= f.file_field :featured5 %>
+				<%= label_tag :featured_5 %><%= f.file_field :featured5 %><br>
 				<label>Caption</label><%= f.text_field :featured5_caption%><br>
 				<label>URL</label><%= f.text_field :featured5_link %>
 			</p>
 			<%= submit_tag 'Change' %>
 		<% end %>
-	</div>	
-</div>		
-	<!--div class="links">
-		<%# link_to 'Edit', edit_settings_url %>
-	</div-->
+	
+		<!--div class="links">
+			<%# link_to 'Edit', edit_settings_url %>
+		</div-->
 
-<br>	
-	
-<div class="gray_border">	
-	<h1>Locations</h1>
-	<div class="settings">
-	<ul class="bullets">
-		<% @locations.each do |location| %>
-		<li><%= location.area %> <%= link_to '[remove]', remove_location_url(location) %></li>
+		<br>	
+		
+		<h1>Locations</h1>
+		<div class="settings">
+		<ul class="bullets">
+			<% @locations.each do |location| %>
+			<li><%= location.area %> <%= link_to '[remove]', remove_location_url(location) %></li>
+			<% end %>
+		</ul>
+		
+		<br>
+			
+		<% form_tag add_location_url do  %>
+			<label>Location</label><%= text_field_tag :location %><br>
+			<%= submit_tag 'Add' %>
 		<% end %>
-	</ul>
+		</div>
+
+		<br>
 	
-	<br>
-	
-	<% form_tag add_location_url do  %>
-		<label>Location</label><%= text_field_tag :location %><br>
-		<%= submit_tag 'Add' %>
-	<% end %>
+		<h1>Price Range</h1>
+		<div class="settings">
+		<ul class="bullets">
+			<% @price_range.each do |pr| %>
+			<li><%= pr.range %> <%= link_to '[remove]', remove_price_range_url(pr) %></li>
+			<% end %>
+		</ul>
+		
+		<br>
+		
+		<% form_tag add_price_range_url do  %>
+			<label>Price Range</label><%= text_field_tag :price_range %><br>
+			<span>e.g. 100,000 - 500,000</span><br>
+			<label>Sort Value</label><%= text_field_tag :sort_value %><br>
+			<span>e.g. 100,000</span>
+			<br><%= submit_tag 'Add' %>
+		<% end %>
+		</div>	
 	</div>
-</div>
-
-<br>
-
-<div class="gray_border">	
-	<h1>Price Range</h1>
-	<div class="settings">
-	<ul class="bullets">
-		<% @price_range.each do |pr| %>
-		<li><%= pr.range %> <%= link_to '[remove]', remove_price_range_url(pr) %></li>
-		<% end %>
-	</ul>
-	
-	<br>
-	
-	<% form_tag add_price_range_url do  %>
-		<label>Price Range</label><%= text_field_tag :price_range %><br>
-		<span>e.g. 100,000 - 500,000</span><br>
-		<label>Sort Value</label><%= text_field_tag :sort_value %><br>
-		<span>e.g. 100,000</span>
-		<br><%= submit_tag 'Add' %>
-	<% end %>
-	</div>	
-</div>
-
+	<div class="footer" id="full"></div>
+</div></div>
 <br	>
 <% end %>
