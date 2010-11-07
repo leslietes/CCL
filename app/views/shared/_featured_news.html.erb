@@ -8,7 +8,10 @@
 	<ul>
 		<li>
 			<% @featured_articles.each do |a| %>
-				<p class="title"><%= link_to a.title, article_url(a) %></p>
+				<p class="title">
+					<%= link_to a.title, article_url(a)  %>
+					<%= link_to '', article_url(a), :class => "ui-icon ui-icon-newwin" %>
+				</p>
 				<p class="published_on">
 					<% if a.teaser? %>
 						<span class="teaser"><%= a.teaser %></span><br>
