@@ -17,6 +17,11 @@ class Developer < ActiveRecord::Base
   def self.show_all_visible
     Developer.find(:all, :conditions => ["hidden = ?", false], :order => "developer ASC")
   end
+  
+  def show_all_projects
+    properties.find(:all, :conditions => ["hidden = ?", false], :order => "name ASC")
+    #Property.find(:all, :conditions => ["developer = ? and hidden = ?", self.id, false], :order => "name ASC")
+  end
 
   def to_param
     permalink

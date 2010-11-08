@@ -13,13 +13,14 @@
 					<div class="details">
 					<p><span>Details</span><br></>Loren ipsum dolor</p>	
 					<ul><span>Projects</span>
-						<% d.properties.each do |property| %>
+						<% d.show_all_projects.each do |property| %>
 						<li><%= link_to property.name, property_url(property) %>
 							<%= link_to property.name, property_url(property), :class => "ui-icon ui-icon-newwin" %>
 						</li>
 						<% end %>
 					</ul>
 					</div>
+					<div class="clear"></div>
 				</div>
 			<% end %>
 		
