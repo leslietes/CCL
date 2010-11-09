@@ -5,6 +5,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :articles
   map.resources :contacts
+  map.resources :condominiums
+  map.resources :rentals
   map.resource :session
   
   # Sample of regular route:
@@ -35,6 +37,7 @@ ActionController::Routing::Routes.draw do |map|
   map.remove_location '/admin/location/remove/:id', :controller => 'admin', :action => 'remove_location'
   map.add_price_range '/admin/settings/add_price_range', :controller => 'admin', :action => 'add_price_range'
   map.remove_price_range '/admin/price_range/remove/:id', :controller => 'admin', :action => 'remove_price_range'
+  #map.view_suscriptions 'admin/subscriptions', :controller => 'admin', :action => 'view_subscriptions'
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
