@@ -1,6 +1,7 @@
 class Property < ActiveRecord::Base
   
   belongs_to :developer
+  #has_many :galleries
 
   has_attached_file :photo, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
@@ -68,12 +69,12 @@ class Property < ActiveRecord::Base
   
   def all_unit_prices
     prices = []
-    prices << "Studio: #{self.studio_price}"           if self.studio?
-    prices << "One Bedroom: #{self.one_bedroom_price}" if self.one_bedroom?
-    prices << "Two Bedroom: #{self.two_bedroom_price}" if self.two_bedroom?
-    prices << "Three Bedroom: #{self.three_bedroom_price}" if self.three_bedroom?
-    prices << "Penthouse: #{self.penthouse_price}"     if self.penthouse?
-    prices << "Loft: #{self.loft_price}"               if self.loft?
+    prices << "#{self.studio_price}"           if self.studio?
+    prices << "#{self.one_bedroom_price}" if self.one_bedroom?
+    prices << "#{self.two_bedroom_price}" if self.two_bedroom?
+    prices << "#{self.three_bedroom_price}" if self.three_bedroom?
+    prices << "#{self.penthouse_price}"     if self.penthouse?
+    prices << "#{self.loft_price}"               if self.loft?
     prices
   end
   

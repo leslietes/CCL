@@ -1,3 +1,6 @@
+
+<% if !@setting.sidebar_file_name.nil? %>
 <div class="ads boxes">
-  	<%= image_tag 'alveo_invite.jpeg', :size => "290x295" %>
+  	<%= @setting.sidebar.url(:medium) %>
 </div>
+<% end %>

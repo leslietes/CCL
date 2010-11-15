@@ -10,14 +10,13 @@
 		
 		<table id="properties">
 			<thead>
-				<tr style="height:20px;">
+				<tr>
 					<th>Name</th>
 					<th>Developer</th>
 					<th>Location</th>
 					<th>Unit Types</th>
-					<th>Unit Sizes</th>
-					<th>Price Range</th>
-					<th>Target Completion Date</th>
+					<th>Price Range<br><i>(as low as)</i></th>
+					<th>Target Completion<br>Date</th>
 					<% if logged_in? %>
 					<th>Actions</th>
 					<% end %>
@@ -26,12 +25,11 @@
 			<tbody>
 			<% @properties.each do |property| %>
 			<tr>
-				<td class="left" style="padding-left:5px"><%= link_to property.name, property_url(property) %></td>
-				<td class="center" width="150px"><%= property.developer_name %></td>
+				<td class="left" style="padding-left:5px" width="150px"><%= link_to property.name, property_url(property) %></td>
+				<td class="center" width="200px"><%= property.developer_name %></td>
 				<td class="center" width="150px"><%= property.location %></td>
 				<td class="center" width="100px"><%= show_all_unit_types(property.all_unit_types) %></td>
-				<td class="center" width="90px"><%= property.unit_sizes %></td>
-				<td class="center" width="110px"><%= property.price_range %></td>
+				<td class="center" width="110px"><%= show_all_unit_prices(property.all_unit_prices) %></td>
 				<td class="center" width="160px"><%= property.completion_date %></td>
 				<% if logged_in? %>
 				<td class="center" width="100px">
