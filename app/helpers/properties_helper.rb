@@ -15,7 +15,15 @@ module PropertiesHelper
     html 
   end
   
+  def show_all_unit_prices(unit_prices)
+    # index list
+    html = ""
+    unit_prices.each {|price| html += "#{price}<br>"}
+    html
+  end
+  
   def display_all_unit_prices(unit_prices)
+    # used where?
     html  = "<ul>"
     unit_prices.each {|price| html += "<li>#{price}</li>"}
     html += "</ul>"
