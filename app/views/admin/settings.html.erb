@@ -18,6 +18,10 @@
 			<%= label_tag :featured_5 %><%= image_tag @setting.featured5.url, :height => "60", :width => "150" %><%#= @setting.featured5_file_name %><br>
 		</p>
 		
+		<p>
+			<%= label_tag :sidebar %><%= image_tag @setting.sidebar.url, :height => "60", :width => "150" %>
+		</p>
+		
 		<br>
 		
 		<% form_for :setting, :url => edit_settings_url, :html => {:method => :put, :multipart => true} do |f| %>
@@ -51,6 +55,11 @@
 				<%= label_tag :featured_5 %><%= f.file_field :featured5 %><br>
 				<label>Caption</label><%= f.text_field :featured5_caption%><br>
 				<label>URL</label><%= f.text_field :featured5_link %>
+			</p>
+			
+			<p>
+				<%= label_tag :sidebar %><%= f.file_field :sidebar %><br>
+				<label>URL</label><%= f.text_field :sidebar_link %>
 			</p>
 			<%= submit_tag 'Change' %>
 		<% end %>

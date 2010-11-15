@@ -38,6 +38,14 @@ class CreateSettings < ActiveRecord::Migration
       t.datetime :featured5_updated_at
       t.string   :featured5_caption
       t.string   :featured5_link
+      
+      t.string   :sidebar_file_name
+      t.string   :sidebar_content_type
+      t.string   :sidebar_file_size
+      t.string   :sidebar_updated_at
+      t.string   :sidebar_caption
+      t.string   :sidebar_link
+      
       t.timestamps
     end
   end

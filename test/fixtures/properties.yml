@@ -25,9 +25,9 @@ avida:
   penthouse_size:
   loft_size:
   price_range:
-  studio_price: as low as P1.584M
-  one_bedroom_price: as low as P2.355M
-  two_bedroom_price: as low as P3.845M
+  studio_price: 1,584,000
+  one_bedroom_price: 2,355,000
+  two_bedroom_price: 3,845,000
   three_bedroom_price:
   penthouse_price:
   loft_price:
@@ -67,10 +67,10 @@ avalon:
   loft_size:
   price_range:
   studio_price:
-  one_bedroom_price: P5.8M - P6.7M
-  two_bedroom_price: P8.5M - P10.3M
-  three_bedroom_price: P12.0M - P13.9M
-  penthouse_price: P23.0M - P25.0M
+  one_bedroom_price: 5,800,000
+  two_bedroom_price: 8,500,000
+  three_bedroom_price: 12,000,000
+  penthouse_price: 23,0000,000
   loft_price:
   amenities: <ul><li>Adult and kiddie swimming pools</li><li>Main lobby and Reception area</li><li>High-speed passenger elevator units</li><li>1 Heavy-duty service elevator unit</li><li>Top of the line fire alarm and sprinkler systems with fire exits</li><li>24/7 Security and Closed Circuit Television (CCTV) systems</li><li>100% Back-up power generation</li><li>Centrally located garbage system per floor</li><li>Individual mailbox for each unit</li><li>Function rooms</li><li>Business center</li><li>Fitness gym and Sauna</li><li>Landscaped gardens</li><li>Daycare center</li><li>Perimeter fence</li><li>4 Levels of basement parking and visitors parking slots</li></ul>
   features:
@@ -107,7 +107,7 @@ lgf1:
   penthouse_size:
   loft_size:
   price_range:
-  studio_price: P1.5M - P1.9M
+  studio_price: 1,500,000
   one_bedroom_price:
   two_bedroom_price:
   three_bedroom_price:
@@ -147,7 +147,7 @@ lgf2:
   penthouse_size:
   loft_size:
   price_range:
-  studio_price: P1.5M - P1.9M
+  studio_price: 1,500,000
   one_bedroom_price:
   two_bedroom_price:
   three_bedroom_price:
@@ -187,12 +187,12 @@ woodcrest:
   penthouse_size:
   loft_size: 122 sq. m.
   price_range:
-  studio_price: P2.2M
-  one_bedroom_price: P2.8M
-  two_bedroom_price: P4.7M
+  studio_price: 2,200,000
+  one_bedroom_price: 2,800,000
+  two_bedroom_price: 4,700,000
   three_bedroom_price:
   penthouse_price:
-  loft_price: P8.7M
+  loft_price: 8,700,000
   amenities: <ul><li>Grand entrance gate and guardhouse</li><li>Clubhouse with functional rooms</li><li>Swimming pool with kid's wading pool</li><li>Fitness gym</li><li>Manicured gardens and strolling lane</li><li>Overhead water tank</li><li>Underground electrical and telephone system</li><li>Waste water treatment facility</li><li>Perimeter fence</li><li>Main lobby and Reception area</li><li>Two elevator units</li><li>Multi-level parking area</li><li>Mailbox for each unit located at the main lobby</li><li>Garbage chute</li><li>Fire alarm and sprinkler system with fire exits</li><li>Standby generator set for selected outlets</li><li>Telephone, cable and internet ready</li><li>Closed circuit television (CCTV)</li></ul>
   features:
   unit_specifications: <ul><li>Painted walls, partitions and ceiling</li><li>Tiled floors</li><li>Tiled toilet and bath with bathroom fixtures</li><li>Electrical provision for water heater for all showers</li><li>Bedroom closets</li><li>Kitchen sink, counter top and cabinets</li><li>Private balconies</li><li>Service area with washing machine and dryer</li><li>Provision for aircon openings and outlets</li><li>Individual porches for privacy and convenience</li></ul>
@@ -387,10 +387,10 @@ grand_cenia:
   penthouse_size:
   loft_size:
   price_range:
-  studio_price: starts at P3.064M
-  one_bedroom_price: starts at P5.494M
-  two_bedroom_price: starts at P7.962M
-  three_bedroom_price: starts at P11.333M
+  studio_price: 3,064,000
+  one_bedroom_price: 5,494,000
+  two_bedroom_price: 7,962,000
+  three_bedroom_price: 11,333,000
   penthouse_price:
   loft_price:
   amenities: <ul><li>Adult and kiddie pools</li><li>Landscaped garden</li><li>Function rooms</li><li>Business center</li><li>Coffee shops/restaurant</li></ul>
@@ -427,9 +427,9 @@ one_oasis:
   penthouse_size:
   loft_size:
   price_range: 
-  studio_price: starts at P1.379M
-  one_bedroom_price: starts at P2.333M
-  two_bedroom_price: starts at P2.383M
+  studio_price: 1,379,000
+  one_bedroom_price: 2,333,000
+  two_bedroom_price: 2,383,000
   three_bedroom_price:
   penthouse_price:
   loft_price:

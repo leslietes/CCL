@@ -51,6 +51,7 @@ ul.styled { list-style:square inside; }
 
 .indented_text { margin-left:70px; }
 
+/*table thead { font-weight:normal;height:50px;}*/
 table#properties, table#users, table#inquiries { border:1px solid #cecece;width:100%;}
 table#properties th, table#properties td, table#users th, table#users td, table#inquiries th, table#inquiries td { border:1px solid #cecece;height:40px;vertical-align:middle; }
 
@@ -129,7 +130,7 @@ ul#nav li a { font-weight:bold;color:#fff; }
 .properties h1 { background:url(/images/nav_bg.jpg) repeat-x;color:#fff;border:1px solid #ccc; }
 /* dataTables */
 table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:10px; }
-table#properties tr { height:100px; }
+table#properties tr { padding:20px; }
 #properties_wrapper, #inquiries_wrapper, #subscriptions_wrapper { padding:5px; }
 #properties_info, #properties_paginate, #inquiries_info, #inquiries_paginate, #subscriptions_info, #subscriptions_paginate { margin-top:10px;margin-bottom:10px; }
  /* end dataTabls */ 
@@ -156,7 +157,6 @@ table#properties tr { height:100px; }
 .property .details { border:1px solid #ccc;padding:10px; }*/
 
 .property_tab { position:relative;}
-.property_tab ul.submenu { border:1px solid red; }
 .property_tab ul.submenu { float:right;text-align:right;position:relative;font-size:12px;color:#333;padding-top:3px;font-weight:bold; }
 .property_tab ul.submenu li { display:inline;position:relative;background-color:#efefef;padding:2px 10px;margin-left:5px;-moz-border-radius-topleft:6px;-moz-border-radius-topright:6px; }
 .property_tab ul.submenu li span { padding-top:5px;position:relative; }
