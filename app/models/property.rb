@@ -30,6 +30,10 @@ class Property < ActiveRecord::Base
   #validates_presence_of :developer_id, :name, :permalink, :location, :target_completion_date, :price_range
   #validates_uniqueness_of :permalink
   
+   def self.property_types
+    [[''],['Condominium'],['Condotel']]
+  end
+  
   # include hidden
   def self.show_all
     Property.find(:all, :order => "name ASC")

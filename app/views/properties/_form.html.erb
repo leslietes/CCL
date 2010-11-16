@@ -56,7 +56,7 @@
 	</p>
 	
 	<p>
-		<%= f.label :condotel %><%= f.check_box :condotel %>
+		<%= f.label :type %><%= select("property", "property_type", @property_types) %>
 	</p>
 
 	<p>

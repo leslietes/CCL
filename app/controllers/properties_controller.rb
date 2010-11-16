@@ -1,11 +1,12 @@
 class PropertiesController < ApplicationController
   
-  before_filter :login_required, :except => [:index, :show, :gallery, :search]
-  before_filter :developers, :only => [:new,:create,:edit,:update]
-  before_filter :select_unit_types, :only => [:new, :create, :edit, :update]
-  before_filter :select_locations,  :only => [:new, :create, :edit, :update]
-  before_filter :select_price_range,:only => [:new, :create, :edit, :update]
-  before_filter :inquiry_form, :only => [:show, :gallery]
+  before_filter :login_required,        :except => [:index, :show, :gallery, :search]
+  before_filter :developers,            :only => [:new,:create,:edit,:update]
+  before_filter :select_unit_types,     :only => [:new, :create, :edit, :update]
+  before_filter :select_locations,      :only => [:new, :create, :edit, :update]
+  before_filter :select_price_range,    :only => [:new, :create, :edit, :update]
+  before_filter :select_property_types, :only => [:new, :create, :edit, :update]
+  before_filter :inquiry_form,          :only => [:show, :gallery]
   
   #layout "application", :only => [:search] # :application doesn't work
   layout "properties", :except => [:search]
@@ -81,16 +82,25 @@ class PropertiesController < ApplicationController
   #end
   
   def search
-    puts "============================="
+    puts "=============================#{params.inspect}"
 #    begin
-      unit_type = params[:unit_type] || ['studio','1 bedroom','2 bedroom','3 bedroom','loft','penthouse']
-      location  = params[:location]
+      conditions = ""
+      
+      location  = params[:location] 
+      unit_type = params[:unit_type]
+      type      = params[:type]     
       price_range = params[:price_range]
-    
-      if !unit_type.blank?
-        conditions = "#{unit_type} = true" 
-      else
-#        conditions = "#{unit_type = params[:unit_type]}
+      
+      if !unit_type.nil?
+        conditions += "#{unit_type} = true" 
+      end
+      
+      if !location.nil?
+        conditions += "location = #{location}"
+      end
+      
+      if !type.nil?
+        conditions += "#{type} = true"
       end
     
       puts "sql: #{conditions}"
@@ -132,6 +142,10 @@ class PropertiesController < ApplicationController
   
   def inquiry_form
     @contact = Contact.new
+  end
+  
+  def select_property_types
+    @property_types = Property.property_types
   end
 
 end

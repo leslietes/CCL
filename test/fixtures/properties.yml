@@ -37,7 +37,6 @@ avida:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   featured: true
   hidden: false
 
@@ -78,7 +77,6 @@ avalon:
   payment_terms: <ol><li>Spot cash (net of 10% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)</li></ol>
   as_low_as:
   reservation_fee:
-  condotel:
   featured: true
   hidden: false
   
@@ -119,7 +117,6 @@ lgf1:
   payment_terms: <ol><li>Spot cash (net of 12% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)</li></ol>
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
   
 lgf2:
@@ -159,7 +156,6 @@ lgf2:
   payment_terms: <ol><li>Spot cash (net of 12% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)</li></ol>
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
 
 woodcrest:
@@ -199,7 +195,6 @@ woodcrest:
   payment_terms: <ol><li>Spot cash (net of 12% disc)</li><li>Defered Cash (0% for 12 month amort w 3% disc)</li><li>30% down, 70% bal(0% for 18 months)</li><li>40% down, 60% bal(0% for 18 months)</li><li>50% down, 50% bal(0% for 18 months)</li><li>30% down (0% for 12 months), 70% bal in-house financing(12% pa)"<li></ol>
   as_low_as:
   reservation_fee:
-  condotel: true
   hidden: false
 
 cityscape1:
@@ -239,7 +234,6 @@ cityscape1:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
 
 cityloft:
@@ -279,7 +273,6 @@ cityloft:
   payment_terms: <ul><li>4 years to pay at 0 interest</li></ul>
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
 
 ramostower:
@@ -319,7 +312,6 @@ ramostower:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
 
 ultima_prime:
@@ -359,7 +351,6 @@ ultima_prime:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
   
 grand_cenia:
@@ -399,7 +390,6 @@ grand_cenia:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: true
   hidden: false
   
 one_oasis:
@@ -439,7 +429,6 @@ one_oasis:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
   
 asia_premier:
@@ -479,7 +468,6 @@ asia_premier:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
 
 padgett_place:
@@ -519,7 +507,6 @@ padgett_place:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
 
 lot_8:
@@ -559,5 +546,4 @@ lot_8:
   payment_terms:
   as_low_as:
   reservation_fee:
-  condotel: false
   hidden: false
