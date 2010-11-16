@@ -47,6 +47,7 @@ class CreateProperties < ActiveRecord::Migration
       t.text :unit_specifications
       t.text :payment_terms
       t.string :as_low_as
+      t.string :as_low_as_label
       t.string :reservation_fee
       t.boolean :condotel, :default => false
       t.boolean :featured, :default => false

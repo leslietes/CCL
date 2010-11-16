@@ -41,4 +41,10 @@ module PropertiesHelper
     html += "</tbody></table>"
     html
   end
+  
+  def condotel_label(property)
+    if property.condotel?
+      "<span class='condotel'>condotel</span>"
+    end
+  end
 end

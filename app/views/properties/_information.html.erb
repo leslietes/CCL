@@ -65,7 +65,7 @@
 		
 		<div>
 			<%= label_tag :as_low_as %>
-			<p><%= @property.as_low_as %></p>
+			<p><%= number_to_currency(@property.as_low_as, :unit => "", :precision => 0) %> <%= @property.as_low_as_label %></p>
 		</div>	
 		
 		<div>

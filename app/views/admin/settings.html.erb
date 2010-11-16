@@ -88,24 +88,7 @@
 
 		<br>
 	
-		<h1>Price Range</h1>
-		<div class="settings">
-		<ul class="bullets">
-			<% @price_range.each do |pr| %>
-			<li><%= pr.range %> <%= link_to '[remove]', remove_price_range_url(pr) %></li>
-			<% end %>
-		</ul>
-		
-		<br>
-		
-		<% form_tag add_price_range_url do  %>
-			<label>Price Range</label><%= text_field_tag :price_range %><br>
-			<span>e.g. 100,000 - 500,000</span><br>
-			<label>Sort Value</label><%= text_field_tag :sort_value %><br>
-			<span>e.g. 100,000</span>
-			<br><%= submit_tag 'Add' %>
-		<% end %>
-		</div>	
+		<%= render :partial => 'price_range' %>
 	</div>
 	<div class="footer" id="full"></div>
 </div></div>

@@ -26,6 +26,7 @@ class PropertiesController < ApplicationController
   def gallery
     @partial  = 'gallery'
     @property = Property.find_by_permalink(params[:id])
+    @galleries= @property.galleries.new
     render :template => 'properties/show'
   end
   
@@ -69,16 +70,36 @@ class PropertiesController < ApplicationController
     redirect_to properties_url
   end
   
+  #def upload_to_gallery
+  #  @property = Property.find_by_permalink(params[:id])
+  #  if @property.save
+  #    flash[:notice] = "Photo successfully uploaded"
+  #  else
+  #    flash[:error] = "Error"
+  #  end
+  #  redirect_to property_gallery(@property)
+  #end
+  
   def search
-    unit_type = params[:unit_type]
-    location  = params[:location]
-    price_range = params[:price_range]
+    puts "============================="
+#    begin
+      unit_type = params[:unit_type] || ['studio','1 bedroom','2 bedroom','3 bedroom','loft','penthouse']
+      location  = params[:location]
+      price_range = params[:price_range]
     
-    conditions = "#{unit_type} = true" if !unit_type.blank?
+      if !unit_type.blank?
+        conditions = "#{unit_type} = true" 
+      else
+#        conditions = "#{unit_type = params[:unit_type]}
+      end
     
-    puts "sql: #{sql + conditions}"
+      puts "sql: #{conditions}"
     
-    @properties = Property.find_by_sql("SELECT * FROM properties WHERE"  + conditions)
+      @properties = Property.find_by_sql("SELECT * FROM properties WHERE"  + conditions)
+#    rescue
+#      @properties = Property.show_all_visible
+#    end
+    
                                 
     render :layout => "application"
   end
@@ -106,7 +127,7 @@ class PropertiesController < ApplicationController
   end
   
   def select_price_range
-    @price_range = PriceRange.all.sort_by{|p| p.sort_value}.collect{|p| p.range }
+    @price_range = PriceRange.show_all
   end
   
   def inquiry_form

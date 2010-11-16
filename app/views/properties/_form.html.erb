@@ -29,9 +29,7 @@
 		<%= f.label :location %><%= select("property","location", @locations, {:include_blank => true}) %>
 	</p>
 	
-	<p>
-		<%= f.label :price_range %><%= select("property","price_range", @price_range, :include_blank => true) %>
-	</p>
+	<%# f.label :price_range %><%# select("property","price_range", @price_range, :include_blank => true) %>
 	
 	<p>
 	  <%= f.label :address %><%= f.text_area :address %>
@@ -160,7 +158,11 @@
 	</p>
 	
 	<p>
-		<%= f.label :as_low_as %><%= f.text_field :as_low_as %>
+		<%= f.label :as_low_as %><%= f.text_field :as_low_as %><br>
+		<div style="padding-left:70px;">
+		<%= f.radio_button :as_low_as_label, "Monthly Installment" %>Monthly Installment
+		<%= f.radio_button :as_low_as_label, "Downpayment" %>Downpayment
+		</div>
 	</p>
 	
 	<p>

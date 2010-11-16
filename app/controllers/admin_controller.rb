@@ -8,7 +8,7 @@ class AdminController < ApplicationController
     #TODO: sort alphabetically
     @locations= Location.all(:order => "area ASC")
     #TODO: sort
-    @price_range = PriceRange.all(:order => "sort_value ASC")
+    @price_range = PriceRange.find(:all, :order => "value_from ASC")
   end
   
   def edit_settings
@@ -55,7 +55,7 @@ class AdminController < ApplicationController
   end
   
   def add_price_range
-    price_range = PriceRange.new(:range => params[:price_range], :sort_value => params[:sort_value])
+    price_range = PriceRange.new(:range => params[:range], :value_from => params[:value_from], :value_to => params[:value_to])
     if price_range.save
       flash[:notice] = "Successfully added price range"
     else

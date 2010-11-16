@@ -2,7 +2,7 @@ class CreatePriceRanges < ActiveRecord::Migration
   def self.up
     create_table :price_ranges do |t|
       t.string :range
-      t.integer :sort_value
+      t.integer :value_from, :value_to
       t.timestamps
     end
   end
