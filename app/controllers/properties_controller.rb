@@ -82,35 +82,54 @@ class PropertiesController < ApplicationController
   #end
   
   def search
-    puts "=============================#{params.inspect}"
-#    begin
+    begin
       conditions = ""
       
-      location  = params[:location] 
-      unit_type = params[:unit_type]
-      type      = params[:type]     
+      @location  = params[:location] 
+      @unit_type = params[:unit_type]
+      @prop_type = params[:type]     
       price_range = params[:price_range]
       
-      if !unit_type.nil?
-        conditions += "#{unit_type} = true" 
+      if !@unit_type.blank?
+        conditions +=  "#{@unit_type} = true"
       end
       
-      if !location.nil?
-        conditions += "location = #{location}"
+      if !@location.blank?
+        conditions += " and " if !conditions.blank?
+        conditions += " location = '#{@location}' "
       end
       
-      if !type.nil?
-        conditions += "#{type} = true"
+      if !@prop_type.blank?
+        conditions += " and " if !conditions.blank?
+        conditions += " property_type = '#{@prop_type}' " 
       end
+      
+      if !price_range.blank?
+        
+        pr   = PriceRange.find(price_range)
+        @pr  = pr.id  # to preserve selected field
+        
+        from, to = pr.value_from, pr.value_to
+        
+        conditions += " and " if !conditions.blank?
+
+        if @unit_type.blank?
+          conditions += " ((studio_price > #{from} and studio_price < #{to}) or "
+          conditions += " (one_bedroom_price > #{from} and one_bedroom_price < #{to}) or "
+          conditions += " (two_bedroom_price > #{from} and two_bedroom_price < #{to}) or "
+          conditions += " (three_bedroom_price > #{from} and three_bedroom_price < #{to}) or "
+          conditions += " (penthouse_price > #{from} and penthouse_price < #{to}) or "
+          conditions += " (loft_price > #{from} and loft_price < #{to}))"
+        else
+          conditions += " (#{@unit_type}_price > #{from} and #{@unit_type}_price < #{to})"
+        end
+      end
+      puts "#{conditions}"
+      @properties = Property.find(:all, :conditions => conditions, :include => :developer)
+    rescue
+      @properties = Property.show_all_visible
+    end
     
-      puts "sql: #{conditions}"
-    
-      @properties = Property.find_by_sql("SELECT * FROM properties WHERE"  + conditions)
-#    rescue
-#      @properties = Property.show_all_visible
-#    end
-    
-                                
     render :layout => "application"
   end
   

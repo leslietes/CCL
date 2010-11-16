@@ -1,31 +1,37 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+   id: 1
    range: 500,000 - 1,000,000
    value_from: 500,000
    value_to: 1,000,000
 
 two:
+   id: 2
    range: 1,000,000 - 2,000,000
    value_from: 1,000,000
    value_to: 2,000,000
 
 three:
+   id: 3
    range: 2,000,000 - 3,000,000
    value_from: 2,000,000
    value_to: 3,000,000
 
 four:
+   id: 4
    range: More than 10,000,000
    value_from: 5,000,000
    value_to: 10,000,000
 
 five:
+   id: 5
    range: 4,000,000 - 5,000,000
    value_from: 4,000,000
    value_to: 5,000,000
 
 six:
+   id: 6
    range: 5,000,000 - 10,000,000
    value_from: 5,000,000
    value_to: 10,000,000

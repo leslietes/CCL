@@ -5,16 +5,16 @@
 	<div class="content">
 		<% form_tag :controller => 'properties', :action => 'search' do %>
 			<p>
-				<%= label_tag :location %><%= select_tag "location", options_for_select(@search_location), :multiple => false %>
+				<%= label_tag :location %><%= select_tag "location", options_for_select(@search_location, @location), :multiple => false %>
 			</p>
 			<p>
-				<%= label_tag :price_range %><%= select_tag "price_range", options_for_select(@search_price) %>
+				<%= label_tag :price_range %><%= select_tag "price_range", options_for_select(@search_price, @pr) %>
 			</p>
 			<p>
-				<%= label_tag :unit_type %><%= select_tag "unit_type", options_for_select(@search_type), :multiple => false %>
+				<%= label_tag :unit_type %><%= select_tag "unit_type", options_for_select(@search_type, @unit_type), :multiple => false %>
 			</p>
 			<p>
-				<%= label_tag :type %><%= select_tag "type", options_for_select(@type) %>
+				<%= label_tag :type %><%= select_tag "type", options_for_select(@type, @prop_type) %>
 			</p>	
 			<p><%= submit_tag 'Search' %></p>
 		<% end %>

@@ -1,21 +1,14 @@
-<div class="search_results gray_border">
-
-	<h1>Search Results</h1>
+<div class="gray_box">
 	
-	<ul>
-	<% @properties.each do |p| %>
-		<li>
-			<div class="photo"><%= image_tag p.photo.url(:thumb) %></div>
-			<h3><%= link_to p.name %></h3>
-			Developer: <%= p.developer_name %><br>
-			Location: <%= p.location %><br>
-			Units: <%= p.all_unit_types.collect{|x| x + ' '} %><br>
-			Target Completion Date: <%= p.target_completion_date %><br>
-			For as low as <%= p.as_low_as %>
-			<div class="clear"></div>
-		</li>
-	<% end %>
-	</ul>
+	<div class="header">
+		<h1>Search Results</h1>
+	</div>
+	
+	<div class="content">
+		<%= render :partial => 'properties/datatable' %>	
+	</div>
+	
+	<div class="footer"></div>
 	
 </div>
 

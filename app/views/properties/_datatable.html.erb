@@ -1,56 +1,35 @@
-<% content_for :property_listings do %>
-<div class="properties">
-<div class="gray_box ">
-	
-	<div class="header" id="full_page">
-		<h1>Properties</h1>	
-	</div>
-
-	<div class="content">
-		
-		<table id="properties">
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Developer</th>
-					<th>Location</th>
-					<th>Unit Types</th>
-					<th>Price Range*<br></th>
-					<th>Estimated Delivery</th>
-					<% if logged_in? %>
-					<th>Actions</th>
-					<% end %>
-				</tr>
-			</thead>
-			<tbody>
-			<% @properties.each do |property| %>
-			<tr>
-				<td class="left" style="padding-left:5px" width="150px"><%= link_to property.name, property_url(property) %></td>
-				<td class="center" width="200px"><%= property.developer_name %></td>
-				<td class="center" width="150px"><%= property.location %></td>
-				<td class="center" width="100px"><%= show_all_unit_types(property.all_unit_types) %></td>
-				<td class="center" width="110px"><%= show_all_unit_prices(property.all_unit_prices) %></td>
-				<td class="center" width="160px"><%= property.completion_date %></td>
-				<% if logged_in? %>
-				<td class="center" width="100px">
-					<%= link_to 'Show', property_url(property) %>
-					<%= link_to 'Edit', edit_property_url(property) %>
-					<%= link_to 'Delete', property_url(property), :method => :delete, :confirm => "Are you sure?" %>
-				</td>
-				<% end %>
-			</tr>
+<table id="properties">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Developer</th>
+			<th>Location</th>
+			<th>Unit Types</th>
+			<th>Price Range*<br></th>
+			<th>Estimated Delivery</th>
+			<% if logged_in? %>
+			<th>Actions</th>
 			<% end %>
-			</tbody>
-		</table>
-
+		</tr>
+	</thead>
+	<tbody>
+	<% @properties.each do |property| %>
+	<tr>
+		<td class="left" style="padding-left:5px" width="150px"><%= link_to property.name, property_url(property) %></td>
+		<td class="center" width="200px"><%= property.developer_name %></td>
+		<td class="center" width="150px"><%= property.location %></td>
+		<td class="center" width="100px"><%= show_all_unit_types(property.all_unit_types) %></td>
+		<td class="center" width="110px"><%= show_all_unit_prices(property.all_unit_prices) %></td>
+		<td class="center" width="160px"><%= property.completion_date %></td>
 		<% if logged_in? %>
-			<div class="links">
-				<%= link_to 'New', new_property_url %>
-			</div>
+		<td class="center" width="100px">
+			<%= link_to 'Show', property_url(property) %>
+			<%= link_to 'Edit', edit_property_url(property) %>
+			<%= link_to 'Delete', property_url(property), :method => :delete, :confirm => "Are you sure?" %>
+		</td>
 		<% end %>
-		<div class="clear"></div>
-	</div>
-	<div class="footer" id="full"></div>
-	<br>
-</div>
-<% end %>
+	</tr>
+	<% end %>
+	</tbody>
+</table>
+<div class="clear"></div>

@@ -1,1 +1,27 @@
-<%= render :partial => 'properties/datatable' %>
+<% content_for :property_listings do %>
+<div class="properties">
+<div class="gray_box ">
+	
+	<div class="header" id="full_page">
+		<h1>Properties</h1>	
+	</div>
+
+	<div class="content">
+		
+		<%= render :partial => 'properties/datatable' %>
+
+		<% if logged_in? %>
+			<div class="links">
+				<%= link_to 'New', new_property_url %>
+			</div>
+		<% end %>
+		<div class="clear"></div>
+	</div>
+	<div class="footer" id="full"></div>
+	<br>
+</div>
+<% end %>
+
+
+
+
