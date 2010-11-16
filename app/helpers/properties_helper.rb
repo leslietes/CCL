@@ -18,23 +18,24 @@ module PropertiesHelper
   def show_all_unit_prices(unit_prices)
     # index list
     html = ""
-    unit_prices.each {|price| html += "#{price}<br>"}
+    unit_prices.each {|price| html += "#{number_to_currency(price, :unit => "", :precision => 0)}<br>"}
     html
   end
   
   def display_all_unit_prices(unit_prices)
     # used where?
     html  = "<ul>"
-    unit_prices.each {|price| html += "<li>#{price}</li>"}
+    unit_prices.each {|price| html += "<li>#{number_to_currency(price)}</li>"}
     html += "</ul>"
     html
   end
   
   def display_unit_info(units)
-    html = "<table><thead><tr><th>Unit Type</th><th>Unit Size</th><th>Unit Price</th><th>Monthly</th></tr></thead><tbody>"
+    # show page
+    html = "<table><thead><tr><th>Unit Type</th><th>Unit Size</th><th>Unit Price*</th><th>Monthly*</th></tr></thead><tbody>"
     units.each do |u|
       html += "<tr>"
-      html += "<td>#{u[0]}</td><td>#{u[2]}</td><td>#{u[1]}</td><td></td>"
+      html += "<td>#{u[0]}</td><td>#{u[2]}</td><td>#{number_to_currency(u[1], :unit => "", :precision => 0)}</td><td>#{number_to_currency(u[3], :unit => "", :precision => 0)}</td>"
       html += "</tr>"
     end
     html += "</tbody></table>"

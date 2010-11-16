@@ -1,18 +1,10 @@
-		<%#= image_tag @property.photo.url(:medium) %>
-		<%#= image_tag @property.logo.url(:medium) %>
-		<%#= image_tag @property.location_map.url(:medium) %>
-		<%#= image_tag @property.studio_layout.url(:medium) %>
-		<%#= image_tag @property.one_bedroom_layout.url(:medium) %>
-		<%#= image_tag @property.two_bedroom_layout.url(:medium) %>
-		<%#= image_tag @property.three_bedroom_layout.url(:medium) %>
-		<%#= image_tag @property.penthouse_layout.url(:medium) %>
-
-		
 		<div>
 			<%= label_tag :description %><br>
 			<div class="logo"><%= image_tag @property.logo.url(:thumb) %></div>
 			<p><%= @property.description%></p>
 		</div>
+		
+		<br>
 		
 		<div>
 		  <%= label_tag :developer %>
@@ -52,8 +44,8 @@
 		<%#= display_all_unit_prices(@property.all_unit_prices) %>
 		
 		<div>
-			<%= label_tag :price_range %>
-			<p class="indented"><%= @property.price_range %></p>
+			<%# label_tag :price_range %>
+			<p class="indented"><%# @property.price_range %></p>
 		</div>	
 		
 		<div>
@@ -80,6 +72,8 @@
 			<%= label_tag :reservation_fee %>
 			<p><%= @property.reservation_fee %></p>
 		</div>
+		
+		<div><br><p><i>* as low as</i></p></div>
 		
 		<%= render :partial => 'floor_plans' %>
 	

@@ -94,6 +94,7 @@
 	
 	<p></p>
 	
+	
 	<p>
 		<%= label_tag :prices %><br>
 		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:280px;">
@@ -102,6 +103,19 @@
 		2 Bedroom: <%= f.text_field :two_bedroom_price %><br>
 		3 Bedroom: <%= f.text_field :three_bedroom_price %><br>
 		Penthouse: <%= f.text_field :penthouse_price %>
+		</div>
+	</p>
+	
+	<p></p>
+	
+	<p>
+		<%= label_tag :monthly %><br>
+		<div style="padding-left:4px;margin-top:-0.5em;text-align:right;width:280px;">
+		Studio:    <%= f.text_field :studio_monthly %><br>
+		1 Bedroom: <%= f.text_field :one_bedroom_monthly %><br>
+		2 Bedroom: <%= f.text_field :two_bedroom_monthly %><br>
+		3 Bedroom: <%= f.text_field :three_bedroom_monthly %><br>
+		Penthouse: <%= f.text_field :penthouse_monthly %>
 		</div>
 	</p>
 	

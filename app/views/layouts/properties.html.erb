@@ -11,6 +11,8 @@
 <body>
 	<div class="container">
 		<%= render :partial => 'layouts/header' %>
+		<%= render :partial => 'layouts/flash_message_wide' %>
+		
 		<%= yield :property_listings %>
 		<%= yield :admin_pages %>
 		<!--div class="content">
