@@ -1,0 +1,17 @@
+<div class="gallery_form">
+	<% form_for :property, :url => upload_to_gallery_url(@property), :html => {:multipart => true } do |f |%>
+		
+		<% f.fields_for :galleries do |p| %>
+		<p>
+			<label>Choose an image</label> <%= p.file_field :gallery_photo %>
+		</p>
+		<p>
+			<label>Caption</label><%= p.text_field :gallery_photo_caption %>
+		</p>	
+		<% end %>
+	
+		<br> 
+		
+		<%= f.submit 'Upload' %>
+	<% end %>
+</div>	

@@ -27,7 +27,7 @@ class PropertiesController < ApplicationController
   def gallery
     @partial  = 'gallery'
     @property = Property.find_by_permalink(params[:id])
-    @galleries= @property.galleries.new
+    @property.galleries.build
     render :template => 'properties/show'
   end
   
@@ -71,15 +71,17 @@ class PropertiesController < ApplicationController
     redirect_to properties_url
   end
   
-  #def upload_to_gallery
-  #  @property = Property.find_by_permalink(params[:id])
-  #  if @property.save
-  #    flash[:notice] = "Photo successfully uploaded"
-  #  else
-  #    flash[:error] = "Error"
-  #  end
-  #  redirect_to property_gallery(@property)
-  #end
+  def upload_to_gallery
+    @property = Property.find_by_permalink(params[:id])
+    @property.galleries.build(params[:property][:galleries])
+    
+    if @property.save
+      flash[:notice] = "Photo successfully uploaded"
+    else
+      flash[:error] = "Error"
+    end
+    redirect_to property_gallery_url(@property)
+  end
   
   def search
     begin

@@ -1,7 +1,9 @@
 class Property < ActiveRecord::Base
   
   belongs_to :developer
-  #has_many :galleries
+  has_many :galleries
+  
+  accepts_nested_attributes_for :galleries
 
   has_attached_file :photo, :styles => { :medium => "800x535>", :thumb => "100x100>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
