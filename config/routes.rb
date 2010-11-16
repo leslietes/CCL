@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
   map.property_gallery '/property/:id/gallery', :controller => 'properties', :action => 'gallery'
+  map.upload_to_gallery 'property/:id/gallery/upload', :controller => 'properties', :action => 'upload_to_gallery'
   
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
