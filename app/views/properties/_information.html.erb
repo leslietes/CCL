@@ -73,13 +73,19 @@
 			<p><%= @property.reservation_fee %></p>
 		</div>
 		
+		
 		<div><br><p><i>* as low as</i></p></div>
 		
 		<%= render :partial => 'floor_plans' %>
 	
 		
 		<% if logged_in? %>
+			<p><%= label_tag :condotel %><%= @property.condotel %></p>
+		
+			<p><%= label_tag :featured %><%= @property.featured %></p>
+			
 			<p><%= label_tag :hidden %><%= @property.hidden %></p>
+			
 			
 			<div class="links">
 				<%= link_to 'Edit', edit_property_url(@property) %> |

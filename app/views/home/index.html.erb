@@ -13,12 +13,16 @@
 				<div class="image"><%= link_to (image_tag p.photo.url(:thumb)), property_url(p) %></div>
 				
 				<div class="info">
-					<div class="left">
-						<p>Estimated delivery on: <br><%= p.target_completion_date %></p>
-					</div>
-					<div class="right">
-						<p><%= p.as_low_as %>/mo*</p>
-					</div>		
+					<% if p.completed? %>
+						<div class="rfo">READY FOR OCCUPANCY</div>
+					<% else %>
+						<div class="left">
+							<p>Estimated delivery on: <br><%= p.target_completion_date %></p>
+						</div>
+						<div class="right">
+							<p><%= p.as_low_as %>/mo*</p>
+						</div>	
+					<% end %>	
 				</div>	
 				
 			</li>
