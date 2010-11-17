@@ -1,6 +1,8 @@
 		<div>
 			<%= label_tag :description %><br>
+			<% if @property.logo_file_name? %>
 			<div class="logo"><%= image_tag @property.logo.url(:medium) %></div>
+			<% end %>
 			<p><%= @property.description%></p>
 		</div>
 		

@@ -143,7 +143,8 @@ table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:1
 .property { line-height:2em;padding:0 20px 20px;position:relative; }
 .property h2 { color:#3366ff; }
 .property div { clear:left;padding-bottom:0px; }
-.property div.logo { border:1px solid #dedede;float:right;width:145px;height:120px;margin-left:10px;margin-right:10px; }
+.property div.logo { float:right;margin-left:10px;margin-right:10px; }
+.property div.logo img {border:1px solid #dedede;}
 .property div label { width:150px;color:#3366ff;font-weight:normal; }
 .property div ul li, .property div ol li { padding-left:150px; }
 .property table, .property th, .property td { border:1px solid #cecece; }

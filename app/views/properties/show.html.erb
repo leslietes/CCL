@@ -8,7 +8,7 @@
 			<%= "Property Details" %>
 			<ul class="submenu">
 				<li><%= link_to_unless_current 'Information', property_url(@property) %></li>
-				<% if @property.has_gallery? %>
+				<% if @property.has_gallery? | logged_in? %>
 				<li><%= link_to_unless_current 'Gallery', property_gallery_url(@property) %></li>
 				<% else %>
 				<li style="color:#b6b6b6;font-weight:normal;">Gallery</li>
