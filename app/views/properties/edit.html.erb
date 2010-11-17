@@ -1,19 +1,23 @@
 <% content_for :property_listings do %>
 
-<div class="properties gray_border">
-
-<h1>Edit Property</h1>
-
-<div class="property_form">
-
-<% form_for :property, :url => property_url(@property), :html => {:method => :put, :multipart => true} do |f| %>
-	<%= f.error_messages %>
-	<%= render :partial => 'form', :locals => {:f => f} %>
-<% end %>
-
+<div class="properties">
+	<div class="gray_box">
+		<div class="header" id="full_page">
+			<h1>Edit Property</h1>	
+		</div>
+	
+		<div class="content">
+			<div class="property_form">
+			<% form_for :property, :url => property_url(@property), :html => {:method => :put, :multipart => true} do |f| %>
+				<%= f.error_messages %>
+				<%= render :partial => 'form', :locals => {:f => f} %>
+			<% end %>
+			</div>
+		</div>
+		
+		<div class="footer" id="full"></div>
+	</div>
 </div>
-</div>
-
 <br>
 
 <% end %>
