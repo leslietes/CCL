@@ -2,31 +2,31 @@
   <ul>
     <% if !@property.studio_layout_file_name.nil? %>
     <li>
-      <a href="<%= @property.studio_layout.url(:medium) %>" title="Studio Floor Plan"></a>
+      <a href="<%= @property.studio_layout.url %>" title="Studio Floor Plan"></a>
     </li>
     <% end %>
   
   	<% if !@property.one_bedroom_layout_file_name.nil? %>
     <li>
-      <a href="<%= @property.one_bedroom_layout.url(:medium) %>" title="One Bedroom Floor Plan"></a>
+      <a href="<%= @property.one_bedroom_layout.url %>" title="One Bedroom Floor Plan"></a>
     </li>
 	<% end %>
     
 	<% if !@property.two_bedroom_layout_file_name.nil? %>
     <li>
-      <a href="<%= @property.two_bedroom_layout.url(:medium) %>" title="Two Bedroom Floor Plan"></a>
+      <a href="<%= @property.two_bedroom_layout.url %>" title="Two Bedroom Floor Plan"></a>
     </li>
 	<% end %>
     
 	<% if !@property.three_bedroom_layout_file_name.nil? %>
     <li>
-      <a href="<%= @property.three_bedroom_layout.url(:medium) %>" title="Three Bedroom Floor Plan"></a>
+      <a href="<%= @property.three_bedroom_layout.url %>" title="Three Bedroom Floor Plan"></a>
     </li>
     <% end %>
 	
 	<% if !@property.penthouse_layout_file_name.nil? %>
     <li>
-      <a href="<%= @property.penthouse_layout.url(:medium) %>" title="Penthouse Floor Plan"></a>
+      <a href="<%= @property.penthouse_layout.url %>" title="Penthouse Floor Plan"></a>
     </li>
 	<% end %>
   </ul>
@@ -37,13 +37,13 @@
 	<ul>
 		<% if !@property.location_map_file_name.nil? %>
 		<li>
-			<a href="<%= @property.location_map.url(:medium) %>" title="Location Map"></a>	
+			<a href="<%= @property.location_map.url %>" title="Location Map"></a>	
 		</li>
 		<% end %>
 		
 		<% if !@property.photo_file_name.nil? %>
 		<li>
-			<a href="<%= @property.photo.url(:medium) %>" title="<%= @property.name %>"</a>
+			<a href="<%= @property.photo.url %>" title="<%= @property.name %>"></a>
 		</li>
 		<% end %>
 	</ul>
