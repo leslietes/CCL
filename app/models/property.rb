@@ -112,4 +112,8 @@ class Property < ActiveRecord::Base
   def has_floor_plans?
     !studio_layout_file_name.nil? || !one_bedroom_layout_file_name.nil? || !two_bedroom_layout_file_name.nil? || !three_bedroom_layout_file_name.nil? || !penthouse_layout_file_name.nil? 
   end
+  
+  def has_gallery?
+    !galleries.empty?
+  end
 end

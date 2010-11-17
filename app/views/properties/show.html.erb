@@ -8,7 +8,11 @@
 			<%= "Property Details" %>
 			<ul class="submenu">
 				<li><%= link_to_unless_current 'Information', property_url(@property) %></li>
+				<% if @property.has_gallery? %>
 				<li><%= link_to_unless_current 'Gallery', property_gallery_url(@property) %></li>
+				<% else %>
+				<li style="color:#b6b6b6;font-weight:normal;">Gallery</li>
+				<% end %>
 			</ul>
 		</h1>	
 	</div>
@@ -24,7 +28,6 @@
 		
 		<div class="clear"></div>
 		
-		<hr>
 
 		<div class="inquiry clear">
 			<h2>Inquire About This Property</h2>

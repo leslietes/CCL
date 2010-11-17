@@ -15,7 +15,7 @@
 					<ul><span>Projects</span>
 						<% d.show_all_projects.each do |property| %>
 						<li><%= link_to property.name, property_url(property) %>
-							<%= link_to property.name, property_url(property), :class => "ui-icon ui-icon-newwin" %>
+							<%= link_to property.name, property_url(property), :class => "ui-icon ui-icon-newwin", :title => "Click to view property" %>
 						</li>
 						<% end %>
 					</ul>

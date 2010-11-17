@@ -14,7 +14,7 @@
 		<div>  
 		  <%= label_tag :location %>
 		  <p  class="indented"><%= @property.location %>
-		  	<a href="#" id="location_map" class="ui-icon ui-icon-newwin"></a>
+		  	<a href="#" id="location_map" class="ui-icon ui-icon-newwin" title="Click to view location map"></a>
 		  </p>
 		</div>  
 		
@@ -24,7 +24,7 @@
 		</div>
 		
 		<div>
-			<%= label_tag :target_completion_date %>
+			<%= label_tag :target_delivery_date %>
 			<p  class="indented"><%= @property.target_completion_date %></p>
 		</div>
 		
@@ -32,8 +32,8 @@
 			<%= label_tag :unit_types %><br>
 			<%= display_unit_info(@property.all_unit_info) %>
 			<p class="indented">
-				<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin"></a>
-				<a href="#" id="floor_plans" class="small">View layouts</a>
+				<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin" title="Click to view layouts"></a>
+				<a href="#" id="floor_plans" class="small" title="Click to view layouts">View layouts</a>
 			</p>
 		</div>	
 		
@@ -74,7 +74,13 @@
 		</div>
 		
 		
-		<div><br><p><i>* as low as</i></p></div>
+		<div class="disclaimer">
+			<p>* Denotes lowest available price<br>
+			   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut.<br>
+			   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut.<br>
+			   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut. <br>
+			</p>
+		</div>
 		
 		<%= render :partial => 'floor_plans' %>
 	

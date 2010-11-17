@@ -54,7 +54,7 @@ ul.styled { list-style:square inside; }
 
 /*table thead { font-weight:normal;height:50px;}*/
 table#properties, table#users, table#inquiries { border:1px solid #cecece;width:100%;}
-table#properties th, table#properties td, table#users th, table#users td, table#inquiries th, table#inquiries td { border:1px solid #cecece;height:40px;vertical-align:middle; }
+table#properties th, table#properties td, table#users th, table#users td, table#inquiries th, table#inquiries td { border:1px solid #cecece;height:40px;vertical-align:middle;padding:10px 0; }
 
 table#price_range { border:1px solid #cecece;}
 table#price_range th, table#price_range td { border:1px solid #cecece;height:25px;vertical-align:middle; } 
@@ -135,7 +135,6 @@ ul#nav li a { font-weight:bold;color:#fff; }
 .properties h1 { background:url(/images/nav_bg.jpg) repeat-x;color:#fff;border:1px solid #ccc; }
 /* dataTables */
 table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:10px; }
-table#properties tr { padding:20px; }
 #properties_wrapper, #inquiries_wrapper, #subscriptions_wrapper { padding:5px; }
 #properties_info, #properties_paginate, #inquiries_info, #inquiries_paginate, #subscriptions_info, #subscriptions_paginate { margin-top:10px;margin-bottom:10px; }
  /* end dataTabls */ 
@@ -156,6 +155,7 @@ table#properties tr { padding:20px; }
 .property div p a span { width:10px; }
 .property ul li { list-style:square inside;}
 .property ol li { list-style:decimal inside;}
+.property .disclaimer { margin-top:10px;background-color:#dedede;padding:5px 10px;font-size:85%;line-height:1.5em; }
 /*.property ul.submenu { text-align:right;float:left;position:relative;width:100%;height:25px; }
 .property ul.submenu li { display:inline;list-style:none;padding:4px 10px;color:#003366;border:1px solid #ccc;-moz-border-radius-topleft:6px;-moz-border-radius-topright:6px;border-bottom:1px solid #fff!important; }
 .property ul.submenu li a { font-weight:normal;color:#b6b6b6; }
@@ -179,6 +179,7 @@ table#properties tr { padding:20px; }
 #gallery ul li a img { height:90px;width:160px;}
 
 /* property inquiry form */
+.inquiry { border:1px solid #ccc;padding:10px;margin-top:10px; }
 .inquiry h2 { color:#666; }
 .inquiry form { padding:0 100px; }
 .inquiry label { width:100px;color:#666!important; }

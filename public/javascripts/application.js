@@ -25,6 +25,9 @@ jQuery(document).ready(function(){
 	});
 	$('#floor_plans a').lightBox();
 	$('#location_map a').lightBox();
+	
+	$(".property a").tooltip();
+	$("#gallery a").tooltip();
 });
 
 
