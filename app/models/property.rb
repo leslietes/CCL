@@ -29,8 +29,8 @@ class Property < ActiveRecord::Base
   has_attached_file :penthouse_layout, :styles => { :medium => "800x535>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  #validates_presence_of :developer_id, :name, :permalink, :location, :target_completion_date, :price_range
-  #validates_uniqueness_of :permalink
+  validates_presence_of :developer_id, :name, :permalink
+  validates_uniqueness_of :permalink
   
    def self.property_types
     [[''],['Condominium'],['Condotel']]
@@ -59,7 +59,7 @@ class Property < ActiveRecord::Base
   
   def self.show_all_featured
     #home_page
-    Property.find(:all, :select => "name, permalink, target_completion_date, developer_id, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, as_low_as_label, as_low_as",
+    Property.find(:all, :select => "id, name, permalink, target_completion_date, developer_id, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, as_low_as_label, as_low_as",
                   :conditions => ["hidden = ? and featured = ?", false, true], :order => "name ASC",
                   :include => :developer)
   end
