@@ -18,7 +18,10 @@
 							<%= link_to property.name, property_url(property), :class => "ui-icon ui-icon-newwin", :title => "Click to view property" %>
 						</li>
 						<% end %>
-					</ul>
+					</ul><br>
+					<% if logged_in? %>
+					<%= link_to 'Edit', edit_developer_url(d) %>&nbsp;|&nbsp;<%= link_to 'Delete', developer_url(d), :method => :delete, :confirm => "Are you sure?" %>	
+					<% end %>
 					</div>
 					<div class="clear"></div>
 				</div>
