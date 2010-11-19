@@ -5,10 +5,10 @@ class Property < ActiveRecord::Base
   
   accepts_nested_attributes_for :galleries
 
-  has_attached_file :photo, :styles => { :medium => "800x535>", :thumb => "100x100>" },
+  has_attached_file :photo, :styles => { :medium => "800x535>", :thumb => "190x130>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :logo, :styles => { :medium => "800x535>", :thumb => "120x140>" },
+  has_attached_file :logo, :styles => { :medium => "800x535>", :thumb => "190x130>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
   has_attached_file :location_map, :styles => { :medium => "800x535>" },

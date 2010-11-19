@@ -22,7 +22,7 @@ class DevelopersController < ApplicationController
     @developer = Developer.new(params[:developer])    
     if @developer.save
       flash[:notice] = "Successfully created developer"
-      redirect_to @developer
+      redirect_to developers_url
     else
       flash[:error] = "Unable to create developer. Please check your entries"
       render :action => 'new'

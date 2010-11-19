@@ -9,7 +9,7 @@
 				
 				<h3><a href="#"><%= d.developer %></a></h3>
 				<div>
-					<%= image_tag d.image.url, :class => "logo"	%>	
+					<%= image_tag(d.image.url(:thumb), :class => "logo")	%>	
 					<div class="details">
 					<p><span>Details</span><br></>Loren ipsum dolor</p>	
 					<ul><span>Projects</span>
