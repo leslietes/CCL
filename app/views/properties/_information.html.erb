@@ -1,8 +1,5 @@
 		<div>
 			<%= label_tag :description %><br>
-			<% if @property.logo_file_name? %>
-			<div class="logo"><%= image_tag @property.logo.url(:thumb) %></div>
-			<% end %>
 			<p><%= @property.description%></p>
 		</div>
 		
@@ -39,10 +36,10 @@
 		<div>
 			<%= label_tag :unit_types %><br>
 			<%= display_unit_info(@property.all_unit_info) %>
-			<p class="indented">
+			<!--p class="indented">
 				<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin" title="Click to view layouts"></a>
 				<a href="#" id="floor_plans" class="small" title="Click to view layouts">View layouts</a>
-			</p>
+			</p-->
 		</div>	
 		
 		<%#= label_tag :unit_types %>

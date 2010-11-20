@@ -14,16 +14,43 @@ jQuery(document).ready(function(){
 		"autoHeight": false
 	});
 	
-	/* property page */
-	$('a#floor_plans').click(function(){
-		$('#floor_plans a').click();
+	/* property page */ 
+	$('a#studio_floor_plan').click(function(){
+		$('#studio_floor_plan a').click();
 		return false;
 	});
+	
+	$('a#one_bedroom_floor_plan').click(function(){
+		$('#one_bedroom_floor_plan a').click();
+		return false;
+	});
+	
+	$('a#two_bedroom_floor_plan').click(function(){
+		$('#two_bedroom_floor_plan a').click();
+		return false;
+	});
+	
+	$('a#three_bedroom_floor_plan').click(function(){
+		$('#three_bedroom_floor_plan a').click();
+		return false;
+	});
+	
+	$('a#penthouse_floor_plan').click(function(){
+		$('#penthouse_floor_plan a').click();
+		return false;
+	});
+	
 	$('a#location_map').click(function(){
 		$('#location_map a').click();
 		return false;
 	});
-	$('#floor_plans a').lightBox();
+	
+	$('#studio_floor_plan a').lightBox();
+	$('#one_bedroom_floor_plan a').lightBox();
+	$('#two_bedroom_floor_plan a').lightBox();
+	$('#three_bedroom_floor_plan a').lightBox();
+	$('#penthouse_floor_plan a').lightBox();
+	
 	$('#location_map a').lightBox();
 });
 

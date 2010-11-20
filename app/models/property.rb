@@ -100,12 +100,12 @@ class Property < ActiveRecord::Base
    
   def all_unit_info
     types = []
-    types << ['Studio',   "#{self.studio_price}",       "#{self.studio_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"]      if self.studio?
-    types << ['1 Bedroom',"#{self.one_bedroom_price}",  "#{self.one_bedroom_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.one_bedroom?
-    types << ['2 Bedroom',"#{self.two_bedroom_price}",  "#{self.two_bedroom_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.two_bedroom?
-    types << ['3 Bedroom',"#{self.three_bedroom_price}","#{self.three_bedroom_size}","<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.three_bedroom?
-    types << ['Penthouse',"#{self.penthouse_price}",    "#{self.penthouse_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.penthouse?
-    types << ['Loft',     "#{self.loft_price}",         "#{self.loft_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"]      if self.loft?
+    types << ['Studio',   "#{self.studio_price}",       "#{self.studio_size}", "#{view_layout_link('studio')}"]      if self.studio?
+    types << ['1 Bedroom',"#{self.one_bedroom_price}",  "#{self.one_bedroom_size}", "#{view_layout_link('one_bedroom')}"] if self.one_bedroom?
+    types << ['2 Bedroom',"#{self.two_bedroom_price}",  "#{self.two_bedroom_size}", "#{view_layout_link('two_bedroom')}"] if self.two_bedroom?
+    types << ['3 Bedroom',"#{self.three_bedroom_price}","#{self.three_bedroom_size}","#{view_layout_link('three_bedroom')}"] if self.three_bedroom?
+    types << ['Penthouse',"#{self.penthouse_price}",    "#{self.penthouse_size}", "#{view_layout_link('penthouse')}"] if self.penthouse?
+    types << ['Loft',     "#{self.loft_price}",         "#{self.loft_size}", "#{view_layout_link('loft')}"]      if self.loft?
     types
   end
   
@@ -116,4 +116,15 @@ class Property < ActiveRecord::Base
   def has_gallery?
     !galleries.empty?
   end
+  
+  def has_tagline?
+    !as_low_as.blank?
+  end
+  
+  private
+  
+  def view_layout_link(type)
+    "<p><a href='#' id='#{type}_floor_plan' class='small'>View layout</a> <a href='#' id='#{type}_floor_plan' class='ui-icon ui-icon-newwin'>View layout</a></p>"
+  end  
+  
 end

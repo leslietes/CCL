@@ -1,36 +1,54 @@
-<div id="floor_plans" style="visibility:hidden;height:0;padding:0;">
-  <ul>
-    <% if !@property.studio_layout_file_name.nil? %>
-    <li>
-      <a href="<%= @property.studio_layout.url(:medium) %>" title="Studio Floor Plan"></a>
-    </li>
-    <% end %>
+<% if !@property.studio_layout_file_name.nil? %>
+	<div id="studio_floor_plan" style="visibility:hidden;height:0;padding:0;">
+  		<ul>
+		    <li>
+		      <a href="<%= @property.studio_layout.url%>" title="Studio Floor Plan"></a>
+		    </li>
+	    </ul>
+	</div>	
+<% end %>  	
+
   
-  	<% if !@property.one_bedroom_layout_file_name.nil? %>
-    <li>
-      <a href="<%= @property.one_bedroom_layout.url(:medium) %>" title="One Bedroom Floor Plan"></a>
-    </li>
-	<% end %>
+<% if !@property.one_bedroom_layout_file_name.nil? %>
+    <div id="one_bedroom_floor_plan" style="visibility:hidden;height:0;padding:0;">
+		<ul>
+		    <li>
+		      <a href="<%= @property.one_bedroom_layout.url %>" title="One Bedroom Floor Plan"></a>
+		    </li>
+		</ul>
+	</div>	
+<% end %>
     
-	<% if !@property.two_bedroom_layout_file_name.nil? %>
-    <li>
-      <a href="<%= @property.two_bedroom_layout.url(:medium) %>" title="Two Bedroom Floor Plan"></a>
-    </li>
-	<% end %>
+<% if !@property.two_bedroom_layout_file_name.nil? %>
+	<div id="two_bedroom_floor_plan" style="visibility:hidden;height:0;padding:0;">
+		<ul>
+		    <li>
+		      <a href="<%= @property.two_bedroom_layout.url %>" title="Two Bedroom Floor Plan"></a>
+		    </li>
+		</ul>
+	</div>		
+<% end %>
     
-	<% if !@property.three_bedroom_layout_file_name.nil? %>
-    <li>
-      <a href="<%= @property.three_bedroom_layout.url(:medium) %>" title="Three Bedroom Floor Plan"></a>
-    </li>
-    <% end %>
+<% if !@property.three_bedroom_layout_file_name.nil? %>
+	<div id="three_bedroom_floor_plan" style="visibility:hidden;height:0;padding:0;">
+		<ul>
+		    <li>
+		      <a href="<%= @property.three_bedroom_layout.url(:medium) %>" title="Three Bedroom Floor Plan"></a>
+		    </li>
+		</ul>
+	</div>		
+<% end %>
 	
-	<% if !@property.penthouse_layout_file_name.nil? %>
-    <li>
-      <a href="<%= @property.penthouse_layout.url(:medium) %>" title="Penthouse Floor Plan"></a>
-    </li>
-	<% end %>
-  </ul>
-</div>
+<% if !@property.penthouse_layout_file_name.nil? %>
+	<div id="penthouse_floor_plan" style="visibility:hidden;height:0;padding:0;">
+		<ul>
+		    <li>
+		      <a href="<%= @property.penthouse_layout.url(:medium) %>" title="Penthouse Floor Plan"></a>
+		    </li>
+		</ul>
+	</div>	
+<% end %>
+
 
 <% if !@property.location_map_file_name.nil? || !@property.photo_file_name.nil? %>
 <div id="location_map" style="visibility:hidden;height:0;padding:0;">

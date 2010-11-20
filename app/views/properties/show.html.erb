@@ -18,11 +18,19 @@
 	</div>
 
 	<div class="content property">
-		<h1 class="property_name"><%= @property.name %></h1>
+		<h1 class="property_name"><%= @property.name %>
+			<% if @property.logo_file_name? %>
+			<div class="logo"><%= image_tag @property.logo.url(:thumb) %></div>
+			<% end %>
+		</h1>
+		
 		
 		<h3 class='tagline'>
+			<% if @property.has_tagline? %>
 			Own a unit for as low as <%= number_to_currency(@property.as_low_as, :unit => "P ", :precision => 0) %><%= @property.as_low_as_label %>
+			<% end %>
 		</h3>
+		
 		
 		<div class="details">
 			<%= render :partial => "#{@partial}" %>

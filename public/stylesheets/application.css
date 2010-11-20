@@ -146,7 +146,7 @@ table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:1
 .property h1.property_name { background:none;border:none;color:#3366ff;padding:0;font-size:2.5em;font-weight:bold;  }
 .property h2 { color:#3366ff; }
 .property div { clear:left;padding-bottom:0px; }
-.property div.logo { float:right;margin-left:10px;margin-right:10px; }
+.property div.logo { float:right;margin:10px 10px 0 10px; }
 .property div.logo img {border:1px solid #dedede;padding:5px;}
 .property div label { width:150px;color:#3366ff;font-weight:normal; }
 .property div ul li, .property div ol li { padding-left:150px; }
