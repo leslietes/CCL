@@ -118,12 +118,14 @@ ul#nav li a { font-weight:bold;color:#fff; }
 .links { position:relative;clear:both;padding-top:10px; }
 
 /* index page */
-.developer .details { margin-left:160px;font-size:.9em; }
-.developer img.logo { height:120px;width:145px;float:left;border:1px solid #dedede;margin-right:10px; }
+.developer .details { font-size:.9em; }
+.developer img.logo { float:right;border:1px solid #dedede;margin-left:10px;padding:5px; }
 .developer p { margin-bottom:10px; }
 .developer span { color:#3366FF; }
 .developer ul li { list-style:square inside;padding-left:15px; }
 .developer ul li a { display:inline-block;}
+
+.ui-accordion .ui-accordion-content { padding:1em; }
 
 /*
 .developer { line-height:2em;padding:0 10px 20px 0; }

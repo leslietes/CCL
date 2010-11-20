@@ -9,9 +9,8 @@
 				
 				<h3><a href="#"><%= d.developer %></a></h3>
 				<div>
-					<%= image_tag(d.image.url(:thumb), :class => "logo")	%>	
+					<%= image_tag(d.image.url, :class => "logo")	%>	
 					<div class="details">
-					<p><span>Details</span><br></>Loren ipsum dolor</p>	
 					<ul><span>Projects</span>
 						<% d.show_all_projects.each do |property| %>
 						<li><%= link_to property.name, property_url(property) %>
