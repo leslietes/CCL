@@ -1,7 +1,7 @@
 		<div>
 			<%= label_tag :description %><br>
 			<% if @property.logo_file_name? %>
-			<div class="logo"><%= image_tag @property.logo.url(:medium) %></div>
+			<div class="logo"><%= image_tag @property.logo.url(:thumb) %></div>
 			<% end %>
 			<p><%= @property.description%></p>
 		</div>
@@ -29,6 +29,12 @@
 			<%= label_tag :target_delivery_date %>
 			<p  class="indented"><%= @property.target_completion_date %></p>
 		</div>
+		
+		<div>
+			<%= label_tag :type %>
+			<p class="indented"><%= @property.property_type %></p>	
+		</div>
+		
 		
 		<div>
 			<%= label_tag :unit_types %><br>
@@ -65,10 +71,8 @@
 			<%= @property.payment_terms %>
 		</div>
 		
-		<div>
-			<%= label_tag :as_low_as %>
-			<p><%= number_to_currency(@property.as_low_as, :unit => "", :precision => 0) %> <%= @property.as_low_as_label %></p>
-		</div>	
+		<%#= label_tag :as_low_as %>
+		<%# number_to_currency(@property.as_low_as, :unit => "", :precision => 0) %> <%# @property.as_low_as_label %>
 		
 		<div>
 			<%= label_tag :reservation_fee %>
@@ -88,8 +92,6 @@
 	
 		
 		<% if logged_in? %>
-			<p><%= label_tag :type %><%= @property.property_type %></p>
-		
 			<p><%= label_tag :featured %><%= @property.featured %></p>
 			
 			<p><%= label_tag :hidden %><%= @property.hidden %></p>

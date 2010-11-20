@@ -125,7 +125,7 @@ ul#nav li a { font-weight:bold;color:#fff; }
 .developer ul li { list-style:square inside;padding-left:15px; }
 .developer ul li a { display:inline-block;}
 
-.ui-accordion .ui-accordion-content { padding:1em; }
+.ui-accordion .ui-accordion-content { padding:1em!important; }
 
 /*
 .developer { line-height:2em;padding:0 10px 20px 0; }
