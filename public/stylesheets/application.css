@@ -143,10 +143,11 @@ table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:1
 
 /* show page */
 .property { line-height:2em;padding:0 20px 20px;position:relative; }
+.property h1.property_name { background:none;border:none;color:#3366ff;padding:0;font-size:2.5em;font-weight:bold;  }
 .property h2 { color:#3366ff; }
 .property div { clear:left;padding-bottom:0px; }
 .property div.logo { float:right;margin-left:10px;margin-right:10px; }
-.property div.logo img {border:1px solid #dedede;}
+.property div.logo img {border:1px solid #dedede;padding:5px;}
 .property div label { width:150px;color:#3366ff;font-weight:normal; }
 .property div ul li, .property div ol li { padding-left:150px; }
 .property table, .property th, .property td { border:1px solid #cecece; }
@@ -157,6 +158,7 @@ table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:1
 .property div p a span { width:10px; }
 .property ul li { list-style:square inside;}
 .property ol li { list-style:decimal inside;}
+.property .tagline { padding-bottom:20px;font-weight:bold; }
 .property .disclaimer { margin-top:10px;background-color:#dedede;padding:5px 10px;font-size:85%;line-height:1.5em; }
 /*.property ul.submenu { text-align:right;float:left;position:relative;width:100%;height:25px; }
 .property ul.submenu li { display:inline;list-style:none;padding:4px 10px;color:#003366;border:1px solid #ccc;-moz-border-radius-topleft:6px;-moz-border-radius-topright:6px;border-bottom:1px solid #fff!important; }

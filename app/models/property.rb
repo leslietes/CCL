@@ -97,15 +97,15 @@ class Property < ActiveRecord::Base
     prices << "#{self.loft_price}"               if self.loft?
     prices
   end
-  
+   
   def all_unit_info
     types = []
-    types << ['Studio',   "#{self.studio_price}",       "#{self.studio_size}", "<a href=''>View studio layout</a>"]      if self.studio?
-    types << ['1 Bedroom',"#{self.one_bedroom_price}",  "#{self.one_bedroom_size}", "<a href=''>View 1 bedroom layout</a>"] if self.one_bedroom?
-    types << ['2 Bedroom',"#{self.two_bedroom_price}",  "#{self.two_bedroom_size}", "<a href=''>View 2 bedroom layout</a>"] if self.two_bedroom?
-    types << ['3 Bedroom',"#{self.three_bedroom_price}","#{self.three_bedroom_size}","<a href=''>View 3 bedroom layout</a>"] if self.three_bedroom?
-    types << ['Penthouse',"#{self.penthouse_price}",    "#{self.penthouse_size}", "<a href=''>View penthouse layout</a>"] if self.penthouse?
-    types << ['Loft',     "#{self.loft_price}",         "#{self.loft_size}", "<a href=''>View loft layout</a>"]      if self.loft?
+    types << ['Studio',   "#{self.studio_price}",       "#{self.studio_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"]      if self.studio?
+    types << ['1 Bedroom',"#{self.one_bedroom_price}",  "#{self.one_bedroom_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.one_bedroom?
+    types << ['2 Bedroom',"#{self.two_bedroom_price}",  "#{self.two_bedroom_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.two_bedroom?
+    types << ['3 Bedroom',"#{self.three_bedroom_price}","#{self.three_bedroom_size}","<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.three_bedroom?
+    types << ['Penthouse',"#{self.penthouse_price}",    "#{self.penthouse_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"] if self.penthouse?
+    types << ['Loft',     "#{self.loft_price}",         "#{self.loft_size}", "<a href='' class='small ui-icon ui-icon-newwin'>View layout</a>"]      if self.loft?
     types
   end
   

@@ -4,8 +4,8 @@
 
 <div class="gray_box">
 	<div class="header property_tab" id="full_page">
-		<h1>
-			<%= @property.name %>
+		<h1> 
+            &nbsp;
 			<ul class="submenu">
 				<li><%= link_to_unless_current 'Information', property_url(@property) %></li>
 				<% if @property.has_gallery? | logged_in? %>
@@ -18,11 +18,11 @@
 	</div>
 
 	<div class="content property">
-		<h2>
-			Own a unit for as low as <%= number_to_currency(@property.as_low_as, :unit => "P ", :precision => 0) %><%= @property.as_low_as_label %>
-		</h2>
+		<h1 class="property_name"><%= @property.name %></h1>
 		
-		<hr>
+		<h3 class='tagline'>
+			Own a unit for as low as <%= number_to_currency(@property.as_low_as, :unit => "P ", :precision => 0) %><%= @property.as_low_as_label %>
+		</h3>
 		
 		<div class="details">
 			<%= render :partial => "#{@partial}" %>
