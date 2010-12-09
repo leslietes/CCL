@@ -20,6 +20,7 @@
 	<div class="content property">
 		<h1 class="property_name"><span style="float:left;"><%= @property.name %></span>
 			<a href="#" id="property_photo" class="ui-icon ui-icon-newwin" title="Click to view photo"></a>
+			<br>
 			<% if @property.logo_file_name? %>
 			<div class="logo"><%= image_tag @property.logo.url(:thumb) %></div>
 			<% end %>
