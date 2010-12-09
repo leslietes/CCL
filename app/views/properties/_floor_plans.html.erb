@@ -50,7 +50,7 @@
 <% end %>
 
 
-<% if !@property.location_map_file_name.nil? || !@property.photo_file_name.nil? %>
+<% if !@property.location_map_file_name.nil? %>
 <div id="location_map" style="visibility:hidden;height:0;padding:0;">
 	<ul>
 		<% if !@property.location_map_file_name.nil? %>
@@ -58,7 +58,13 @@
 			<a href="<%= @property.location_map.url(:medium) %>" title="Location Map"></a>	
 		</li>
 		<% end %>
-		
+	</ul>
+</div>	
+<% end %>
+
+<% if !@property.photo_file_name.nil? %>
+<div id="property_photo" style="visibility:hidden;height:0;padding:0;">
+	<ul>
 		<% if !@property.photo_file_name.nil? %>
 		<li>
 			<a href="<%= @property.photo.url(:medium) %>" title="<%= @property.name %>"></a>

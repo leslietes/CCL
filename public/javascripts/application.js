@@ -45,6 +45,11 @@ jQuery(document).ready(function(){
 		return false;
 	});
 	
+	$('a#property_photo').click(function(){
+		$('#property_photo a').click();
+		return false;
+	});
+	
 	$('#studio_floor_plan a').lightBox();
 	$('#one_bedroom_floor_plan a').lightBox();
 	$('#two_bedroom_floor_plan a').lightBox();
@@ -52,6 +57,7 @@ jQuery(document).ready(function(){
 	$('#penthouse_floor_plan a').lightBox();
 	
 	$('#location_map a').lightBox();
+	$('#property_photo a').lightBox();
 });
 
 
