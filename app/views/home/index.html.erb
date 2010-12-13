@@ -17,10 +17,16 @@
 						<div class="rfo">READY FOR OCCUPANCY</div>
 					<% else %>
 						<div class="left">
+							<% if !p.target_completion_date.blank? %>
 							<p>Estimated delivery<br><%= p.target_completion_date %></p>
+							<% end %>
 						</div>
 						<div class="right">
-							<p><%= p.as_low_as_label %><br>as low as <%= number_to_currency(p.as_low_as, :unit => "", :precision => 0) %></p>
+							<% if p.as_low_as_label == " downpayment" && !p.as_low_as.blank? %>
+							    <p>Downpayment for as low as <%= number_to_currency(p.as_low_as, :unit => "", :precision => 0) %></p>
+							<% elsif "/month" && !p.as_low_as.blank? %>
+							    <p>As low as <%= number_to_currency(p.as_low_as, :unit => "", :precision => 0) %>/month</p>
+							<% end %>
 						</div>	
 					<% end %>	
 				</div>	
