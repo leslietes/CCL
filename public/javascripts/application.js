@@ -5,7 +5,9 @@ jQuery(document).ready(function(){
 		"aLengthMenu": [[-1, 10, 25, 50], ["All", 10, 25, 50]],
 		"iDisplayLength": "-1"
 	});
-	$('#inquiries').dataTable();
+	$('#inquiries').dataTable({
+		"aaSorting": [[4,"desc"]]
+	});
 	$('#subscriptions').dataTable();
 	$('#gallery a').lightBox();
 	

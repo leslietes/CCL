@@ -11,9 +11,8 @@
 				<thead>
 					<tr>
 						<th>Name</th>
-						<th>Contact No</th>
-						<th>Email Address</th>
 						<th>Subject</th>
+						<th>Reason</th>
 						<th>Message</th>
 						<th>Date Sent</th>
 						<th>Actions</th>
@@ -22,13 +21,16 @@
 				<tbody>
 					<% @contacts.each do |c| %>
 						<tr>
-							<td><%= c.name %></td>
-							<td><%= c.contact_no %></td>
-							<td><%= c.email %></td>
-							<td><%= c.subject %>
-							<td><%= c.message %></td>
-							<td><%= format_date(c.created_at) %></td>
 							<td>
+								<%= c.name %><br>
+								<%= c.contact_no %><br>
+								<%= c.email %>
+							</td>
+							<td class="center"><%= c.subject %></td>
+							<td class="center"><%= c.reason %></td>
+							<td width="300px;"><%= c.message %></td>
+							<td class="center"><%= format_date_with_time(c.created_at) %></td>
+							<td class="center">
 								<%= link_to 'Delete', contact_url(c), :method => :delete, :confirm => "Are you sure?" %>
 							</td>
 						</tr>

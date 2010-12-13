@@ -10,6 +10,11 @@ module ApplicationHelper
     #date.strftime("#{abbreviated ? '%b' : '%B'} %d, %Y")
   end
   
+  def format_date_with_time(date, abbreviated=false)
+    return unless date
+    date.strftime("%b %d, %Y %H:%M")
+  end
+  
   def has_featured?
     setting = Setting.first
     !setting.featured1_file_name.nil? || !setting.featured2_file_name.nil? || !setting.featured3_file_name.nil? || !setting.featured4_file_name.nil? || !setting.featured5_file_name.nil?

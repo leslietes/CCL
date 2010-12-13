@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
   before_filter :login_required, :only => [:index, :destroy]
   
   def index
-    @contacts = Contact.all
+    @contacts = Contact.find(:all, :order => "created_at ASC")
     render :layout => "properties"
   end
   
@@ -13,19 +13,24 @@ class ContactsController < ApplicationController
   
   def create
     @contact = Contact.new(params[:contact])
-    @contact.subject = 'General Inquiry'
-    if verify_recaptcha
+    
+    #if verify_recaptcha
       if @contact.save
         flash[:notice] = "Your message has been sent. We will get back to you shortly"
-        redirect_to new_contact_url
+        case params[:from]
+          when "Contact Us"
+            redirect_to new_contact_url
+          else
+            redirect_to property_url(params[:from])
+        end
       else
         flash[:error] = "Unable to send message. Please check your entries"
         render :action => "new"
       end
-    else
-      flash[:error] = "There was an error with the code you entered. Please try again"
-      render :action => 'new'
-    end
+    #else
+    #  flash[:error] = "There was an error with the code you entered. Please try again"
+    #  render :action => 'new'
+    #end
   end
   
   def destroy
