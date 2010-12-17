@@ -179,7 +179,7 @@ table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:1
 .search_results ul li { margin-top:5px;margin-left:15px;margin-bottom:10px; }
 .search_results .photo { border:1px solid #dedede;height:120px;width:145px;float:left;margin-right:15px; }
 
-#gallery { clear:both; }
+#gallery { clear:left; }
 #gallery ul li { list-style:none;display:inline;padding:0; }
 #gallery ul li a img { height:90px;width:160px;}
 
