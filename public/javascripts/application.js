@@ -10,7 +10,8 @@ jQuery(document).ready(function(){
 	});
 	$('#subscriptions').dataTable();
 	$('#pre_owned').dataTable();
-	
+	$('#rentals').dataTable();
+		
 	$('#gallery a').lightBox();
 	
 	$('.calendar').datepicker();
