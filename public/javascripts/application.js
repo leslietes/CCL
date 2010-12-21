@@ -9,6 +9,9 @@ jQuery(document).ready(function(){
 		"aaSorting": [[4,"desc"]]
 	});
 	$('#subscriptions').dataTable();
+	$('#pre_owned').dataTable();
+	$('#rentals').dataTable();
+		
 	$('#gallery a').lightBox();
 	
 	$('.calendar').datepicker();

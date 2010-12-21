@@ -1,10 +1,57 @@
+<% content_for :property_listings do %>
+
+<div class="properties">
+
 <div class="gray_box">
-	<div class="header">
+	<div class="header" id="full_page">
 		<h1>Pre-Owned Condominiums</h1>
 	</div>
 
 	<div class="content">
+		<table id="pre_owned">
+			<thead>
+				<tr>
+					<th>Unit</th>
+					<th>Location</th>
+					<th>Size</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+		</table>
+		
+		<% if logged_in? %>
+			<div class="links">
+				<%= link_to 'Edit', '' %> |
+				<%= link_to 'Delete', '', :method => :delete, :confirm => "Are you sure?" %>
+			</div>	
+		<% end %>
+		
+		<br>
+		
+		<div class="clear"></div>
+		
+		<div class="pre_owned clear property">
+			<div>
+			<h2>Contact Us For Submissions</h2>
+			<% form_for @contact do |f| %>
+				<p><b>If you have a condominium unit for sale, and you would want it featured here, please fill in the form below. We'll get back to you as soon as possible.</b></p>
+				<%= f.error_messages %>
+				<%= f.hidden_field :subject, :value => 'Pre-owned Inquiry' %>
+				<%= hidden_field_tag :from,  "Pre Owned" %>
+				<p><label>Your Full Name</label><%= f.text_field :name%></p>
+				<p><label>Contact Number</label><%= f.text_field :contact_no %></p>
+				<p><label>Email Address</label><%= f.text_field :email%></p>
+				<p><label>Your Message</label><%= f.text_area :message %></p>
+				<%# recaptcha_tags %>
+				<p><%= f.submit 'Send' %></p>
+			<% end %>
+			</div>
+		</div>
 	</div>
 	
-	<div class="footer"></div>
+	<div class="footer" id="full"></div>
 </div>
+</div>
+
+<br>
+<% end %>

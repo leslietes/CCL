@@ -43,7 +43,8 @@ hr { color:#fff;background-color:#fff;height:1px;margin-bottom:10px; }
 img { color:#fff; }
 
 label { float:left;width:70px;font-weight:bold;clear:left; }
-input { width:200px;border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%; }
+input { border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%; }
+input[type='text'] { width:200px;}
 input[type='submit'] { width:80px;margin-left:70px;font-size:12px;padding:5px; }
 input[type='radio'] { margin-left:0; }
 input[type='file'] { width:200px; }
@@ -54,14 +55,15 @@ ul.styled { list-style:square inside; }
 .indented_text { margin-left:70px; }
 
 /*table thead { font-weight:normal;height:50px;}*/
-table#properties, table#users, table#inquiries { border:1px solid #cecece;width:100%;}
+table#properties, table#users, table#inquiries, table#pre_owned, table#rentals { border:1px solid #cecece;width:100%;}
 table#properties th, table#properties td, table#users th, table#users td, table#inquiries th, table#inquiries td { border:1px solid #cecece;height:40px;vertical-align:middle;padding:10px 0; }
+table#pre_owned th, table#pre_owned td, table#rentals th, table#rentals td { border:1px solid #cecece;height:40px;vertical-align:middle;padding:10px 0; } 
 
 table#price_range { border:1px solid #cecece;}
 table#price_range th, table#price_range td { border:1px solid #cecece;height:25px;vertical-align:middle; } 
 
 /* used in search form */
-select { width:200px; }
+select { width:200px;border-color: #CCCCCC #AAAAAA #AAAAAA #CCCCCC;border-style: solid;border-width: 1px;background-color:#fff; }
 
 /* used in settings page */
 ul.bullets { list-style:square inside;padding-left:20px; }
@@ -137,9 +139,9 @@ ul#nav li a { font-weight:bold;color:#fff; }
 .properties, .inquiries, .users { position:relative;margin-left:15px;margin-right:15px;margin-top:15px; } /*same as .main except for width */
 .properties h1 { background:url(/images/nav_bg.jpg) repeat-x;color:#fff;border:1px solid #ccc; }
 /* dataTables */
-table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:10px; }
-#properties_wrapper, #inquiries_wrapper, #subscriptions_wrapper { padding:5px; }
-#properties_info, #properties_paginate, #inquiries_info, #inquiries_paginate, #subscriptions_info, #subscriptions_paginate { margin-top:10px;margin-bottom:10px; }
+table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#rentals{ clear:both;margin-top:10px; }
+#properties_wrapper, #inquiries_wrapper, #subscriptions_wrapper, #pre_owned_wrapper, #rentals_wrapper { padding:5px; }
+#properties_info, #properties_paginate, #inquiries_info, #inquiries_paginate, #subscriptions_info, #subscriptions_paginate, #pre_owned_paginate, #pre_owned_info, #rentals_info { margin-top:10px;margin-bottom:10px; }
  /* end dataTabls */ 
 
 /* show page */
@@ -191,6 +193,14 @@ table#properties, table#inquiries, table#subscriptions { clear:both;margin-top:1
 .inquiry input[type='submit'] { margin-left:150px; }
 .inquiry input[type='radio'] {  }
 .inquiry textarea { width:65%;height:120px;margin-left:150px; }
+
+/* pre_owned form and rentals */
+.pre_owned, .rentals { border:1px solid #ccc;padding:10px;margin-top:10px;margin-right:5px; }
+.pre_owned h2, .rentals h2 { color:#666; }
+.pre_owned form, .rentals form { padding:0 100px; }
+.pre_owned label, .rentals label { width:100px;color:#666!important; }
+.pre_owned input[type='submit'], .rentals input[type='submit'] { margin-left:150px; }
+.pre_owned textarea, .rentals textarea { width:65%;height:120px;margin-left:0px; }
 
 /* contact us */
 .contact_us { padding:10px; }
