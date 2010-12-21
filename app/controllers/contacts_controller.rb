@@ -20,6 +20,8 @@ class ContactsController < ApplicationController
         case params[:from]
           when "Contact Us"
             redirect_to new_contact_url
+          when 'Pre Owned'
+          	redirect_to condominiums_url
           else
             redirect_to property_url(params[:from])
         end
