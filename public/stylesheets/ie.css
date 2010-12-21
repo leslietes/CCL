@@ -2,7 +2,7 @@
 
 .main { margin-left:10px; }
 
-.gray_box .content { height:250px;padding:5px; }
+.gray_box .content { height:250px;padding:5px;height:auto; }
 .gray_box .header#third_column h1 { width:270px; }
 .gray_box .footer { width:620px; }
 .gray_box #boxes.footer{ width:300px;height:auto; }
