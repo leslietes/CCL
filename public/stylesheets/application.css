@@ -43,7 +43,8 @@ hr { color:#fff;background-color:#fff;height:1px;margin-bottom:10px; }
 img { color:#fff; }
 
 label { float:left;width:70px;font-weight:bold;clear:left; }
-input { width:200px;border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%; }
+input { border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%; }
+input[type='text'] { width:200px;}
 input[type='submit'] { width:80px;margin-left:70px;font-size:12px;padding:5px; }
 input[type='radio'] { margin-left:0; }
 input[type='file'] { width:200px; }
@@ -61,7 +62,7 @@ table#price_range { border:1px solid #cecece;}
 table#price_range th, table#price_range td { border:1px solid #cecece;height:25px;vertical-align:middle; } 
 
 /* used in search form */
-select { width:200px; }
+select { width:200px;border-color: #CCCCCC #AAAAAA #AAAAAA #CCCCCC;border-style: solid;border-width: 1px;background-color:#fff; }
 
 /* used in settings page */
 ul.bullets { list-style:square inside;padding-left:20px; }

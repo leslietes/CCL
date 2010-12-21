@@ -50,10 +50,10 @@
 				<p><label>Contact Number</label><%= f.text_field :contact_no %></p>
 				<p><label>Email Address</label><%= f.text_field :email%></p>
 				<p><label>Your Message</label>
-					<%= f.radio_button :reason, "Financing"%>Inquire about easy financing scheme
-					<br><%= f.radio_button :reason, "Schedule", :style => "margin-left:150px;" %>Schedule viewing of model/scale unit
-					<br><%= f.radio_button :reason, "Inquire",  :style => "margin-left:150px;" %>Inquire about this property
-					<%= f.text_area :message %>
+						<%= f.radio_button :reason, "Financing"%>Inquire about easy financing scheme
+						<br><%= f.radio_button :reason, "Schedule", :style => "margin-left:150px;clear:left;" %>Schedule viewing of model/scale unit
+						<br><%= f.radio_button :reason, "Inquire",  :style => "margin-left:150px;clear:left;" %>Inquire about this property
+						<%= f.text_area :message %>
 				</p>
 				<%# recaptcha_tags %>
 				<p><%= f.submit 'Send' %></p>
