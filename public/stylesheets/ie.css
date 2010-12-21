@@ -9,8 +9,8 @@
 
 .right_column { width:280px;margin-right:0px; }
 .right_column .gray_box .header { width:296px; }
-.right_column .gray_box .content { width:285px; }
-.right_column .gray_box .footer { width:290px;padding-bottom:10px;height:50px;overflow:visible; }
+.right_column .gray_box .content { width:285px;height:auto; }
+.right_column .gray_box .footer { width:290px;padding-bottom:10px; }
 
 
 #featured ul li div.right p { top:35%;position:relative; }
