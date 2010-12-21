@@ -46,7 +46,7 @@ label { float:left;width:70px;font-weight:bold;clear:left; }
 input { border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%; }
 input[type='text'] { width:200px;}
 input[type='submit'] { width:80px;margin-left:70px;font-size:12px;padding:5px; }
-input[type='radio'] { margin-left:0; }
+input[type='radio'] { margin-left:0;border:none; }
 input[type='file'] { width:200px; }
 textarea { vertical-align:top;border:1px solid;border-color:#ccc #aaa #aaa #ccc;font-size:110%;height:150px; }
 form p { padding:.5em 0; }

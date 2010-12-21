@@ -15,7 +15,7 @@
 
 #featured ul li div.right p { top:35%;position:relative; }
 
-.developer { width:600px;clear:both;position:relative;height:400px; }
+.developer { width:600px;clear:both;position:relative;height:auto; }
 .developer h3 { clear:both; }
 .developer img.logo { position:relative; }
 
