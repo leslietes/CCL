@@ -5,7 +5,7 @@
 .right_column { width:280px;margin-right:0px; }
 .right_column .gray_box .header { width:296px; }
 .right_column .gray_box .content { width:285px; }
-.right_column .gray_box .footer { width:290px;padding-bottom:10px; }
+.right_column .gray_box .footer { width:290px;padding-bottom:10px;height:160px; }
 
 .gray_box .content { height:250px;padding:5px; }
 .gray_box .header#third_column h1 { width:270px; }
