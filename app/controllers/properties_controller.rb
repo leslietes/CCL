@@ -12,6 +12,10 @@ class PropertiesController < ApplicationController
   layout "properties", :except => [:search]
   
   def index
+  	_projects = Property.show_all_visible
+  	proj = _projects.collect{|p| p.name }.join(',')
+  	
+  	@page_title = "CebuCondoListings - #{proj}" 
     if logged_in?
       @properties = Property.show_all
     else
@@ -22,12 +26,14 @@ class PropertiesController < ApplicationController
   def show
     @partial  = 'information'
     @property = Property.find_by_permalink(params[:id])
+    @page_title = "CebuCondoListings - #{@property.name}, #{@property.developer_name}, #{@property.location}, Cebu"
   end
   
   def gallery
     @partial  = 'gallery'
     @property = Property.find_by_permalink(params[:id])
     @property.galleries.build
+    @page_title = "CebuCondoListings - #{@property.name}, #{@property.developer_name}, #{@property.location}, Cebu"
     render :template => 'properties/show'
   end
   

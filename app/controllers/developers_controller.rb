@@ -3,6 +3,10 @@ class DevelopersController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   
   def index
+  	developers = Developer.show_all_visible
+  	_dev = developers.collect{|d| d.developer}.join(',')
+  
+  	@page_title = "CebuCondoListings - #{_dev}"
     if logged_in?
       @developers = Developer.show_all
     else
