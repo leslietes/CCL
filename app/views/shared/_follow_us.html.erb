@@ -15,15 +15,17 @@
 </div>		
 
 <div class="gray_box boxes">
-	<div class="header" id="third_column">
-		<h1>Connect With Us</h1>
-	</div>
-	<div class="content follow_us">
-		<ul>
-			<li><%= link_to 'Twitter', 'http://www.twitter.com/cebucondolists', :class => 'twitter' %></li>
-			<%#= link_to 'Flickr', 'http://www.flickr.com/cebucondolistings', :class => 'flickr' %>
-			<li><%= link_to 'Facebook', 'http://www.facebook.com/#!/pages/Cebu-Condo-Listings/157402274291728', :class => 'facebook' %></li>
-		</ul>
+	
+	<div class="content follow_us" style="padding:5px 0;border-top:1px solid #ccc;">
+		<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FCebu-Condo-Listings%2F157402274291728&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
+	</div>	
+	<div class="footer" id="boxes"></div>
+</div>
+
+<div class="gray_box boxes">
+	
+	<div class="content follow_us" style="padding:5px 0;border-top:1px solid #ccc;">
+		<%= link_to '', 'http://www.twitter.com/cebucondolists', {:class => 'twitter', :target => "_blank" } %>
 	</div>	
 	<div class="footer" id="boxes"></div>
 </div>

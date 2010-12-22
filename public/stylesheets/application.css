@@ -217,13 +217,13 @@ table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#r
 .box_content label { width:80px;font-weight:normal;}
 .box_content input[type='submit']{ margin-left:80px; } */
 
-.follow_us ul { margin:0 auto;height:45px;width:90px;}
+/*.follow_us ul { margin:0 auto;height:45px;width:90px;}
 .follow_us ul li { display:inline;float:left;width:45px;height:45px; }
 .follow_us ul li a { width:45px;height:45px;display:block;text-indent:-99999px; }
-
 .follow_us a.facebook { background:url(/images/facebook.gif) no-repeat scroll 0 0; }
-.follow_us a.twitter { background:url(/images/twitter.jpeg) no-repeat scroll 0 0; }
-.follow_us a.flickr { background:url(/images/flickr.jpg) no-repeat scroll 0 0; }
+.follow_us a.flickr { background:url(/images/flickr.jpg) no-repeat scroll 0 0; }*/
+
+.follow_us a.twitter { background:url(/images/twitter.jpg) no-repeat scroll 0 0;display:block;width:260px;height:60px;margin-left:50px; }
  	
 .featured_news ul li { margin-bottom:10px; }
 .featured_news ul li p.title a {color:#3366ff;display:inline-block; }
