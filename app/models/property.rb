@@ -76,6 +76,19 @@ class Property < ActiveRecord::Base
     self.completed? ? 'Completed' : self.target_completion_date
   end
   
+  def types
+  	#for metadata
+  	_types  = []
+  	_types << "studio"     if self.studio?
+  	_types << "1 bedroom"  if self.one_bedroom?
+  	_types << "2 bedrooms" if self.two_bedroom?
+  	_types << "3 bedrooms" if self.three_bedroom?
+  	_types << "penthouse"  if self.penthouse?
+  	_types << "loft" 	    if self.loft?
+  	_types.join(',')
+  	_types
+  end
+  
   def all_unit_types
     types = []
     types << 'Studio'    if self.studio?
@@ -119,6 +132,10 @@ class Property < ActiveRecord::Base
   
   def has_tagline?
     !as_low_as.blank?
+  end
+  
+  def has_unit_specifications?
+  	!unit_specifications.blank?
   end
   
   private

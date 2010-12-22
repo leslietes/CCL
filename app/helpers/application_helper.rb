@@ -1,7 +1,29 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def page_title
-    @page_title || 'cebucondolistings'
+    @page_title || 'CebuCondoListings'
+  end
+  
+  def meta(name, content)
+  	%(<meta name="#{name}" content="#{content} />")
+  end
+  
+  def meta_description
+  	if @property 
+  		"Information on #{@property.name}. A #{@property.developer_name} project."
+  	elsif @developer
+  		"Information on #{@developer.developer}'s condominium projects."
+  	else
+  		"Premier site for the most comprehensive and up-to-date listings of new and upcoming condominium development projects in Cebu City and nearby areas."
+  	end
+  end
+  
+  def meta_keywords
+  	if @property
+  		[@property.name, @property.developer_name, @property.location, @property.property_type, @property.types].join(',')
+  	else
+  		"Cebu, condominiums, condotels, studio, one bedroom, two bedrooms, three bedrooms, penthouse, loft"
+  	end
   end
   
   def format_date(date, abbreviated=false)
