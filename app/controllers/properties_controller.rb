@@ -91,7 +91,7 @@ class PropertiesController < ApplicationController
   
   def search
     begin
-      conditions = ""
+      conditions = "hidden = false "
       
       @location  = params[:location] 
       @unit_type = params[:unit_type]
@@ -99,7 +99,7 @@ class PropertiesController < ApplicationController
       price_range = params[:price_range]
       
       if !@unit_type.blank?
-        conditions +=  "#{@unit_type} = true"
+        conditions +=  " and #{@unit_type} = true"
       end
       
       if !@location.blank?
@@ -133,9 +133,10 @@ class PropertiesController < ApplicationController
         end
       end
       puts "#{conditions}"
-      @properties = Property.paginate(:all, :conditions => conditions, :page => params[:page], :include => :developer)
+      @properties = Property.paginate(:select => "id, name, permalink, location, developer_id, target_completion_date, completed, studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, as_low_as, as_low_as_label, photo_file_name, photo_content_type, photo_file_size, photo_updated_at",
+      								  :conditions => conditions, :page => params[:page], :include => :developer)
     rescue
-      @properties = Property.paginate(:all, :select => "id, name, permalink, location, developer_id, target_completion_date, completed, studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, as_low_as, as_low_as_label",
+      @properties = Property.paginate(:select => "id, name, permalink, location, developer_id, target_completion_date, completed, studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, as_low_as, as_low_as_label, photo_file_name, photo_content_type, photo_file_size, photo_updated_at",
       								  :conditions => ["hidden = ?", false], :include => :developer, 
       								  :page => params[:page], :order => "name ASC")
     end
