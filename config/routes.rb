@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   # The priority is based upon order of creation: first created -> highest priority.
   map.resources :developers
-  map.resources :properties, :collection => {:search => :post }
+  map.resources :properties
   map.resources :users
   map.resources :articles
   map.resources :contacts
@@ -16,6 +16,8 @@ ActionController::Routing::Routes.draw do |map|
   # Sample of named route:
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
+  
+  map.search '/property/search', :controller => 'properties', :action => 'search'
   map.property_gallery '/property/:id/gallery', :controller => 'properties', :action => 'gallery'
   map.upload_to_gallery 'property/:id/gallery/upload', :controller => 'properties', :action => 'upload_to_gallery'
   

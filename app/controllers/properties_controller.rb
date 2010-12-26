@@ -133,9 +133,9 @@ class PropertiesController < ApplicationController
         end
       end
       puts "#{conditions}"
-      @properties = Property.find(:all, :conditions => conditions, :include => :developer)
+      @properties = Property.paginate(:all, :conditions => conditions, :page => params[:page], :include => :developer)
     rescue
-      @properties = Property.show_all_visible
+      @properties = Property.paginate :page => params[:page], :order => "name ASC"
     end
     
     render :layout => "application"

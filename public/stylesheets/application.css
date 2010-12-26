@@ -38,7 +38,7 @@ h3 { font-size:1.17em; /*margin:.83em 0;*/ }
 h4 { margin:1.12em 0; }
 h5 { font-size:.83em;margin:1.5em 0; }
 h6 { font-size:.75em;margin:1.67em 0; }
-a { text-decoration:none;font-weight:normal;color:#003366; }
+a:link, a:active, a:visited, a:hover { text-decoration:none;font-weight:normal;color:#003366; }
 hr { color:#fff;background-color:#fff;height:1px;margin-bottom:10px; }
 img { color:#fff; }
 
@@ -177,9 +177,14 @@ table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#r
 .property_form { font-size:12px;padding:10px;}
 .property_form .one, .property_form .two { float:left;margin-right:10px;width:48%; } /* property form */
 
-.search_results { font-size:12px; }
-.search_results ul li { margin-top:5px;margin-left:15px;margin-bottom:10px; }
+.search_results { color:#333; }
+.search_results h3 { color:#3366ff;font-size:13px; }
+.search_results ul li { font-size:10px;margin-top:5px;margin-left:15px;margin-bottom:10px; }
+.search_results label { color:#3366ff;clear:none;float:none;width:auto; }
 .search_results .photo { border:1px solid #dedede;height:120px;width:145px;float:left;margin-right:15px; }
+.search_results .info { padding:10px 0; }
+.paginate { margin:auto;width:200px;text-align:center;font-size:11px; }
+
 
 #gallery { clear:left; }
 #gallery ul li { list-style:none;display:inline;padding:0; }

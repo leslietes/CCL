@@ -1,5 +1,9 @@
 class Property < ActiveRecord::Base
   
+  # for will_paginate
+  cattr_reader :per_page
+  @@per_page = 4
+  
   belongs_to :developer
   has_many :galleries
   
