@@ -22,7 +22,7 @@ module ApplicationHelper
   	if @property
   		[@property.name, @property.developer_name, @property.location, @property.property_type, @property.types].join(',')
   	else
-  		"Cebu, condominiums, condotels, studio, one bedroom, two bedrooms, three bedrooms, penthouse, loft"
+  		"Cebu, condo, listings, condominiums, condotels, studio, one bedroom, two bedrooms, three bedrooms, penthouse, loft"
   	end
   end
   

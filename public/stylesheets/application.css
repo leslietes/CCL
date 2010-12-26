@@ -182,6 +182,7 @@ table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#r
 .search_results ul li { font-size:10px;margin-top:5px;margin-left:15px;margin-bottom:10px; }
 .search_results label { color:#3366ff;clear:none;float:none;width:auto; }
 .search_results .photo { border:1px solid #dedede;height:120px;width:145px;float:left;margin-right:15px; }
+.search_results .photo img { border:1px solid red;width:145px;height:120px; }
 .search_results .info { padding:10px 0; }
 .paginate { margin:auto;width:200px;text-align:center;font-size:11px; }
 

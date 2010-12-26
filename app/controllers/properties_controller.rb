@@ -135,7 +135,9 @@ class PropertiesController < ApplicationController
       puts "#{conditions}"
       @properties = Property.paginate(:all, :conditions => conditions, :page => params[:page], :include => :developer)
     rescue
-      @properties = Property.paginate :page => params[:page], :order => "name ASC"
+      @properties = Property.paginate(:all, :select => "id, name, permalink, location, developer_id, target_completion_date, completed, studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, as_low_as, as_low_as_label",
+      								  :conditions => ["hidden = ?", false], :include => :developer, 
+      								  :page => params[:page], :order => "name ASC")
     end
     
     render :layout => "application"
