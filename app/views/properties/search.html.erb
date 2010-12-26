@@ -11,16 +11,19 @@
 					<div class="photo">
 						<%= link_to (image_tag p.photo.url(:thumb)), property_url(p) %>
 					</div>
-					<h3><%= link_to p.name, property_url(p) %></h3>
+					<h3>
+						<%= link_to p.name, property_url(p) %>
+						<% if p.has_tagline? %>
+							<br>Own a unit for as low as <%= number_to_currency(p.as_low_as, :unit => "P ", :precision => 0) %><%= p.as_low_as_label %>
+						<% end %>
+					</h3>
+
 					<div class="info">
 						<label>Developer</label> <%= p.developer_name %><br>
 						<label>Location</label> <%= p.location %><br>
 						<label>Units</label> <%= p.all_unit_types.join(', ') %><br>
 						<% if p.has_target_completion_date? %>
 							<label>Target Completion Date</label> <%= p.target_completion_date %><br>
-						<% end %>
-						<% if p.has_tagline? %>
-							Own a unit for as low as <%= number_to_currency(p.as_low_as, :unit => "P ", :precision => 0) %><%= p.as_low_as_label %>
 						<% end %>
 					</div>	
 					<div class="clear"></div>
