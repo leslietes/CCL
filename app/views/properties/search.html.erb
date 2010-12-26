@@ -32,8 +32,10 @@
 		</ul>
 		
 		<div class="paginate">
-			<%= will_paginate @properties %>
+			<%= will_paginate @properties, :class => "digg_pagination" %>
+			<div class="page_info">
 			<%= page_entries_info @properties %>
+			</div>
 		</div>
 	</div>
 	

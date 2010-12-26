@@ -38,7 +38,8 @@ h3 { font-size:1.17em; /*margin:.83em 0;*/ }
 h4 { margin:1.12em 0; }
 h5 { font-size:.83em;margin:1.5em 0; }
 h6 { font-size:.75em;margin:1.67em 0; }
-a:link, a:active, a:visited, a:hover { text-decoration:none;font-weight:normal;color:#003366; }
+a:link, a:active, a:visited { text-decoration:none;font-weight:normal;color:#003366; }
+a:hover { text-decoration:underline;font-weight:normal;color:#003366; } 
 hr { color:#fff;background-color:#fff;height:1px;margin-bottom:10px; }
 img { color:#fff; }
 
@@ -184,8 +185,20 @@ table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#r
 .search_results .photo { border:1px solid #dedede;height:120px;width:145px;float:left;margin-right:15px; }
 .search_results .photo img { width:145px;height:120px; }
 .search_results .info { padding:10px 0; }
-.paginate { margin:auto;width:200px;text-align:center;font-size:11px; }
+.paginate { margin:auto;width:200px;font-size:11px; }
+.paginate .page_info { margin-top:5px; }
 
+.digg_pagination { background: white; /* self-clearing method: */ }
+.digg_pagination a, .digg_pagination span, .digg_pagination em { padding: .2em .5em;display: block;float:left;margin-right: 1px; }
+.digg_pagination span.disabled { color: #999;border:1px solid #ddd; }
+.digg_pagination em { font-weight: bold;background: #2E6AB1;color: white;border: 1px solid #2E6AB1; }
+.digg_pagination a { text-decoration: none;color: #105CB6;border:1px solid #9AAFE5; }
+.digg_pagination a:hover, .digg_pagination a:focus { color: #003;border-color: #003; }
+.digg_pagination .page_info { margin-top:10px;background: #2E6AB1;color: white;padding: .4em .6em;width: 22em;margin-bottom: .3em;text-align: center; }
+.digg_pagination .page_info b { color: #003;background: #6aa6ed;padding: .1em .25em; }
+.digg_pagination:after { content: ".";display: block;height: 0;clear: both;visibility: hidden; }
+* html .digg_pagination { height: 1%; }
+*:first-child+html .digg_pagination { overflow: hidden; }
 
 #gallery { clear:left; }
 #gallery ul li { list-style:none;display:inline;padding:0; }
