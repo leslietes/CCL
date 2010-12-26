@@ -11,12 +11,12 @@
 					<div class="photo">
 						<%= link_to (image_tag p.photo.url(:thumb)), property_url(p) %>
 					</div>
-					<h3>
+					<h2>
 						<%= link_to p.name, property_url(p) %>
-						<% if p.has_tagline? %>
-							<br>Own a unit for as low as <%= number_to_currency(p.as_low_as, :unit => "P ", :precision => 0) %><%= p.as_low_as_label %>
-						<% end %>
-					</h3>
+					</h2>
+					<% if p.has_tagline? %>
+						<div style="color:#333;font-weight:bold;font-size:12px;">Own a unit for as low as <%= number_to_currency(p.as_low_as, :unit => "P ", :precision => 0) %><%= p.as_low_as_label %></div>
+					<% end %>
 
 					<div class="info">
 						<label>Developer</label> <%= p.developer_name %><br>
