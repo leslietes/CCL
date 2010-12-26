@@ -134,11 +134,11 @@ class PropertiesController < ApplicationController
       end
       puts "#{conditions}"
       @properties = Property.paginate(:select => "id, name, permalink, location, developer_id, target_completion_date, completed, studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, as_low_as, as_low_as_label, photo_file_name, photo_content_type, photo_file_size, photo_updated_at",
-      								  :conditions => conditions, :page => params[:page], :include => :developer)
+      								  :conditions => conditions, :page => params[:page], :include => [:developer], :order => "properties.name ASC")
     rescue
       @properties = Property.paginate(:select => "id, name, permalink, location, developer_id, target_completion_date, completed, studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, as_low_as, as_low_as_label, photo_file_name, photo_content_type, photo_file_size, photo_updated_at",
-      								  :conditions => ["hidden = ?", false], :include => :developer, 
-      								  :page => params[:page], :order => "name ASC")
+      								  :conditions => ["hidden = ?", false], :include => [:developer], 
+      								  :page => params[:page], :order => "properties.name ASC")
     end
     
     render :layout => "application"
