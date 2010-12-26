@@ -1,7 +1,9 @@
+		<% if @property.has_description? %>
 		<div>
 			<%= label_tag :description %><br>
 			<p><%= @property.description%></p>
 		</div>
+		<% end %>
 		
 		<br>
 		
@@ -17,15 +19,19 @@
 		  </p>
 		</div>  
 		
+		<% if @property.has_address? %>
 		<div>  
 		  <%= label_tag :address %>
 		  <p class="indented"><%= @property.address %></p>
 		</div>
+		<% end %>
 		
+		<% if @property.has_target_completion_date? %>
 		<div>
 			<%= label_tag :target_delivery_date %>
 			<p  class="indented"><%= @property.target_completion_date %></p>
 		</div>
+		<% end %>
 		
 		<div>
 			<%= label_tag :type %>
@@ -53,29 +59,36 @@
 			<p class="indented"><%# @property.price_range %></p>
 		</div>	
 		
+		<% if @property.has_amenities? %>
 		<div>
 			<%= label_tag :amenities %><br>
 			<%= @property.amenities%>
 		</div>
+		<% end %>
 		
+		<% if @property.has_unit_specifications? %>
 		<div>
 			<%= label_tag :unit_specifications %><br>
 			<%= @property.unit_specifications %>
 		</div>
+		<% end %>
 		
+		<% if @property.has_payment_terms? %>
 		<div>
 			<%= label_tag :payment_terms %><br>
 			<%= @property.payment_terms %>
 		</div>
+		<% end %>
 		
 		<%#= label_tag :as_low_as %>
 		<%# number_to_currency(@property.as_low_as, :unit => "", :precision => 0) %> <%# @property.as_low_as_label %>
 		
+		<% if @property.has_reservation_fee? %>
 		<div>
 			<%= label_tag :reservation_fee %>
 			<p><%= @property.reservation_fee %></p>
 		</div>
-		
+		<% end %>
 		
 		<div class="disclaimer">
 			<p>* Denotes lowest available price<br>

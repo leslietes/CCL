@@ -134,8 +134,32 @@ class Property < ActiveRecord::Base
     !as_low_as.blank?
   end
   
+  def has_description?
+  	!description.blank?
+  end
+  
+  def has_address?
+  	!address.blank?
+  end
+  
+  def has_target_completion_date?
+  	!target_completion_date.blank?
+  end
+  
+  def has_amenities? 
+  	!amenities.blank?
+  end
+  
   def has_unit_specifications?
   	!unit_specifications.blank?
+  end
+  
+  def has_payment_terms?
+  	!payment_terms.blank?
+  end
+  
+  def has_reservation_fee?
+  	!reservation_fee.blank?
   end
   
   private
