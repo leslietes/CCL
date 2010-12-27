@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
     
     #if verify_recaptcha
       if @contact.save
-        flash[:notice] = "Your message has been sent. We will get back to you shortly"
+        flash[:notice] = "Your message has been sent. We will get back to you shortly."
         case params[:from]
           when "Contact Us"
             redirect_to new_contact_url
@@ -26,7 +26,7 @@ class ContactsController < ApplicationController
             redirect_to property_url(params[:from])
         end
       else
-        flash[:error] = "Unable to send message. Please check your entries"
+        flash[:error] = "Unable to send message. Please check your entries."
         render :action => "new"
       end
     #else
