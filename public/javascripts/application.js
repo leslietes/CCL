@@ -63,6 +63,70 @@ jQuery(document).ready(function(){
 	
 	$('#location_map a').lightBox();
 	$('#property_photo a').lightBox();
+	
+	// Get contact form and validate
+	document.getElementsByTagName("form")[0].onsubmit = function() {
+		var message = "";
+		
+		// Get full name field and check
+		var name = document.getElementById("contact_name");
+		if ( !validator.checkRequired(name) ) {
+			message += "Full name is required.\n";
+			//validator.alert(name, "Full name is required.");
+			//return false;
+		}
+		
+		// Get contact number field and check
+		var contact_no = document.getElementById("contact_contact_no");
+		if ( !validator.checkRequired(contact_no) ) {
+			message += "Contact number is required.\n";
+			//validator.alert(contact_no, "Contact number is required.");
+			//return false;
+		}
+		
+		// Get email address and check
+		var email = document.getElementById("contact_email");
+		if ( !validator.checkEmail(email) ) {
+			message += "Valid email address is required.\n";
+			//validator.alert(email, "Valid email address is required.");
+			//return false;
+		}
+		
+		//Get message and check
+		var inquiry = document.getElementById("contact_message");
+		if ( !validator.checkRequired(inquiry) ){
+			message += "Message is required.";
+			//validator.alert(message, "Message is required.");
+			//return false;
+		}
+		
+		if (message.length > 0) {
+			alert(message);
+			//$("<div id='errorExplanation' class='errorExplanation'>" + message + "</div>").insertBefore("#new_contact");
+			return false;
+		}
+		
+		
+	}
 });
+
+var validator = {
+	
+	// Generic function to check if required input element is not blank
+	checkRequired: function (elem) {
+		//if (elem.type == "text")
+			return elem.value.length > 0;
+		//else
+			//return elem.value.length > 0;
+	},	
+		
+	checkEmail: function (elem) {
+		return elem.value  != '' && /^[a-z0-9_+.-]+\@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/i.test( elem.value );
+	}
+	
+	//alert: function(elem, msg) {
+	//	alert(msg);
+	//}
+};
 
 
