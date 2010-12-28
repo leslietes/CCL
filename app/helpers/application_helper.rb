@@ -1,11 +1,11 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def page_title
-    @page_title || 'CebuCondoListings'
+    @page_title || 'CebuCondoListings | Cebu Condominium Listings'
   end
   
   def meta(name, content)
-  	%(<meta name="#{name}" content="#{content} />")
+  	%(<meta name="#{name}" content="#{content}"/>)
   end
   
   def meta_description
@@ -14,7 +14,7 @@ module ApplicationHelper
   	elsif @developer
   		"Information on #{@developer.developer}'s condominium projects."
   	else
-  		"Premier site for the most comprehensive and up-to-date listings of new and upcoming condominium development projects in Cebu City and nearby areas."
+  		"Cebu Condo Listings. The premier site for the most comprehensive and up-to-date listings of new and upcoming condominium development projects in Cebu City and nearby areas."
   	end
   end
   

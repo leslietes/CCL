@@ -4,9 +4,9 @@ class DevelopersController < ApplicationController
   
   def index
   	developers = Developer.show_all_visible
-  	_dev = developers.collect{|d| d.developer}.join(',')
+  	_dev = developers.collect{|d| d.developer}.join(', ')
   
-  	@page_title = "CebuCondoListings - #{_dev}"
+  	@page_title = "CebuCondoListings | Cebu Condominium Listings - #{_dev}"
     if logged_in?
       @developers = Developer.show_all
     else

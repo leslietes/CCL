@@ -13,9 +13,9 @@ class PropertiesController < ApplicationController
   
   def index
   	_projects = Property.show_all_visible
-  	proj = _projects.collect{|p| p.name }.join(',')
+  	proj = _projects.collect{|p| p.name }.join(', ')
   	
-  	@page_title = "CebuCondoListings - #{proj}" 
+  	@page_title = "CebuCondoListings | Cebu Condominium Listings - #{proj}" 
     if logged_in?
       @properties = Property.show_all
     else
@@ -26,7 +26,7 @@ class PropertiesController < ApplicationController
   def show
     @partial  = 'information'
     @property = Property.find_by_permalink(params[:id])
-    @page_title = "CebuCondoListings - #{@property.name}, #{@property.developer_name}, #{@property.location}, Cebu"
+    @page_title = "CebuCondoListings | Cebu Condominium Listings - #{@property.name}, #{@property.developer_name}, #{@property.location}, Cebu"
   end
   
   def gallery
