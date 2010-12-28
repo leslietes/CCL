@@ -11,18 +11,38 @@
 		<table id="rentals">
 			<thead>
 				<tr>
-					<th>Unit</th>
+					<th>Name</th>
 					<th>Location</th>
+					<th>Unit Type</th>
 					<th>Size</th>
 					<th>Price</th>
+					<% if logged_in? %>
+					<th>Actions</th>
+					<% end %>
 				</tr>
 			</thead>
+			<tbody>
+			    <% @rentals.each do |r| %>
+			    <tr>
+			        <td><%= r.name %></td>
+			        <td class="center" width="200px"><%= r.location %></td>
+			        <td class="center"><%= r.unit_type %></td>
+			        <td class="center"><%= r.unit_size %></td>
+			        <td class="center"><%= r.unit_price %></td>
+			        <% if logged_in? %>
+			        <td class="center" width="100px">
+			        	<%= link_to 'Edit', edit_rental_url(r) %>
+						<%= link_to 'Delete', rental_url(r), :method => :delete, :confirm => "Are you sure?" %>
+			        </td>
+			        <% end %>
+			    </tr>
+			    <% end %>
+			</tbody>
 		</table>
 		
 		<% if logged_in? %>
 			<div class="links">
-				<%= link_to 'Edit', '' %> |
-				<%= link_to 'Delete', '', :method => :delete, :confirm => "Are you sure?" %>
+				<%= link_to 'New', new_rental_url %>
 			</div>	
 		<% end %>
 		

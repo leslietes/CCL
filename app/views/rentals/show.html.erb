@@ -1,0 +1,108 @@
+<div class="gray_box">
+	
+	<div class="header">
+		<h1>&nbsp;</h1>	
+	</div>
+	
+	<div class="content property">
+		<h2><%= @rental.name %></h2>
+		
+		<br>
+		
+		<div class="details">
+			<div>
+				<%= label_tag :description %>
+				<p><%= @rental.description %></p>
+			</div>	
+		
+			<% if false %>
+			<div>
+				<%= label_tag :developer %>
+				<p class="indented"><%= @rental.developer_name %></p>
+			</div>
+			<% end %>
+			
+			<div>
+				<%= label_tag :address %>
+				<p class="indented"><%= @rental.address %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :location %>
+				<p class="indented"><%= @rental.location %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :unit_type %>
+				<p class="indented"><%= @rental.unit_type.capitalize %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :unit_size %>
+				<p class="indented"><%= @rental.unit_size %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :unit_price %>
+				<p class="indented"><%= number_to_currency(@rental.unit_price, :unit => "P ", :precision => 0) %></p>
+			</div>
+			
+			<% if logged_in? %>
+			<div>
+				<%= label_tag :owner %>
+				<p class="indented"><%= @rental.owner %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :email_address %>
+				<p class="indented"><%= @rental.email_address %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :contact_info %>
+				<p class="indented"><%= @rental.contact_info %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :hidden %>
+				<p class="indented"><%= @rental.hidden %></p>
+			</div>
+			<% end %>
+			
+		</div>
+		
+		<div class="clear"></div>
+	
+		<% if logged_in? %>
+			<div class="links">
+				<%= link_to 'Edit', edit_rental_url(@rental) %> <%= link_to 'Delete', rental_url(@rental), :method => :delete, :confirm => 'Are you sure?' %>
+			</div>
+		<% end %>	
+		
+		<div class="pre_owned_inquiry clear">
+			<h2>Inquire About This Property</h2>
+			<% form_for @contact do |f| %>
+				<%= f.error_messages %>
+				<%= f.hidden_field :subject, :value => @rental.name %>
+				<%= hidden_field_tag :from,  "#{@rental.permalink}" %>
+				<p><label>Your Full Name</label><%= f.text_field :name%></p>
+				<p><label>Contact Number</label><%= f.text_field :contact_no %></p>
+				<p><label>Email Address</label><%= f.text_field :email%></p>
+				<p><label>Your Message</label>
+						<%= f.radio_button :reason, "Schedule" %>Schedule viewing of model/scale unit
+						<br><%= f.radio_button :reason, "Inquire",  :style => "margin-left:150px;clear:left;" %>Inquire about this property
+						<%= f.text_area :message %>
+				</p>
+				<%# recaptcha_tags %>
+				<p><%= f.submit 'Send' %></p>
+			<% end %>
+		</div>	
+		
+		
+	</div>
+	
+	<div class="footer"></div>	
+	
+</div>
+
+<br>
