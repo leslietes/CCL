@@ -25,7 +25,7 @@
 					<tr>
 						<td><%= link_to p.name, pre_owned_condo_url(p)  %></td>
 						<td class="center" width="200px"><%= p.location  %></td>
-						<td class="center"><%= p.unit_type %></td>
+						<td class="center"><%= p.unit_type.capitalize %></td>
 						<td class="center"><%= p.unit_price%></td>
 						<% if logged_in? %>
 						<td  class="center" width="100px">
