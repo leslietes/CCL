@@ -13,7 +13,7 @@ class Emailer < ActionMailer::Base
     @bcc = find_bcc_emails
     @sent_on = Time.now
     @content_type = "text/html"
-    @headers['From'] = 'no-reply@example.com'
+    @headers['From'] = 'no-reply@cebucondolistings.com'
     @headers['Reply-To'] = ''
   end
   
