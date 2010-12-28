@@ -8,9 +8,13 @@ class PreOwnedCondosController < ApplicationController
     before_filter :select_property_types, :only => [:new, :create, :edit, :update]
     
 	def index
-		@pre_owned = PreOwnedCondo.all
-		
-		render :layout => "properties"
+	  if logged_in?
+		@pre_owned = PreOwnedCondo.show_all
+      else
+        @pre_owned = PreOwnedCondo.show_all_visible
+      end
+	  
+	  render :layout => "properties"
 	end
 	
 	def show
