@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :articles
   map.resources :contacts
-  map.resources :condominiums
+  map.resources :pre_owned_condos
   map.resources :rentals
   map.resource :session
   

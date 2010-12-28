@@ -1,0 +1,81 @@
+<p>
+	<%= f.label :developer %>
+	<%= select("pre_owned_condo","developer_id", @developers, {:include_blank => true}) %>
+</p>
+
+<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</p>
+
+<p>
+	<%= f.label :permalink %>
+	<%= f.text_field :permalink %>
+</p>
+
+<p>
+	<%= f.label :address %>
+	<%= f.text_area :address %>
+</p>
+
+<p>
+	<%= f.label :location %>
+	<%= select("pre_owned_condo","location", @locations, {:include_blank => true}) %>
+</p>
+
+<p>
+	<%= f.label :completed %>
+	<%= f.check_box :completed %>
+</p>
+
+<p>
+	<%= f.label :target_completion %>
+	<%= f.text_field :target_completion_date %>
+</p>
+
+<p>
+	<%= f.label :unit_type %>
+	<%= select("pre_owned_condo","unit_type", @unit_types, {:include_blank => true}) %>
+</p>
+
+<p>
+	<%= f.label :unit_size %>
+	<%= f.text_field :unit_size %>
+</p>
+
+<p>
+	<%= f.label :unit_price %>
+	<%= f.text_field :unit_price %>
+</p>
+
+<p>
+	<%= f.label :property_type %>
+	<%= select("pre_owned_condo", "property_type", @property_types) %>
+</p>
+
+<p>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+</p>
+
+<p>
+	<%= f.label :hidden %>
+	<%= f.check_box :hidden %>
+</p>
+
+<p>
+	<%= f.label :owner %>
+	<%= f.text_field :owner %>
+</p>
+
+<p>
+	<%= f.label :email_address %>
+	<%= f.text_field :email_address %>
+</p>
+
+<p>
+	<%= f.label :contact_info %>
+	<%= f.text_field :contact_info %>
+</p>
+
+<p><%= f.submit 'Save' %></p>

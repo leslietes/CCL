@@ -1,0 +1,99 @@
+<div class="gray_box">
+	
+	<div class="header">
+		<h1>&nbsp;</h1>	
+	</div>
+	
+	<div class="content property">
+		<h2><%= @pre_owned.name %></h2>
+		
+		<div class="details">
+			<div>
+				<%= label_tag :description %><br>
+				<p><%= @pre_owned.description %></p>
+			</div>	
+			
+			<div>
+				<%= label_tag :developer %>
+				<p class="indented"><%= @pre_owned.developer_name %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :address %>
+				<p class="indented"><%= @pre_owned.address %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :location %>
+				<p class="indented"><%= @pre_owned.location %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :completed %>
+				<p class="indented"><%= @pre_owned.completed %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :target_completion_date %>
+				<p class="indented"><%= @pre_owned.target_completion_date %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :unit_type %>
+				<p class="indented"><%= @pre_owned.unit_type %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :unit_size %>
+				<p class="indented"><%= @pre_owned.unit_size %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :unit_price %>
+				<p class="indented"><%= @pre_owned.unit_price %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :type %>
+				<p class="indented"><%= @pre_owned.property_type %></p>
+			</div>
+			
+			<% if logged_in? %>
+			<div>
+				<%= label_tag :owner %>
+				<p class="indented"><%= @pre_owned.owner %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :email_address %>
+				<p class="indented"><%= @pre_owned.email_address %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :contact_info %>
+				<p class="indented"><%= @pre_owned.contact_info %></p>
+			</div>
+			
+			<div>
+				<%= label_tag :hidden %>
+				<p class="indented"><%= @pre_owned.hidden %></p>
+			</div>
+			<% end %>
+			
+		</div>
+		
+		<div class="clear"></div>
+	
+		<% if logged_in? %>
+			<div class="links">
+				<%= link_to 'Edit', edit_pre_owned_condo_url(@pre_owned) %> <%= link_to 'Delete', pre_owned_condo_url(@pre_owned), :method => :delete, :confirm => 'Are you sure?' %>
+			</div>
+		<% end %>	
+	</div>
+	
+	<div class="footer"></div>	
+	
+	
+</div>
+
+<br>

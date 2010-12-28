@@ -1,0 +1,16 @@
+<div class="gray_box">
+	<div class="header">
+		<h1>Edit Pre-Owned Condominium</h1>
+	</div>
+	
+	<div class="content">
+		<% form_for :pre_owned_condo, :url => pre_owned_condo_url(@pre_owned_condo), :html => {:method => :put} do |f| %>
+		  <%= f.error_messages %>
+		  <%= render :partial => 'form', :locals => {:f => f} %>
+		<% end %>
+	</div>
+	
+	<div class="footer"></div>
+</div>	
+
+<br>

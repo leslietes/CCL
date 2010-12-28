@@ -1,0 +1,14 @@
+<div class="gray_box">
+	<div class="header">
+		<h1>New Pre-Owned Condominium</h1>
+	</div>
+	
+	<div class="content">
+		<% form_for @pre_owned do |f| %>
+		  <%= f.error_messages %>
+		  <%= render :partial => 'form', :locals => {:f => f} %>
+		<% end %>
+	</div>
+	
+	<div class="footer"></div>
+</div>	
