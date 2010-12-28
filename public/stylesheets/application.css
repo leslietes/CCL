@@ -221,6 +221,16 @@ table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#r
 .pre_owned input[type='submit'], .rentals input[type='submit'] { margin-left:150px; }
 .pre_owned textarea, .rentals textarea { width:65%;height:120px;margin-left:0px; }
 
+/* pre_owned and rentals inquiry form */
+.pre_owned_inquiry { border:1px solid #ccc;padding:10px;margin-top:10px;margin-right:5px; }
+.pre_owned_inquiry h2 { color:#666; }
+.pre_owned_inquiry form { padding:20px 0px; }
+.pre_owned_inquiry label { width:100px;color:#666!important; }
+.pre_owned_inquiry input[type='submit'] { margin-left:150px; }
+.pre_owned_inquiry input[type='radio'] {  }
+.pre_owned_inquiry textarea { width:65%;height:120px;margin-left:150px; }
+
+
 /* contact us */
 .contact_us { padding:10px; }
 .contact_us p, .settings p { line-height:2em; }
