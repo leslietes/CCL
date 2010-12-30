@@ -10,11 +10,6 @@
 		<br>
 		
 		<div class="details">
-			<div>
-				<%= label_tag :description %>
-				<p><%= @pre_owned.description %></p>
-			</div>	
-		
 			<% if false %>
 			<div>
 				<%= label_tag :developer %>
@@ -22,10 +17,12 @@
 			</div>
 			<% end %>
 			
+			<% if false %>
 			<div>
 				<%= label_tag :address %>
 				<p class="indented"><%= @pre_owned.address %></p>
 			</div>
+			<% end %>
 			
 			<div>
 				<%= label_tag :location %>
@@ -45,17 +42,18 @@
 			<% end %>
 			
 			<div>
-				<%= label_tag :unit_type %>
-				<p class="indented"><%= @pre_owned.unit_type.capitalize %></p>
-			</div>
-			
-			<div>
-				<%= label_tag :unit_size %>
+				<%= label_tag :size %>
 				<p class="indented"><%= @pre_owned.unit_size %></p>
 			</div>
 			
 			<div>
-				<%= label_tag :unit_price %>
+				<%= label_tag :unit_type %>
+				<p class="indented"><%= @pre_owned.unit_type.capitalize %></p>
+			</div>
+			
+			
+			<div>
+				<%= label_tag :price %>
 				<p class="indented"><%= number_to_currency(@pre_owned.unit_price, :unit => "P ", :precision => 0) %></p>
 			</div>
 			
@@ -63,6 +61,11 @@
 				<%= label_tag :type %>
 				<p class="indented"><%= @pre_owned.property_type %></p>
 			</div>
+			
+			<div>
+				<%= label_tag :description %>
+				<p><%= @pre_owned.description %></p>
+			</div>	
 			
 			<% if logged_in? %>
 			<div>
