@@ -15,5 +15,9 @@ class PreOwnedCondo < ActiveRecord::Base
 	def developer_name
 	  developer.developer
 	end
+	
+	def has_address?
+		!address.blank?
+	end
 
 end

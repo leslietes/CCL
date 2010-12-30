@@ -17,7 +17,7 @@
 			</div>
 			<% end %>
 			
-			<% if false %>
+			<% if @pre_owned.has_address? %>
 			<div>
 				<%= label_tag :address %>
 				<p class="indented"><%= @pre_owned.address %></p>

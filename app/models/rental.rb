@@ -9,5 +9,9 @@ class Rental < ActiveRecord::Base
 	  find(:all, :select => "id, name, location, unit_type, unit_price, unit_size",
 	       :conditions => ["hidden = ?", false], :order => "name ASC")
 	end
+	
+	def has_address?
+		!address.blank?
+	end
 
 end

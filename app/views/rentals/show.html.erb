@@ -22,10 +22,12 @@
 			</div>
 			<% end %>
 			
+			<% if @rental.has_address? %>
 			<div>
 				<%= label_tag :address %>
 				<p class="indented"><%= @rental.address %></p>
 			</div>
+			<% end %>
 			
 			<div>
 				<%= label_tag :location %>
