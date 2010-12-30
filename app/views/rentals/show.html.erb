@@ -86,7 +86,7 @@
 			<% form_for @contact do |f| %>
 				<%= f.error_messages %>
 				<%= f.hidden_field :subject, :value => @rental.name %>
-				<%= hidden_field_tag :from,  "#{@rental.permalink}" %>
+				<%= hidden_field_tag :from,  "Rental" %>
 				<p><label>Your Full Name</label><%= f.text_field :name%></p>
 				<p><label>Contact Number</label><%= f.text_field :contact_no %></p>
 				<p><label>Email Address</label><%= f.text_field :email%></p>
