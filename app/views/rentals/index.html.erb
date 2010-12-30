@@ -24,11 +24,11 @@
 			<tbody>
 			    <% @rentals.each do |r| %>
 			    <tr>
-			        <td><%= r.name %></td>
+			        <td><%= link_to r.name, rental_url(r) %></td>
 			        <td class="center" width="200px"><%= r.location %></td>
-			        <td class="center"><%= r.unit_type %></td>
+			        <td class="center"><%= r.unit_type.capitalize %></td>
 			        <td class="center"><%= r.unit_size %></td>
-			        <td class="center"><%= r.unit_price %></td>
+			        <td class="center"><%=  number_to_currency(r.unit_price, :unit => "P ", :precision => 0) %></td>
 			        <% if logged_in? %>
 			        <td class="center" width="100px">
 			        	<%= link_to 'Edit', edit_rental_url(r) %>

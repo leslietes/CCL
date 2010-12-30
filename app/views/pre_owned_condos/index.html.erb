@@ -26,7 +26,7 @@
 						<td><%= link_to p.name, pre_owned_condo_url(p)  %></td>
 						<td class="center" width="200px"><%= p.location  %></td>
 						<td class="center"><%= p.unit_type.capitalize %></td>
-						<td class="center"><%= p.unit_price%></td>
+						<td class="center"><%=  number_to_currency(p.unit_price, :unit => "P ", :precision => 0) %></td>
 						<% if logged_in? %>
 						<td  class="center" width="100px">
 							<%= link_to 'Edit', edit_pre_owned_condo_url(p) %>
