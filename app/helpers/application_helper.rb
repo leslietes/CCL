@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def page_title
-    @page_title || 'CebuCondoListings | Cebu Condominium Listings'
+    @page_title || 'CebuCondoListings | Cebu Condominium Listings | Cebu Condo Listings | Condos for Sale | Condos for Rent'
   end
   
   def meta(name, content)
@@ -10,9 +10,9 @@ module ApplicationHelper
   
   def meta_description
   	if @property 
-  		"Information on #{@property.name}. A #{@property.developer_name} project."
+  		"Cebu Condo Listings | #{@property.name} Cebu #{@property.developer_name}"
   	elsif @developer
-  		"Information on #{@developer.developer}'s condominium projects."
+  		"Cebu Condo Listings | #{@developer.developer} Cebu"
   	else
   		"Cebu Condo Listings. The premier site for the most comprehensive and up-to-date listings of new and upcoming condominium development projects in Cebu City and nearby areas."
   	end
@@ -20,9 +20,9 @@ module ApplicationHelper
   
   def meta_keywords
   	if @property
-  		[@property.name, @property.developer_name, @property.location, @property.property_type, @property.types].join(',')
+  		[@property.name, 'Cebu', @property.developer_name, @property.location, @property.property_type, @property.types].join(',')
   	else
-  		"Cebu, condo, listings, condominiums, condotels, studio, one bedroom, two bedrooms, three bedrooms, penthouse, loft"
+  		"Cebu, condo, condominium, listings, condotels, studio, one bedroom, two bedrooms, three bedrooms, penthouse, loft"
   	end
   end
   
