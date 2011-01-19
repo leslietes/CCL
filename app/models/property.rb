@@ -73,7 +73,7 @@ class Property < ActiveRecord::Base
   end
   
   def developer_name
-    developer.developer
+  	developer.blank? ? "" : developer.developer
   end
   
   def completion_date
