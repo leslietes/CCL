@@ -7,7 +7,7 @@
 	<div class="content article">
 		<h2><%= @article.title %></h2>
 		<p class="teaser"><%= @article.teaser %></p>
-		<p class="published_on"><span>On <%= @article.published_date %> in <%= @article.published_at %></span></p>
+		<p class="published_on"><span>On <%= format_date(@article.published_date) %> in <%= @article.published_at %></span></p>
 		
 		<% if @article.article_photo? %>
 		<p class="image">

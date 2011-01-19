@@ -16,7 +16,7 @@
 					<% if a.teaser? %>
 						<span class="teaser"><%= a.teaser %></span><br>
 					<% end %>
-					<span>On <%= a.published_date %> in <%= a.published_at %></span>
+					<span>On <%= format_date(a.published_date) %> in <%= a.published_at %></span>
 				</p>
 				<p class="teaser"></p>
 			<% end %>

@@ -10,7 +10,7 @@
 				<% if article.teaser? %>
 					<p class="teaser"><%= article.teaser %> <%= link_to '...', article_url(article) %></p>
 				<% end %>
-				<p class="published_on"><span>On <%= article.published_date %> in <%= article.published_at %></span></p>
+				<p class="published_on"><span>On <%= format_date(article.published_date) %> in <%= article.published_at %></span></p>
 				
 				<% if logged_in? %>
 				<div class="links">
