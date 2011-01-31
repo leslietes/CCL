@@ -277,4 +277,7 @@ table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#r
 /* recaptcha */
 table#recaptcha_table td { height:6px; }
 div#recaptcha_area { margin-left:-2px; }
- */
+
+/* slider */
+#s3slider { border:1px solid #ccc; }
+.s3sliderImage span { background-color:none;color:transparent; }
