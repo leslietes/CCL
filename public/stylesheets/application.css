@@ -280,4 +280,4 @@ div#recaptcha_area { margin-left:-2px; }
 
 /* slider */
 #s3slider { border:1px solid #ccc!important; }
-.s3sliderImage span { background-color:none;color:transparent!important; }
+.s3sliderImage span { background-color:none!important;color:transparent!important; }
