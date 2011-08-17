@@ -1,0 +1,11 @@
+<% form_tag add_location_url do  %>
+	<label>Location</label><%= text_field_tag :location %>
+	<%= submit_tag 'Add' %>
+<% end %>
+
+<% @locations.each do |location| %>
+	<p><%= location.area %> <%= link_to '[remove]', remove_location_url(location) %></p>
+<% end %>
+
+
+	

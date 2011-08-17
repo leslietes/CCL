@@ -1,4 +1,11 @@
 <% content_for :admin_pages do %>
+
+<script>
+	$(function(){
+		$("#tabs").tabs();
+	});
+</script>
+
 <div class="settings">
 <div class="gray_box">
 	
@@ -9,89 +16,47 @@
 		
 	<div class="content">
 		
-		<p><%= label_tag :email_address %><%= @setting.production_email %></p>
-		<p><%= label_tag :bcc %><%= @setting.bcc %></p>
-		<p>
-			<%= label_tag :featured_1 %><%= image_tag @setting.featured1.url, :height => "60", :width => "150" %><%#= @setting.featured1_file_name %><br>
-			<%= label_tag :featured_2 %><%= image_tag @setting.featured2.url, :height => "60", :width => "150" %><%#= @setting.featured2_file_name %><br>
-			<%= label_tag :featured_3 %><%= image_tag @setting.featured3.url, :height => "60", :width => "150" %><%#= @setting.featured3_file_name %><br>
-			<%= label_tag :featured_4 %><%= image_tag @setting.featured4.url, :height => "60", :width => "150" %><%#= @setting.featured4_file_name %><br>
-			<%= label_tag :featured_5 %><%= image_tag @setting.featured5.url, :height => "60", :width => "150" %><%#= @setting.featured5_file_name %><br>
-		</p>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Featured</a></li>
+				<li><a href="#tabs-2">Edit Form</a></li>
+				<li><a href="#tabs-3">Building Perspectives</a></li>
+				<li><a href="#tabs-4">Locations</a></li>
+				<li><a href="#tabs-5">Price Range</a></li>
+				<li><a href="#tabs-5">Users</a></li>
+			</ul>
+			
+			<div id="tabs-1">
+				<%= render :partial => 'featured' %>
+			</div>
+			
+			<div id="tabs-2">
+				<%= render :partial => 'settings_form' %>
+			</div>
+			
+			<div id="tabs-3">
+				<%= render :partial => 'perspectives' %>
+			</div>	
 		
-		<p>
-			<%= label_tag :sidebar %><%= image_tag @setting.sidebar.url, :height => "60", :width => "150" %>
-		</p>
-		
-		<br><br>
-		
-		<% form_for :setting, :url => edit_settings_url, :html => {:method => :put, :multipart => true} do |f| %>
-			<p><%= label_tag :email%><%= f.text_field :production_email %><p>
-			<p><%= label_tag :bcc  %><%= f.text_field :bcc %></p>
-			<p>
-				<%= label_tag :featured_1 %><%= f.file_field :featured1 %><br>
-				<label>Caption</label><%= f.text_field :featured1_caption%><br>
-				<label>URL</label><%= f.text_field :featured1_link %>
-			</p>
-			
-			<p>
-				<%= label_tag :featured_2 %><%= f.file_field :featured2 %><br>
-				<label>Caption</label><%= f.text_field :featured2_caption%><br>
-				<label>URL</label><%= f.text_field :featured2_link %>
-			</p>
-			
-			<p>
-				<%= label_tag :featured_3 %><%= f.file_field :featured3 %><br>
-				<label>Caption</label><%= f.text_field :featured3_caption%><br>
-				<label>URL</label><%= f.text_field :featured3_link %>
-			</p>
-			
-			<p>
-				<%= label_tag :featured_4 %><%= f.file_field :featured4 %><br>
-				<label>Caption</label><%= f.text_field :featured4_caption%><br>
-				<label>URL</label><%= f.text_field :featured4_link %>
-			</p>
-			
-			<p>
-				<%= label_tag :featured_5 %><%= f.file_field :featured5 %><br>
-				<label>Caption</label><%= f.text_field :featured5_caption%><br>
-				<label>URL</label><%= f.text_field :featured5_link %>
-			</p>
-			
-			<p>
-				<%= label_tag :sidebar %><%= f.file_field :sidebar %><br>
-				<label>URL</label><%= f.text_field :sidebar_link %>
-			</p>
-			<%= submit_tag 'Change' %>
-		<% end %>
+			<div id="tabs-4">
+				<%= render :partial => 'locations' %>
+			</div>
 	
-		<!--div class="links">
-			<%# link_to 'Edit', edit_settings_url %>
-		</div-->
-
-		<br>	
-		
-		<h1>Locations</h1>
-		<div class="settings">
-		<ul class="bullets">
-			<% @locations.each do |location| %>
-			<li><%= location.area %> <%= link_to '[remove]', remove_location_url(location) %></li>
-			<% end %>
-		</ul>
-		
-		<br>
+			<!--div class="links">
+				<%# link_to 'Edit', edit_settings_url %>
+			</div-->
+	
+			<div id="tabs-5">
+				<%= render :partial => 'price_range' %>	
+			</div>
 			
-		<% form_tag add_location_url do  %>
-			<label>Location</label><%= text_field_tag :location %><br>
-			<%= submit_tag 'Add' %>
-		<% end %>
+			<div id="tabs-6">
+			</div>
+			
 		</div>
-
-		<br>
+		</div>
+		<div class="footer" id="full"></div>
 	
-		<%= render :partial => 'price_range' %>
-	</div>
-	<div class="footer" id="full"></div>
 </div></div>
 <br	>
 <% end %>

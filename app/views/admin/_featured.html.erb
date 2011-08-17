@@ -1,0 +1,12 @@
+<p><%= label_tag :email_address %><%= @setting.production_email %><br></p>
+<p><%= label_tag :bcc %><%= @setting.bcc %><br></p>
+<p>
+	<%= label_tag :featured_1 %><%= image_tag @setting.featured1.url, :height => "60", :width => "150" %><%#= @setting.featured1_file_name %><br>
+	<%= label_tag :featured_2 %><%= image_tag @setting.featured2.url, :height => "60", :width => "150" %><%#= @setting.featured2_file_name %><br>
+	<%= label_tag :featured_3 %><%= image_tag @setting.featured3.url, :height => "60", :width => "150" %><%#= @setting.featured3_file_name %><br>
+	<%= label_tag :featured_4 %><%= image_tag @setting.featured4.url, :height => "60", :width => "150" %><%#= @setting.featured4_file_name %><br>
+	<%= label_tag :featured_5 %><%= image_tag @setting.featured5.url, :height => "60", :width => "150" %><%#= @setting.featured5_file_name %><br>
+</p>
+<p>
+	<%= label_tag :sidebar %><%= image_tag @setting.sidebar.url, :height => "60", :width => "150" %>
+</p>

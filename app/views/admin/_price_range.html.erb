@@ -1,33 +1,29 @@
-<h1>Price Range</h1>
+<% form_tag add_price_range_url do  %>
+	<label>Price Range</label><%= text_field_tag :range %><br><br>
+	<label>From</label><%= text_field_tag :value_from %><br><br>
+	<label>To</label><%= text_field_tag :value_to %><br><br>
+	<%= submit_tag 'Add' %><br><br>
+<% end %>
 
-<div class="settings">
-	<table id="price_range">
-		<thead>
+<table id="price_range">
+	<thead>
+		<tr>
+			<th>Range</th>
+			<th>From</th>
+			<th>To</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @price_range.each do |pr| %>
 			<tr>
-				<th>Range</th>
-				<th>From</th>
-				<th>To</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @price_range.each do |pr| %>
-				<tr>
-					<td width="150px"><%= pr.range %></td>
-					<td width="80px" class="center"><%= number_to_currency(pr.value_from, :precision => 0, :unit => "")  %></td>
-					<td width="80px" class="center"><%= number_to_currency(pr.value_to,   :precision => 0, :unit => "")  %></td>
-					<td width="50px"  class="center"><%= link_to 'remove', remove_price_range_url(pr) %></td>
-				</tr>	
-			<% end %>
-		</tbody>
-	</table>
-
-	<br>
+				<td width="150px"><%= pr.range %></td>
+				<td width="80px" class="center"><%= number_to_currency(pr.value_from, :precision => 0, :unit => "")  %></td>
+				<td width="80px" class="center"><%= number_to_currency(pr.value_to,   :precision => 0, :unit => "")  %></td>
+				<td width="50px"  class="center"><%= link_to 'remove', remove_price_range_url(pr) %></td>
+			</tr>	
+		<% end %>
+	</tbody>
+</table>
 		
-	<% form_tag add_price_range_url do  %>
-		<label>Price Range</label><%= text_field_tag :range %><br>
-		<label>From</label><%= text_field_tag :value_from %><br>
-		<label>To</label><%= text_field_tag :value_to %><br>
-		<%= submit_tag 'Add' %>
-	<% end %>
-</div>	
+

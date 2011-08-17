@@ -1,0 +1,13 @@
+<% @perspectives.each do |p| %>
+	<%= image_tag p.perspective.url(:medium), :height => "295px", :width => "290px" %>
+	<%= p.caption %>
+	<%= p.link %>
+	<%= link_to 'remove', remove_perspective_url(p) %><br>
+<% end %>
+
+<% form_for :perspective, :url => add_perspective_url, :html => {:method => :post, :multipart => true} do |f| %>
+	<%= label_tag :file_name %><%= f.file_field :perspective %><br>
+	<%= label_tag :caption   %><%= f.text_field :caption   %><br>
+	<%= label_tag :link      %><%= f.text_field :link      %><br>
+	<%= f.submit 'Add' %>
+<% end %>

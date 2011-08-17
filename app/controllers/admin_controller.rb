@@ -8,7 +8,10 @@ class AdminController < ApplicationController
     #TODO: sort alphabetically
     @locations= Location.all(:order => "area ASC")
     #TODO: sort
-    @price_range = PriceRange.find(:all, :order => "value_from ASC")
+    @price_range  = PriceRange.find(:all, :order => "value_from ASC")
+    
+    @perspectives = Perspective.find(:all)
+    @perspective  = Perspective.new
   end
   
   def edit_settings
@@ -77,5 +80,29 @@ class AdminController < ApplicationController
   
   def view_subscriptions
     @subscriptions = Subscription.all
+  end
+  
+  def add_perspective
+    puts "ADD PERSPECTIVE"
+    puts "!!!!!!!!!!!!#{params[:perspective]}"
+    perspective = Perspective.new(params[:perspective])
+    puts "==============#{perspective.inspect}"
+    if perspective.save
+      flash[:notice] = "Successfully added building perspective"
+    else
+      flash[:error] = "Unable to add building perspective"
+    end
+    redirect_to settings_url
+  end
+  
+  def remove_perspective
+    if Perspective.exists?(params[:id])
+      if Perspective.delete(params[:id])
+        flash[:notice] = "Successfully deleted"
+      else
+        flash[:error] = "Unable to delete deleted"
+      end
+    end
+    redirect_to settings_url
   end
 end
