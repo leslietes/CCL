@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
     @search_price    = PriceRange.show_all.insert(0,"")
     @search_type     = Setting.unit_types.insert(0,"")
     @type            = Property.property_types #condominium/condotel
+    @perspectives    = Perspective.all
   end
   
   protected

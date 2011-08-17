@@ -67,11 +67,14 @@ table#price_range th, table#price_range td { border:1px solid #cecece;height:25p
 select { width:200px;border-color: #CCCCCC #AAAAAA #AAAAAA #CCCCCC;border-style: solid;border-width: 1px;background-color:#fff; }
 
 /* used in settings page */
-ul.bullets { list-style:square inside;padding-left:20px; }
 .settings { position:relative;margin-left:15px;margin-right:15px;margin-top:15px; }
-.settings form label, .settings label { width:80px; }
+.settings a, p, label, table { font-size:12px; }
+.settings form label, .settings label { width:100px; }
 .settings form span { font-style:italic;margin-left:80px; }
-.settings input[type='submit'] { margin-left:80px;margin-top:10px; }
+.settings input[type='submit'] { font-size:12px;margin-left:0px;margin-top:0px;-moz-border-radius:5px;width:80px; }
+/*
+ul.bullets { list-style:square inside;padding-left:20px; }
+*/
 
 .clear { clear:both; }
 .clear_left { clear:left;}
@@ -105,6 +108,9 @@ ul#nav li a { font-weight:bold;color:#fff; }
 .gray_box .footer { background:url(/images/box_bottom_home_featured.jpg) no-repeat;height:10px; }
 .gray_box .footer#boxes { background:url(/images/box_bottom_home_boxes.jpg) no-repeat; }
 .gray_box .footer#full { background:url(/images/box_bottom_full.jpg) no-repeat; }
+
+.home { background:url(/drop_shadow_top.jpg) no-repeat top right;height:0px!important; }
+.home h1 { background:none!important; }
 
 #featured {  }
 #featured ul li { margin-bottom:10px;float:left;width:195px;border:1px solid #fff;background-color:#fff; }
@@ -236,7 +242,7 @@ table#properties, table#inquiries, table#subscriptions, table#pre_owned, table#r
 .contact_us p, .settings p { line-height:2em; }
 .contact_us label { width:150px; }
 .contact_us input, .settings input { width:300px;}
-.contact_us input[type='submit'], .settings input[type='submit'] { width:100px;margin-left:0;margin-top:20px; }
+.contact_us input[type='submit'] { width:100px;margin-left:0;margin-top:20px; }
 .contact_us textarea, .settings textarea { width:300px;height:200px; }
 
 .boxes { margin-top:10px;margin-bottom:10px; }
@@ -280,4 +286,6 @@ div#recaptcha_area { margin-left:-2px; }
 
 /* slider */
 #s3slider { border:1px solid #ccc!important; }
-.s3sliderImage span { background-color:none!important;color:transparent!important; }
+.s3sliderImage span { background-color:#000!important;color:#fff!important; }
+#right_slider { border:1px solid #ccc!important; }
+.right_sliderImage span { background-color:#000!important;color:#fff!important; }

@@ -40,6 +40,8 @@ ActionController::Routing::Routes.draw do |map|
   map.remove_location '/admin/location/remove/:id', :controller => 'admin', :action => 'remove_location'
   map.add_price_range '/admin/settings/add_price_range', :controller => 'admin', :action => 'add_price_range'
   map.remove_price_range '/admin/price_range/remove/:id', :controller => 'admin', :action => 'remove_price_range'
+  map.add_perspective '/admin/perspective/add', :controller => 'admin', :action => 'add_perspective'
+  map.remove_perspective '/admin/perspective/remove/:id', :controller => 'admin', :action => 'remove_perspective'
   #map.view_suscriptions 'admin/subscriptions', :controller => 'admin', :action => 'view_subscriptions'
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
