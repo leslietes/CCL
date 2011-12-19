@@ -1,12 +1,12 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
-development:
-  adapter: mysql
-  database: condo_development
-  username: root
-  password: 
-  encoding: UTF8
-  port: 5432
+#development:
+#  adapter: mysql
+#  database: condo_development
+#  username: root
+#  password: 
+#  encoding: UTF8
+#  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,8 +19,8 @@ development:
 #  username: root
 #  password: password
 
-#production:
-#  adapter: mysql
-#  database: condo_prod
-#  username: root
-#  password: 
+production:
+  adapter: mysql
+  database: p756835r_cebucondo
+  username: p756835r_admin
+  password: VGGszCDReM9m
