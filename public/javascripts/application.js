@@ -1,10 +1,6 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 jQuery(document).ready(function(){
-	$('#right_slider').s3Slider({
-		timeOut: 6000
-	});
-	
 	$('#properties').dataTable({
 		"aLengthMenu": [[-1, 10, 25, 50], ["All", 10, 25, 50]],
 		"iDisplayLength": "-1"
