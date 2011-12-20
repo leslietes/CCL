@@ -64,8 +64,8 @@ class Property < ActiveRecord::Base
   def self.show_all_featured
     #home_page
     Property.find(:all, :select => "id, name, permalink, target_completion_date, developer_id, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, as_low_as_label, as_low_as",
-                  :conditions => ["hidden = ? and featured = ?", false, true], :order => "name ASC",
-                  :include => :developer)
+                  :conditions => ["hidden = ? and featured = ?", false, true], :order => "name ASC")
+#                  ,:include => :developer)
   end
   
   def to_param
