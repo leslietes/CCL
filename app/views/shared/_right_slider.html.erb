@@ -1,3 +1,11 @@
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		$('#right_slider').s3Slider({
+			timeOut: 6000
+		});
+	});
+</script>
+<!-- Do not move js above as it will cause error on properties page, when slider is not found -->    
 <div id="right_slider">
 	<ul id="right_sliderContent">
 		<% @perspectives.each do |p| %>
