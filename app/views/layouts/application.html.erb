@@ -11,6 +11,7 @@
   <meta content="Real Estate" name="classification">
   
   <%= stylesheet_link_tag 'application', 'demo_table', 's3slider', 'jquery.lightbox-0.5', 'jquery-ui-1.7.3.custom' %>
+  <%= javascript_include_tag 'jquery-1.4.2.min.js', 's3Slider' %>
   <%# csrf_meta_tag %>
   
   <!--[if IE]>
@@ -37,6 +38,6 @@
 	<noscript>
   		<img src="/rail_stat/track" width="1" height="1" alt="" style="position: absolute;" />
 	</noscript>
-	<%= javascript_include_tag 'jquery-1.4.2.min.js', 'jquery-ui-1.7.3.custom.min', 'jquery.dataTables.min', 's3Slider', 'jquery.lightbox-0.5.min', 'application' %>
+	<%= javascript_include_tag 'jquery-ui-1.7.3.custom.min', 'jquery.dataTables.min', 'jquery.lightbox-0.5.min', 'application' %>
 </body>
 </html>
