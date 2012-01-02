@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
   
   before_filter :login_required
-  layout "properties"
+  #layout "properties"
   
   def settings
     @setting = Setting.first

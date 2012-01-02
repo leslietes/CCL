@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  
+  before_filter :menu_css
   before_filter :retrieve_objects
   
   def retrieve_objects
@@ -18,10 +18,13 @@ class ApplicationController < ActionController::Base
     @search_price    = PriceRange.show_all.insert(0,"")
     @search_type     = Setting.unit_types.insert(0,"")
     @type            = Property.property_types #condominium/condotel
-    @perspectives    = Perspective.all
   end
   
   protected
+  
+  def menu_css
+    @class = params[:controller]
+  end
   
   def login_required
     if !current_user

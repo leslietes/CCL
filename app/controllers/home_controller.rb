@@ -1,9 +1,11 @@
 class HomeController < ApplicationController
   def index
+    @class = 'home'
     @properties = Property.show_all_featured
     @setting = Setting.first
     #TODO: change to form_tag
-    @subscription  = Subscription.new
+    #@subscription  = Subscription.new
+    @perspectives    = Perspective.all
   end
 
 #  def about

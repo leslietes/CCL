@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   
   before_filter :login_required, :except => [:index, :show]
-  layout "properties", :except => [:index, :show]
+  #layout "properties", :except => [:index, :show]
   
   def index
     @articles = Article.all

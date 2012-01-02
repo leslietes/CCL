@@ -4,8 +4,8 @@ class PreOwnedCondosController < ApplicationController
 	before_filter :inquiry_form,   :only => [:index, :show]
 	before_filter :developers,     :only => [:new,:create,:edit,:update]
 	before_filter :select_unit_types, :only => [:new, :create, :edit, :update]
-  	before_filter :select_locations,  :only => [:new, :create, :edit, :update]
-    before_filter :select_property_types, :only => [:new, :create, :edit, :update]
+	before_filter :select_locations,  :only => [:new, :create, :edit, :update]
+  before_filter :select_property_types, :only => [:new, :create, :edit, :update]
     
 	def index
 	  if logged_in?
@@ -14,7 +14,7 @@ class PreOwnedCondosController < ApplicationController
         @pre_owned = PreOwnedCondo.show_all_visible
       end
 	  
-	  render :layout => "properties"
+	  #render :layout => "properties"
 	end
 	
 	def show

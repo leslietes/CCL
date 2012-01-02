@@ -14,7 +14,7 @@ class RentalsController < ApplicationController
  	    @rentals = Rental.show_all_visible
  	  end
  	  
- 	  render :layout => "properties"
+ 	  #render :layout => "properties"
 	end
 	
 	def show

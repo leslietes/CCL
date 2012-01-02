@@ -1,5 +1,4 @@
 class DevelopersController < ApplicationController
-  
   before_filter :login_required, :except => [:index, :show]
   
   def index
@@ -41,7 +40,7 @@ class DevelopersController < ApplicationController
     @developer = Developer.find_by_permalink(params[:id])
     if @developer.update_attributes(params[:developer])
       flash[:notice] = "Successfully updated developer"
-      redirect_to developer_url(@developer)
+      redirect_to developers_url
     else
       flash[:error] = "Unable to update developer. Please check your entries"
       render :action => 'edit'

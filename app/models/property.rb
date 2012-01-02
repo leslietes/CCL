@@ -7,6 +7,9 @@ class Property < ActiveRecord::Base
   belongs_to :developer
   has_many :galleries
   
+  #reverse_geocoded_by :latitude, :longitude
+  #geocoded_by :address
+  
   accepts_nested_attributes_for :galleries
 
   has_attached_file :photo, :styles => { :medium => "800x535>", :thumb => "190x130>" },
@@ -46,7 +49,7 @@ class Property < ActiveRecord::Base
                   studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, 
                   studio_size, one_bedroom_size, two_bedroom_size, three_bedroom_size, penthouse_size, loft_size, 
                   studio_price, one_bedroom_price, two_bedroom_price, three_bedroom_price, penthouse_price, loft_price,
-                  studio_monthly, one_bedroom_monthly, two_bedroom_monthly, three_bedroom_monthly, penthouse_monthly, loft_monthly",
+                  studio_monthly, one_bedroom_monthly, two_bedroom_monthly, three_bedroom_monthly, penthouse_monthly, loft_monthly, hidden, featured, sold_out, preselling, latitude, longitude",
                   :order => "name ASC", :include => :developer)
   end
   
@@ -56,14 +59,14 @@ class Property < ActiveRecord::Base
                   studio, one_bedroom, two_bedroom, three_bedroom, penthouse, loft, 
                   studio_size, one_bedroom_size, two_bedroom_size, three_bedroom_size, penthouse_size, loft_size, 
                   studio_price, one_bedroom_price, two_bedroom_price, three_bedroom_price, penthouse_price, loft_price,
-                  studio_monthly, one_bedroom_monthly, two_bedroom_monthly, three_bedroom_monthly, penthouse_monthly, loft_monthly",
+                  studio_monthly, one_bedroom_monthly, two_bedroom_monthly, three_bedroom_monthly, penthouse_monthly, loft_monthly, hidden, featured, sold_out, preselling, latitude, longitude",
                   :conditions => ["hidden = ?", false], :order => "name ASC",
                   :include => :developer)
   end
   
   def self.show_all_featured
     #home_page
-    Property.find(:all, :select => "id, name, permalink, target_completion_date, developer_id, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, as_low_as_label, as_low_as",
+    Property.find(:all, :select => "id, name, permalink, target_completion_date, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, as_low_as_label, as_low_as, sold_out, preselling",
                   :conditions => ["hidden = ? and featured = ?", false, true], :order => "name ASC")
 #                  ,:include => :developer)
   end

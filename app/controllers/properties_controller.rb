@@ -9,7 +9,7 @@ class PropertiesController < ApplicationController
   before_filter :inquiry_form,          :only => [:show, :gallery]
   
   #layout "application", :only => [:search] # :application doesn't work
-  layout "properties", :except => [:search]
+  #layout "properties", :except => [:search]
   
   def index
   	_projects = Property.show_all_visible
@@ -177,5 +177,5 @@ class PropertiesController < ApplicationController
   def select_property_types
     @property_types = Property.property_types
   end
-
+  
 end
