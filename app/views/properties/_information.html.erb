@@ -1,111 +1,58 @@
-		<% if @property.has_description? %>
-		<div>
-			<%= label_tag :description %><br>
-			<p><%= @property.description%></p>
-		</div>
-		<% end %>
+<h3>Highlights </h3>
+
+<%= label_tag :developer %><p><%= @property.developer_name %></p>
+<%= label_tag :location %><p><%= @property.location %></p>
+<% if @property.has_address? %>
+  <%= label_tag :address %><p><%= @property.address %></p>
+<% end %>
+
+<% if @property.has_target_completion_date? %>
+  <%= label_tag :est_delivery_date %><p><%= @property.target_completion_date %></p>
+<% end %>
+
+<%= label_tag :type %><p><%= @property.property_type %></p>	
+
+<%#= label_tag :unit_types %><br/>
+<%#= display_unit_info(@property.all_unit_info) %>
+<!--p class="indented">
+<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin" title="Click to view layouts"></a>
+<a href="#" id="floor_plans" class="small" title="Click to view layouts">View layouts</a>
+</p-->
+
+<br/>
+
+<% if @property.has_amenities? %>
+  <h3>Amenities</h3>
+  <%= @property.amenities%>
+<% end %>
+
+<br/>
+
+<% if @property.has_unit_specifications? %>
+  <h3>Unit Specifications</h3>
+  <%= @property.unit_specifications %>
+<% end %>
+
+<br/>
+
+<% if @property.has_reservation_fee? %>
+	<%= label_tag :reservation_fee %><p><%= @property.reservation_fee %></p>
+<% end %>
 		
-		<br>
-		
-		<div>
-		  <%= label_tag :developer %>
-		  <p class="indented"><%= @property.developer_name %></p>
-		</div>	
-		
-		<div>  
-		  <%= label_tag :location %>
-		  <p  class="indented"><%= @property.location %>
-		  	<a href="#" id="location_map" class="ui-icon ui-icon-newwin" title="Click to view location map"></a>
-		  </p>
-		</div>  
-		
-		<% if @property.has_address? %>
-		<div>  
-		  <%= label_tag :address %>
-		  <p class="indented"><%= @property.address %></p>
-		</div>
-		<% end %>
-		
-		<% if @property.has_target_completion_date? %>
-		<div>
-			<%= label_tag :target_delivery_date %>
-			<p  class="indented"><%= @property.target_completion_date %></p>
-		</div>
-		<% end %>
-		
-		<div>
-			<%= label_tag :type %>
-			<p class="indented"><%= @property.property_type %></p>	
-		</div>
-		
-		
-		<div>
-			<%= label_tag :unit_types %><br>
-			<%= display_unit_info(@property.all_unit_info) %>
-			<!--p class="indented">
-				<a href="#" id="floor_plans" class="ui-icon ui-icon-newwin" title="Click to view layouts"></a>
-				<a href="#" id="floor_plans" class="small" title="Click to view layouts">View layouts</a>
-			</p-->
-		</div>	
-		
-		<%#= label_tag :unit_types %>
-		<%#= display_all_unit_types(@property.all_unit_types) %>
-		
-		<%#= label_tag :unit_sizes %>
-		<%#= display_all_unit_prices(@property.all_unit_prices) %>
-		
-		<div>
-			<%# label_tag :price_range %>
-			<p class="indented"><%# @property.price_range %></p>
-		</div>	
-		
-		<% if @property.has_amenities? %>
-		<div>
-			<%= label_tag :amenities %><br>
-			<%= @property.amenities%>
-		</div>
-		<% end %>
-		
-		<% if @property.has_unit_specifications? %>
-		<div>
-			<%= label_tag :unit_specifications %><br>
-			<%= @property.unit_specifications %>
-		</div>
-		<% end %>
-		
-		<% if @property.has_payment_terms? %>
-		<div>
-			<%= label_tag :payment_terms %><br>
-			<%= @property.payment_terms %>
-		</div>
-		<% end %>
-		
-		<%#= label_tag :as_low_as %>
-		<%# number_to_currency(@property.as_low_as, :unit => "", :precision => 0) %> <%# @property.as_low_as_label %>
-		
-		<% if @property.has_reservation_fee? %>
-		<div>
-			<%= label_tag :reservation_fee %>
-			<p><%= @property.reservation_fee %></p>
-		</div>
-		<% end %>
-		
-		<div class="disclaimer">
-			<p>* Denotes lowest available price<br>
-			</p>
-		</div>
-		
-		<%= render :partial => 'floor_plans' %>
+<%#= render :partial => 'floor_plans' %>
 	
 		
-		<% if logged_in? %>
-			<p><%= label_tag :featured %><%= @property.featured %></p>
-			
-			<p><%= label_tag :hidden %><%= @property.hidden %></p>
-			
-			
-			<div class="links">
-				<%= link_to 'Edit', edit_property_url(@property) %> |
-				<%= link_to 'Delete', property_url(@property), :method => :delete, :confirm => "Are you sure?" %>
-			</div>	
-		<% end %>
+<% if logged_in? %>
+	<p><%= label_tag :featured %><%= @property.featured %></p>
+	
+	<p><%= label_tag :hidden %><%= @property.hidden %></p>
+	
+	<p><%= label_tag :sold_out %><%= @property.sold_out %></p>
+	
+	<p><%= label_tag :preselling %><%= @property.preselling %></p>
+	
+	<div class="links">
+		<%= link_to 'Edit', edit_property_url(@property) %> |
+		<%= link_to 'Delete', property_url(@property), :method => :delete, :confirm => "Are you sure?" %>
+	</div>	
+<% end %>

@@ -1,44 +1,41 @@
-<div class="gray_box">
-	<div class="header">
-		<h1>Developers</h1>	
-	</div>
-	<div class="content">
-		<div class="developer">
-		
-			<% @developers.each do |d| %>
-				
-				<h3><a href="#"><%= d.developer %></a></h3>
-				<div>
-					<%= image_tag(d.image.url, :class => "logo")	%>	
-					<div class="details">
-					<ul><span>Projects</span>
-						<% d.show_all_projects.each do |property| %>
-						<li><%= link_to property.name, property_url(property) %>
-							<%= link_to property.name, property_url(property), :class => "ui-icon ui-icon-newwin", :title => "Click to view property" %>
-						</li>
-						<% end %>
-					</ul><br>
-					<% if logged_in? %>
-					<%= link_to 'Edit', edit_developer_url(d) %>&nbsp;|&nbsp;<%= link_to 'Delete', developer_url(d), :method => :delete, :confirm => "Are you sure?" %>	
+<div class="blue">
+<div class="main_content developers">
+	<h1>Developers</h1>
+	
+	<div class="left">
+		<% @developers.each do |d| %>
+		<ul>
+			<li class="developer">
+				<%= image_tag(d.image.url)	%>	
+				<div class="projects">
+					<h3>Projects</h3>
+					<% d.show_all_projects.each do |property| %>
+					<%= link_to property.name, property_url(property) %><br/>
 					<% end %>
-					</div>
-					<div class="clear"></div>
 				</div>
-			<% end %>
-		
-		</div>
-		
+				<br/><br/>
+				<% if logged_in? %>
+				<div class="links">
+				<%= link_to 'Edit', edit_developer_url(d) %>&nbsp;|&nbsp;<%= link_to 'Delete', developer_url(d), :method => :delete, :confirm => "Are you sure?" %>
+				</div>	
+				<% end %>
+				<div class="clear"></div>
+			</li>
+		</ul>				
+		<% end %>
+			
 		<% if logged_in? %>
 			<div class="links">
 				<%= link_to 'New', new_developer_url %>
 			</div>
 		<% end %>
-		
 	</div>
 	
-	<div class="footer"></div>
-	
-	<div class="clear"></div>
+	<div class="right">
+		<%= render :partial => 'shared/featured_news' %><br/>
+		<%= render :partial => 'shared/search_form' %>
+	</div>
+		
 </div>
-
+</div>
 <br>

@@ -1,9 +1,8 @@
-<div class="gray_box">
-	<div class="header">
+<div class="blue">
+	<div class="main_content">
 		<h1>Upcoming Events</h1>
-	</div>
-
-	<div class="content">
+		
+		<div class="left">
 		<% @articles.each do |article |%>
 			<div class="articles">
 				<h2><%= link_to article.title, article_url(article) %></h2>
@@ -26,9 +25,13 @@
 				<%= link_to 'New', new_article_url %>
 			</div>	
 		<% end %>
+		</div>
 		
-	</div>
-	
-	<div class="footer"></div>
+		<div class="right">
+			<%= render :partial => 'shared/featured_news' %><br/>
+			<%= render :partial => 'shared/search_form' %>
+		</div>
+		
 	
 </div>
+</div></div>

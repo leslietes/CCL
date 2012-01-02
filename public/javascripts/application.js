@@ -1,6 +1,7 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 jQuery(document).ready(function(){
+
 	$('#properties').dataTable({
 		"aLengthMenu": [[-1, 10, 25, 50], ["All", 10, 25, 50]],
 		"iDisplayLength": "-1"
@@ -12,14 +13,15 @@ jQuery(document).ready(function(){
 	$('#pre_owned').dataTable();
 	$('#rentals').dataTable();
 		
-	$('#gallery a').lightBox();
+	//$('#gallery a').lightBox();
 	
 	$('.calendar').datepicker();
-	$('.developer').accordion({
-		"autoHeight": false
-	});
 	
-	/* property page */ 
+	//$('.developer').accordion({
+	//	"autoHeight": false
+	//});
+	
+	/* property page 
 	$('a#studio_floor_plan').click(function(){
 		$('#studio_floor_plan a').click();
 		return false;
@@ -53,16 +55,16 @@ jQuery(document).ready(function(){
 	$('a#property_photo').click(function(){
 		$('#property_photo a').click();
 		return false;
-	});
+	});*/ 
 	
-	$('#studio_floor_plan a').lightBox();
-	$('#one_bedroom_floor_plan a').lightBox();
-	$('#two_bedroom_floor_plan a').lightBox();
-	$('#three_bedroom_floor_plan a').lightBox();
-	$('#penthouse_floor_plan a').lightBox();
+	//$('#studio_floor_plan a').lightBox();
+	//$('#one_bedroom_floor_plan a').lightBox();
+	//$('#two_bedroom_floor_plan a').lightBox();
+	//$('#three_bedroom_floor_plan a').lightBox();
+	//$('#penthouse_floor_plan a').lightBox();
 	
-	$('#location_map a').lightBox();
-	$('#property_photo a').lightBox();
+	//$('#location_map a').lightBox();
+	//$('#property_photo a').lightBox();
 	
 	// Get contact form and validate
 	document.getElementsByTagName("form")[0].onsubmit = function() {

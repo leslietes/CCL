@@ -8,6 +8,8 @@
 			<th>Price Range*<br></th>
 			<th>Estimated Delivery</th>
 			<% if logged_in? %>
+			<th>Coordinates</th>
+			<th>Status</th>
 			<th>Actions</th>
 			<% end %>
 		</tr>
@@ -22,6 +24,15 @@
 		<td class="center" width="110px"><%= show_all_unit_prices(property.all_unit_prices) %></td>
 		<td class="center" width="160px"><%= property.completion_date %></td>
 		<% if logged_in? %>
+		<td class="center">
+			<%= property.latitude %>, <%= property.longitude%>
+		</td>
+		<td class="center">
+			<%= label_tag :sold_out %><%= property.sold_out %><br/>
+			<%= label_tag :preselling %><%= property.preselling %><br/>
+			<%= label_tag :hidden %><%= property.hidden %><br/>
+			<%= label_tag :featured %><%= property.featured%>
+		</td>
 		<td class="center" width="100px">
 			<%= link_to 'Show', property_url(property) %>
 			<%= link_to 'Edit', edit_property_url(property) %>

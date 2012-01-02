@@ -1,6 +1,9 @@
+<div id="header">
 <div id="logo">
-	<%= image_tag '/images/logo.jpg', :alt => "Cebu Condo Listings | Cebu Condominium | Cebu Condo" %>
-	<div class="social">
+	<div id="logo_image"></div>
+	<%#= image_tag '/images/logo.jpg', :alt => "Cebu Condo Listings | Cebu Condominium | Cebu Condo" %>
+	<div class="contact">
+		<div class="contact_content"><p>63-917-546-0800</p></div>
 	</div>		
 	<div id="links">
 		<ul>
@@ -13,15 +16,17 @@
 			<% end %>
 		</ul>
 	</div>
-</div>
 
-<ul id="nav">
-	<li><%= link_to_unless_current 'Home', root_url %></li>
-	<%#= link_to 'About Us', about_url %>
-	<li><%= link_to_unless_current 'Developers', developers_url %></li>
-	<li><%= link_to_unless_current 'Properties', properties_url %></li>
-	<li><%= link_to_unless_current 'Pre-Owned', pre_owned_condos_url %></li>
-	<li><%= link_to_unless_current 'Rent', rentals_url %></li>
-	<li><%= link_to_unless_current 'Upcoming Events', news_url %></li>
-	<li><%= link_to_unless_current 'Contact Us', contact_us_url %></li>
-</ul>	
+
+	<ul id="nav">
+		<li class="<%= @class == 'home' ? 'home' : '' %>"><%= link_to 'Home', root_url %></li>
+		<%#= link_to 'About Us', about_url %>
+		<li class="<%= @class == 'developers' ? 'developers' : '' %>"><%= link_to 'Developers', developers_url %></li>
+		<li class="<%= @class == 'properties' ? 'properties' : '' %>"><%= link_to 'Properties', properties_url %></li>
+		<!--li class="<%= @class == 'pre_owned_condos' ? 'pre_owned_condos' : '' %>"><%= link_to 'Pre-Owned', pre_owned_condos_url %></li-->
+		<!--li class="<%= @class == 'rentals' ? 'rentals' : '' %>"><%= link_to 'Rent', rentals_url %></li-->
+		<li class="<%= @class == 'events' ? 'events' : '' %>"><%= link_to 'Upcoming Events', news_url %></li>
+		<li><%= link_to 'Contact Us', contact_us_url %></li>
+	</ul>	
+</div>
+</div>

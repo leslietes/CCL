@@ -1,33 +1,37 @@
-<div class="gray_box">
+<div class="blue">
 	
-	<div class="header">
+	<div class="main_content">
 		<h1>Events</h1>	
-	</div>
 	
-	<div class="content article">
-		<h2><%= @article.title %></h2>
-		<p class="teaser"><%= @article.teaser %></p>
-		<p class="published_on"><span>On <%= format_date(@article.published_date) %> in <%= @article.published_at %></span></p>
+		<div class="left">
+			<div class="articles">
+				<h2><%= @article.title %></h2>
+				<p class="teaser"><%= @article.teaser %></p>
+				<p class="published_on"><span>On <%= format_date(@article.published_date) %> in <%= @article.published_at %></span></p>
+				
+				<% if @article.article_photo? %>
+				<p class="image">
+					<%= image_tag @article.article_photo.url %><br>
+					<span><%= @article.article_photo_caption %></span>	
+				</p>
+				<% end %>
+				
+				<p class="body">
+					<%= @article.body %>
+				</p>
+			</div>
+		</div>
 		
-		<% if @article.article_photo? %>
-		<p class="image">
-			<%= image_tag @article.article_photo.url %><br>
-			<span><%= @article.article_photo_caption %></span>	
-		</p>
-		<% end %>
-		
-		<p class="body">
-			<%= @article.body %>
-		</p>
-	</div>
-	
-	<div class="footer"></div>	
+		<div class="right">
+			<%= render :partial => 'shared/featured_news' %><br/>
+			<%= render :partial => 'shared/search_form' %>
+		</div>
 	
 	<% if logged_in? %>
 		<div class="links">
 			<%= link_to 'Edit', edit_article_url(@article) %> <%= link_to 'Delete', article_url(@article), :method => :delete, :confirm => 'Are you sure?' %>
 		</div>
 	<% end %>	
-</div>
+</div></div>
 
 <br>

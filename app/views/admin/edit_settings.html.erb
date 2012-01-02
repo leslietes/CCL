@@ -1,4 +1,5 @@
-<div class="settings">
+<div class="blue">
+<div class="settings main_content">
 	<h1>Settings</h1>
 	
 	<% form_for @setting, :url => edit_settings_url, :html => {:method => :post} do |f| %>
@@ -6,4 +7,4 @@
 		<%# f.label :about_us %><br><%# f.text_area :about_us %>
 		<p><%= submit_tag 'Save' %></p>
 	<% end %>
-</div>
+</div></div>

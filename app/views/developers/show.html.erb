@@ -1,4 +1,5 @@
-<div class="developer">
+<div class="blue">
+<div class="developer main_content">
 
 <%#= image_tag @developer.image.url(:medium) %>
 
@@ -27,5 +28,7 @@
 		<%= link_to 'Delete', developer_url(@developer), :method => :delete, :confirm => "Are you sure?" %>
 	</div>	
 <% end %>
+<div class="clear"/>
+<p><%= link_to 'Back', developers_url %></p>
 
-</div>
+</div></div></div>

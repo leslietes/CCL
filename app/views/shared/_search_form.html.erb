@@ -1,24 +1,21 @@
-<div class="gray_box">
-	<div class="header" id="third_column">
-		<h1>Search</h1>
-	</div>
-	<div class="content">
-		<% form_tag :controller => 'properties', :action => 'search' do %>
-			<p>
-				<%= label_tag :location %><%= select_tag "location", options_for_select(@search_location, @location), :multiple => false %>
-			</p>
-			<p>
-				<%= label_tag :price_range %><%= select_tag "price_range", options_for_select(@search_price, @pr) %>
-			</p>
-			<p>
-				<%= label_tag :unit_type %><%= select_tag "unit_type", options_for_select(@search_type, @unit_type), :multiple => false %>
-			</p>
-			<p>
-				<%= label_tag :type %><%= select_tag "type", options_for_select(@type, @prop_type) %>
-			</p>	
-			<p><%= submit_tag 'Search' %></p>
-		<% end %>
-		<p>For a list of all properties, click <%= link_to 'here', properties_url %></p>
-	</div>
-	<div class="footer" id="boxes"></div>
+<div class="search">
+	<% form_tag :controller => 'properties', :action => 'search' do %>
+		<p>
+			<%= label_tag :location %><br/><%= select_tag "location", options_for_select(@search_location, @location), :multiple => false %>
+		</p>
+		<p>
+			<%= label_tag :price_range %><br/><%= select_tag "price_range", options_for_select(@search_price, @pr) %>
+		</p>
+		<p>
+			<%= label_tag :unit_type %><br/><%= select_tag "unit_type", options_for_select(@search_type, @unit_type), :multiple => false %>
+		</p>
+		<p>
+			<%= label_tag :type %><br/><%= select_tag "type", options_for_select(@type, @prop_type) %>
+		</p>
+		<div class="search_button">
+			<%= submit_tag 'Search' %>
+		</div>
+	<% end %>
+	<br/>
+	<p><b>For a list of all properties, click <%= link_to 'HERE', properties_url %></b></p>
 </div>	

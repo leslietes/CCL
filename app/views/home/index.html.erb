@@ -1,46 +1,49 @@
-<%#= render :partial => 'slider' %>
+<% content_for :spotlight do %>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+ 	$("#s3Slider").s3Slider({
+		timeOut: 4000
+	});
+  });
+</script>
 
-<!--div>
-	Cebucondolistings.com is the premier site for the most comprehensive and up-to-date listings of new and upcoming condominium development projects in Cebu City and nearby areas.
-</div-->	
-
-<div class="gray_box">
-	<div class="header home">
-		<h1>&nbsp;</h1>	
-	</div>
+<div class="content_container">
 	<div class="content">
-		<div id="featured">
-		<ul>
-			<% @properties.each do |p| %>
-			<li>
-				<h3><%= link_to p.name, property_url(p) %></h3>
-				<div class="image"><%= link_to (image_tag p.photo.url(:thumb)), property_url(p) %></div>
-				
-				<div class="info">
-					<% if p.completed? %>
-						<div class="rfo">READY FOR OCCUPANCY</div>
-					<% else %>
-						<div class="left">
-							<% if !p.target_completion_date.blank? %>
-							<p>Estimated delivery<br><%= p.target_completion_date %></p>
-							<% end %>
-						</div>
-						<div class="right">
-							<% if p.as_low_as_label == " downpayment" && !p.as_low_as.blank? %>
-							    <p>Downpayment for as low as <%= number_to_currency(p.as_low_as, :unit => "", :precision => 0) %></p>
-							<% elsif "/month" && !p.as_low_as.blank? %>
-							    <p>As low as <%= number_to_currency(p.as_low_as, :unit => "", :precision => 0) %>/month</p>
-							<% end %>
-						</div>	
-					<% end %>	
-				</div>	
-				
-			</li>
-			<% end %>
-			<div class="clear"></div>
-		</ul>
+	<div class="spotlight">
+		<div class="desc">
+			<%= @setting.introduction %><br/><br/>
+			<span class="price">AS LOW AS <b><%= @setting.intro_price %></b><br/> per month</span><br/>
+			<div class="start">
+				<%= link_to('', "#{eval(@setting.link)}") %>
+			</div>
 		</div>
-		<div class="clear"></div>
+		<div id="s3Slider_container">
+		<div id="s3Slider">
+			<ul id="s3SliderContent">
+			<% @perspectives.each do |p| %>
+			  <li class="s3SliderImage">
+			  	<%= link_to(image_tag(p.perspective.url(:medium), :height => '360', :width => '385'), "#{eval(p.link)}") %>
+				<%#= image_tag(p.perspective.url(:medium), :height => '360', :width => '385') %>
+				<span><%= p.caption %></span>
+			  </li>
+			<% end %>
+			<div class="clear s3SliderImage"></div>
+			</ul>
+		</div></div>
 	</div>
-	<div class="footer"></div>
+	<div class="clear"></div>
+	</div>
+</div>
+<% end %>
+
+<div class="main_content">
+	<div class="first sections">
+	<%= render :partial => 'shared/featured' %>
+	</div>
+	<div class="second sections">
+	<%= render :partial => 'shared/featured_news' %>
+	</div>
+	<div class="third sections">
+	<%= render :partial => 'shared/search_form' %>
+	</div>
 </div>
