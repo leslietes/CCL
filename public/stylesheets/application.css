@@ -74,7 +74,7 @@ body {
 
 
 .content_container { background:url(/images/new_ui/blue_bg.jpg) repeat-x; }
-.content { width:960px;margin:auto;}
+.content { width:960px;margin:auto;position:relative;}
 .main { position:relative;width:100%; }
 .main_content { width:960px;margin:auto;}
 .main_content .left { width:660px;float:left;margin-right:5px; }
@@ -87,8 +87,9 @@ body {
 .spotlight { padding-top:35px;padding:35px 22px 0; }
 .spotlight .desc { width:50%;float:left;font-size:29px;color:#fff;line-height:39px;}
 .spotlight .desc .price { float:right;text-align:right;padding-right:20px;}
-.spotlight #s3Slider_container { background:url(/images/new_ui/ccl.png) no-repeat -813px -165px;float:right;-moz-border-radius:8px;padding:50px 25px; }
-.spotlight .image img { margin-top:26px; }
+.spotlight #s3Slider_container { float:right;-moz-border-radius:8px;padding:25px 25px 0;background-color:rgba(255,255,255,0.2); }
+.spotlight img { border:1px solid #fff;-moz-border-radius:5px; }
+.slider_bottom { background:url(/images/new_ui/ccl.png) no-repeat -809px -578px;position:absolute;right:0;width:460px;height:18px;bottom:-17px; }
 
 .start { background:url(/images/new_ui/ccl.png) no-repeat -425px -405px;height:35px;width:180px;margin:3px 120px;text-indent:-9999px;position:relative; }
 .start a { width:180px;height:35px;display:block;}
@@ -422,7 +423,7 @@ div#recaptcha_area { margin-left:-2px; }
 #s3Slider {width:385px;height:360px;position:relative;overflow:hidden;}
 #s3SliderContent { width:385px;position:absolute;top:0;margin-left:0;}
 .s3SliderImage { float:left;position:relative;display:none;}
-.s3SliderImage span { position:absolute;left:0;font:15px Arial, Helvetica, sans-serif;padding:10px 13px;width:358px;background-color:#000; filter: alpha(opacity=70);-moz-opacity: 0.7;-khtml-opacity: 0.7;opacity: 0.7;color: #fff;display:none;bottom:0;}
+.s3SliderImage span { position:absolute;left:0;font:15px Arial, Helvetica, sans-serif;padding:10px 11px;width:360px;background-color:#000; filter: alpha(opacity=70);-moz-opacity: 0.7;-khtml-opacity: 0.7;opacity: 0.7;color: #fff;display:none;bottom:0;margin-left:1px;}
 
 
 /*#s3Slider { border:1px solid #ccc!important;width:385px;height:330;position:relative; }
