@@ -36,6 +36,14 @@
 	</p>
 	
 	<p>
+	  <%= f.label :latitude %><%= f.text_field :latitude %>
+	</p>
+	
+    <p>
+	  <%= f.label :longitude %><%= f.text_field :longitude %>
+	</p>
+
+	<p>
 		<%= f.label :completed %><%= f.check_box :completed %>
 	</p>		
 	
@@ -164,7 +172,9 @@
 	</p>
 	
 	<p>
-		<%= f.label :reservation_fee %><%= f.text_field :reservation_fee %>
+		<%= f.label :reservation_fee %><%= f.text_field :reservation_fee %><br/>
+		<%= f.check_box :sold_out %> Sold Out<br/>
+		<%= f.check_box :preselling%> Pre-Selling
 	</p>	
 </div>
 
