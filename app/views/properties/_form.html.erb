@@ -39,7 +39,9 @@
 		<%= f.label :no_of_bldgs %><%= f.text_field :no_of_bldgs %>
 	</p>
 	
-	
+	<p>
+		<%= f.label :no_of_units %><%= f.text_field :no_of_units %>
+	</p>
 	
 	<p>
 	  <%= f.label :address %><%= f.text_area :address %>
@@ -85,6 +87,12 @@
 		<%= f.label :hidden %><%= f.check_box :hidden %>
 	</p>
 	
+	<p>
+		<%= f.label :sold_out %><%= f.check_box :sold_out %>
+	</p>
+	<p>
+		<%= f.label :preselling %><%= f.check_box :preselling%>
+	</p>	
 </div>
 
 <div class="two">
@@ -182,10 +190,8 @@
 	</p>
 	
 	<p>
-		<%= f.label :reservation_fee %><%= f.text_field :reservation_fee %><br/>
-		<%= f.check_box :sold_out %> Sold Out<br/>
-		<%= f.check_box :preselling%> Pre-Selling
-	</p>	
+		<%= f.label :reservation_fee %><%= f.text_field :reservation_fee %>
+	</p>
 </div>
 
 <div class="clear"></div>
