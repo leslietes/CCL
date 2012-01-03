@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   #layout "properties", :except => [:index, :show]
   
   def index
-    @articles = Article.all
+    @articles = Article.find(:all, :order => "created_at DESC")
     render :layout => "application"
   end
   
