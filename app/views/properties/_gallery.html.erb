@@ -1,12 +1,12 @@
 <div id="gallery">
 	<ul>
-		<% @property.galleries.each do |g|%>
-			<% if g.gallery_photo_file_name %>
+		<%# @property.galleries.each do |g|%>
+			<%# if g.gallery_photo_file_name %>
 				<li>
-					<%= link_to(image_tag(g.gallery_photo.url(:small)), g.gallery_photo.url, :title => g.gallery_photo_caption) %>
+					<%#= link_to(image_tag(g.gallery_photo.url(:small)), g.gallery_photo.url, :title => g.gallery_photo_caption) %>
 				</li>
-			<% end %>
-		<% end %>
+			<%# end %>
+		<%# end %>
 	</ul>		
 </div>
 

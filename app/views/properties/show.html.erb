@@ -8,8 +8,28 @@
 	
 	<div id="left">
 		<div id="gallery1">
-			<%= image_tag @property.logo.url(:thumb) %>
-			<%= image_tag @property.location_map.url(:medium) %>
+			<% if @property.logo? %>
+			    <%= image_tag(@property.logo.url(:medium)) %>
+			<% end %>
+			<% if @property.location_map? %>
+			    <%= image_tag(@property.location_map.url(:medium)) %>
+			<% end %>
+			<% if @property.studio_layout? %>
+			    <%= image_tag(@property.studio_layout.url(:medium)) %>
+			<% end %>
+			<% if @property.one_bedroom_layout? %>
+			    <%= image_tag(@property.one_bedroom_layout.url(:medium))  %>
+			<% end %>
+			<% if @property.two_bedroom_layout? %>
+			    <%= image_tag(@property.two_bedroom_layout.url(:medium)) %>
+			<% end %>
+			<% if @property.penthouse_layout? %>
+			    <%= image_tag(@property.penthouse_layout.url(:medium)) %>
+			<% end %>
+			
+			<% @property.galleries.each do |g| %>
+			    <%= image_tag(g.gallery_photo.url(:medium)) %>
+			<% end %>
 		</div>
 		
 		<br/>

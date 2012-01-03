@@ -56,6 +56,7 @@
 	
 	<div class="links">
 		<%= link_to 'Edit', edit_property_url(@property) %> |
-		<%= link_to 'Delete', property_url(@property), :method => :delete, :confirm => "Are you sure?" %>
+		<%= link_to 'Delete', property_url(@property), :method => :delete, :confirm => "Are you sure?" %> |
+		<%= link_to 'Gallery', property_gallery_url(@property) %>
 	</div>	
 <% end %>

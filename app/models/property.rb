@@ -12,28 +12,28 @@ class Property < ActiveRecord::Base
   
   accepts_nested_attributes_for :galleries
 
-  has_attached_file :photo, :styles => { :medium => "800x535>", :thumb => "190x130>" },
+  has_attached_file :photo, :styles => { :medium => "335x525>", :thumb => "85x122>", :small => "120x145>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :logo, :styles => { :medium => "800x535>", :thumb => "190x130>" },
+  has_attached_file :logo, :styles => { :medium => "335x525>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :location_map, :styles => { :medium => "800x535>" },
+  has_attached_file :location_map, :styles => { :medium => "335x525>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :studio_layout, :styles => { :medium => "800x535>" },
+  has_attached_file :studio_layout, :styles => { :medium => "335x525>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :one_bedroom_layout, :styles => { :medium => "800x535>" },
+  has_attached_file :one_bedroom_layout, :styles => { :medium => "335x525>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :two_bedroom_layout, :styles => { :medium => "800x535>" },
+  has_attached_file :two_bedroom_layout, :styles => { :medium => "335x525>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :three_bedroom_layout, :styles => { :medium => "800x535>" },
+  has_attached_file :three_bedroom_layout, :styles => { :medium => "335x525>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
-  has_attached_file :penthouse_layout, :styles => { :medium => "800x535>" },
+  has_attached_file :penthouse_layout, :styles => { :medium => "335x525>" },
                     :url => "/:class/:attachment/:id/:style_:basename.:extension"
 
   validates_presence_of :developer_id, :name, :permalink

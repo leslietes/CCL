@@ -9,7 +9,7 @@
 			<% @properties.each do |p| %>
 				<li>
 					<div class="photo">
-						<%= link_to (image_tag p.photo.url(:thumb)), property_url(p) %>
+						<%= link_to (image_tag p.photo.url(:small)), property_url(p) %>
 					</div>
 					<h2>
 						<%= link_to p.name, property_url(p) %>
