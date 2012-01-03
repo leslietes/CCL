@@ -89,6 +89,13 @@ class PropertiesController < ApplicationController
     redirect_to property_gallery_url(@property)
   end
   
+  def clear_gallery
+    @property = Property.find_by_permalink(params[:id])
+    @property.galleries = []
+    @property.save
+    redirect_to property_url(@property)
+  end
+  
   def search
     begin
       conditions = "hidden = false "

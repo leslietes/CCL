@@ -20,6 +20,7 @@ ActionController::Routing::Routes.draw do |map|
   map.search '/property/search', :controller => 'properties', :action => 'search'
   map.property_gallery '/property/:id/gallery', :controller => 'properties', :action => 'gallery'
   map.upload_to_gallery 'property/:id/gallery/upload', :controller => 'properties', :action => 'upload_to_gallery'
+  map.clear_gallery 'property/:id/gallery/clear', :controller => 'properties', :action => 'clear_gallery'
   
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'

@@ -6,8 +6,7 @@
 	<ul>
 		<% @featured_articles.each do |a| %>
 		<li>
-				<%= link_to a.title, article_url(a)  %>
-				<%= link_to '', article_url(a), :class => "ui-icon ui-icon-newwin" %><br/>
+				<%= link_to a.title, article_url(a)  %><br/>
 				<span>
 				<% if a.published_date? %>
 					On <%= format_date(a.published_date) %>
