@@ -4,8 +4,8 @@
 	<div class="mid">
 	<h1>News/Events</h1>	
 	<ul>
+		<% @featured_articles.each do |a| %>
 		<li>
-			<% @featured_articles.each do |a| %>
 				<%= link_to a.title, article_url(a)  %>
 				<%= link_to '', article_url(a), :class => "ui-icon ui-icon-newwin" %><br/>
 				<span>
@@ -16,9 +16,8 @@
 				In <%= a.published_at %>
 				<% end %>
 				</span>
-			<% end %>
-		</li>
-		<hr/>
+		</li><hr/>
+		<% end %>
 	</ul>
 	<div class="read_more">
 		<%= link_to 'Read More', articles_url %>
