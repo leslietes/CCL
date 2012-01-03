@@ -1,4 +1,6 @@
-#logo { height:105px; }
+#logo_image { height:150px; }
+
+/*#logo { height:105px; }
 
 .main { margin-left:10px; }
 
@@ -17,5 +19,7 @@
 
 .developer { width:600px;clear:both;position:relative;height:auto; }
 .developer h3 { clear:both; }
-.developer img.logo { position:relative; }
+.developer img.logo { position:relative; }*/
+
+.developers ul li.developer {margin-right:30px;}
 
