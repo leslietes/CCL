@@ -1,13 +1,20 @@
 <div class="blue">
 	
 	<div class="main_content">
-		<h1>Events</h1>	
-	
+		
+		<h1>News/Events</h1>	
 		<div class="left">
 			<div class="articles">
 				<h2><%= @article.title %></h2>
 				<p class="teaser"><%= @article.teaser %></p>
-				<p class="published_on"><span>On <%= format_date(@article.published_date) %> in <%= @article.published_at %></span></p>
+				<p class="published_on">
+				<% if @article.published_date? %>	
+					<span>On <%= format_date(@article.published_date) %>
+				<% end %> 
+				<% if @article.published_at? %>
+				In <%= @article.published_at %></span>
+				<% end %>
+				</p>
 				
 				<% if @article.article_photo? %>
 				<p class="image">
