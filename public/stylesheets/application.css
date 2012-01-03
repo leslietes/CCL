@@ -81,7 +81,7 @@ body {
 .main_content .right { float:left;margin-left:5px; }
 
 .right_column { position:relative;width:295px;float:left;min-height:500px;clear:right;margin-right:15px;margin-left:0;margin-top:35px; }
-.flash { margin-bottom:20px;padding:5px;background-color:#eaebff;width:602px; }
+.flash { margin:0 auto 20px auto;padding:5px;background-color:#eaebff;width:960px; }
 .flash_wide { margin-bottom:20px;padding:5px;background-color:#eaebff;margin:10px 15px; }
 
 .spotlight { padding-top:35px;padding:35px 22px 0; }
