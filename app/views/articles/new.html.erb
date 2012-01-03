@@ -1,20 +1,15 @@
-<% content_for :admin_pages do %>
-<div class="article_full">
-<div class="gray_box">
+<%# content_for :admin_pages do %>
+<div class="blue">
+<div class="main_content">
 	
-	<div class="header" id="full_page">
-		<h1>New Article</h1>	
-	</div>
+	<h1>New Article</h1>	
 	
-	<div class="content">
 		
-		<% form_for @article, :html => {:multipart => true} do |f| %>
-		  <%= f.error_messages %>
-		  <%= render :partial => 'form', :locals => {:f => f} %>
-		<% end %>
+	<% form_for @article, :html => {:multipart => true} do |f| %>
+	  <%= f.error_messages %>
+	  <%= render :partial => 'form', :locals => {:f => f} %>
+	<% end %>
 	
-	</div>
-	<div class="footer" id="full"></div>
 </div>
 </div>
-<% end %>
+<%# end %>
