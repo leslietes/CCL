@@ -67,7 +67,7 @@ jQuery(document).ready(function(){
 	//$('#property_photo a').lightBox();
 	
 	// Get contact form and validate
-	document.getElementsByTagName("form")[0].onsubmit = function() {
+	document.getElementById("inquiry").onsubmit = function() {
 		var message = "";
 		
 		// Get full name field and check
