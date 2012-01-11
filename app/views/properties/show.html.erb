@@ -16,6 +16,9 @@
 			<% if @property.logo? %>
 			    <%= image_tag(@property.logo.url(:medium)) %>
 			<% end %>
+			<% if @property.photo? %>
+			    <%= image_tag(@property.photo.url(:medium)) %>
+			<% end %>
 			<% if @property.location_map? %>
 			    <%= image_tag(@property.location_map.url(:medium)) %>
 			<% end %>
