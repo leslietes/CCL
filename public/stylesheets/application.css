@@ -204,7 +204,7 @@ ul#nav li.home a, ul#nav li.developers a, ul#nav li.properties a, ul#nav li.pre_
 .featured_news .top { background:url(/images/new_ui/news_top.jpg);border:none;height:13px;padding:0;width:285px;}
 .featured_news .mid { position:relative;height:330px;background:url(/images/new_ui/news_mid.jpg) repeat-y;display:block; }
 .featured_news .bottom { background:url(/images/new_ui/news_bottom.jpg) no-repeat;position:relative;padding:0;border:none;height:13px; }
-.featured_news h1 { background:url(/images/new_ui/news_line.jpg) no-repeat 73px 50px;text-align:center;padding:20px 0 30px;}
+.featured_news h1 { background:url(/images/new_ui/news_line.jpg) no-repeat 73px 50px;text-align:center;padding:20px 0 30px;margin-bottom:10px;}
 .featured_news ul li { background:none!important;border:none!important;text-align:left;margin-bottom:15px;width:240px;padding:0 20px;}
 .featured_news a { font-weight:bold; }
 .featured_news a.ui-icon { display:inline-block;}
