@@ -1,4 +1,7 @@
-<%# content_for :admin_pages do %>
+<% content_for :head do %>
+<%= stylesheet_link_tag 'jquery-ui-1.7.3.custom'%>
+<%= javascript_include_tag 'jquery-1.4.2.min.js','jquery-ui-1.7.3.custom.min' %>
+<% end %>
 
 <script>
 	$(function(){
@@ -57,4 +60,3 @@
 	
 </div></div>
 <br	>
-<%# end %>

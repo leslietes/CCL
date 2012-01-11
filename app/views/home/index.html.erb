@@ -1,3 +1,8 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag 's3slider'%>
+<%= javascript_include_tag 'jquery-1.4.2.min.js','s3Slider' %>
+<% end %>
+
 <% content_for :spotlight do %>
 <script type="text/javascript">
   jQuery(document).ready(function(){
@@ -11,8 +16,8 @@
 	<div class="content">
 	<div class="spotlight">
 		<div class="desc">
-			<%= @setting.introduction %><br/><br/>
-			<span class="price">AS LOW AS <b><%= @setting.intro_price %></b><br/> per month</span><br/>
+			<%= @setting.introduction if @setting.introduction %><br/><br/>
+			<span class="price">AS LOW AS <b><%= @setting.intro_price if @setting.intro_price %></b><br/> per month</span><br/>
 			<div class="start">
 				<%= link_to('', "#{eval(@setting.link)}") %>
 			</div>
