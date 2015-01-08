@@ -4,7 +4,7 @@
 	
 	<% form_for @setting, :url => edit_settings_url, :html => {:method => :post} do |f| %>
 		<p><%= f.label :production_email %><br><%= f.text_field :production_email %></p>
-		<%# f.label :about_us %><br><%# f.text_area :about_us %>
+		<%# f.label :about_us %><br><%# f.text_area :about_us %><br><%= f.label :contact_no %><br><%= f.text_field :contact_no %>
 		<p><%= submit_tag 'Save' %></p>
 	<% end %>
 </div></div>
