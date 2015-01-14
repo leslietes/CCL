@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
     @search_type     = Setting.unit_types.insert(0,"")
     @type            = Property.property_types #condominium/condotel
     @contact_no      = Setting.first.contact_no
+    @production_email= Setting.first.production_email
   end
   
   protected
