@@ -1,18 +1,18 @@
-set :application, "cebucondolistings"
-set :domain, "domain"
-set :server_hostname, 'www.cebucondolistings.com'
+set :application, "cebucondo"
+set :domain, "106.186.120.245:12001"
+set :server_hostname, 'www.cebucondo.ph'
 
 server domain, :app, :web, :db, :primary => true
 
-set :user, "user"
-set :password, "password"
+set :user, "cebucond"
+set :password, "bKY06wd6v5"
 
 set :repository,  "git@github.com:leslietes/CCL.git"
 set :scm, :git
-set :scm_username, "username"
-set :scm_password, "password"
+set :scm_username, "leslietes"
+set :scm_password, "secret"
 set :set_verbose, true
-set :deploy_to, "/home/#{user}/#{application}"
+set :deploy_to, "/rails_apps/#{application}"
 set :use_sudo, false
 set :deploy_via, :checkout
 set :keep_releases, 2
@@ -21,7 +21,7 @@ set :branch, :master
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-set :runner, "runner"
+set :runner, "leslietes"
 
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
