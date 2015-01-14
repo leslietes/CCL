@@ -1,5 +1,8 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
  one:
-   production_email: inquiries@cebucondolistings.com
+   production_email: inquiries@cebucondo.ph
+   introduction: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+   intro_price: 10000
+   link: property_url('avida')
    #about_us: Cebucondolistings.com is the premier site for the most comprehensive and up-to-date listings of new and upcoming condominium development projects in Cebu City and nearby areas.
