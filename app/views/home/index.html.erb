@@ -15,19 +15,13 @@
 <div class="content_container">
 	<div class="content">
 	<div class="spotlight">
-		<div class="desc">
-			<%= @setting.introduction if @setting.introduction %><br/><br/>
-			<span class="price">AS LOW AS <b><%= @setting.intro_price if @setting.intro_price %></b><br/> per month</span><br/>
-			<div class="start">
-				<%= link_to('', "#{eval(@setting.link)}") %>
-			</div>
-		</div>
+		
 		<div id="s3Slider_container">
 		<div id="s3Slider">
 			<ul id="s3SliderContent">
 			<% @perspectives.each do |p| %>
 			  <li class="s3SliderImage">
-			  	<%= link_to(image_tag(p.perspective.url(:medium), :height => '360', :width => '383'), "#{eval(p.link)}") %>
+			  	<%= link_to(image_tag(p.perspective.url(:medium), :height => '360', :width => '990'), "#{eval(p.link)}") %>
 				<%#= image_tag(p.perspective.url(:medium), :height => '360', :width => '385') %>
 				<span class="top"><%= p.caption %></span>
 			  </li>
@@ -35,7 +29,7 @@
 			<div class="clear s3SliderImage"></div>
 			</ul>
 		</div></div>
-		<div class="slider_bottom"></div>
+		
 	</div>
 	<div class="clear"></div>
 	</div>
@@ -46,9 +40,9 @@
 	<div class="first sections">
 	<%= render :partial => 'shared/featured' %>
 	</div>
-	<div class="second sections">
-	<%= render :partial => 'shared/featured_news' %>
-	</div>
+	<!--div class="second sections">
+	<%#= render :partial => 'shared/featured_news' %>
+	</div-->
 	<div class="third sections">
 	<%= render :partial => 'shared/search_form' %>
 	</div>

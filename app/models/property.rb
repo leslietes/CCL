@@ -66,7 +66,7 @@ class Property < ActiveRecord::Base
   
   def self.show_all_featured
     #home_page
-    Property.find(:all, :select => "id, name, permalink, target_completion_date, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, as_low_as_label, as_low_as, sold_out, preselling",
+    Property.find(:all, :select => "id, name, permalink, location, developer_id, target_completion_date, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, as_low_as_label, as_low_as, sold_out, preselling",
                   :conditions => ["hidden = ? and featured = ?", false, true], :order => "name ASC")
 #                  ,:include => :developer)
   end
