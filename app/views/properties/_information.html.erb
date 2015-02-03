@@ -10,6 +10,8 @@
   <%= label_tag :est_delivery_date %><p><%= @property.target_completion_date %></p>
 <% end %>
 
+<%= label_tag :starting_price %><p><%= number_to_currency(@property.starting_price, :unit => '', :precision => 0) %></p>
+
 <%= label_tag :type %><p><%= @property.property_type %></p>
 <%= label_tag :no_of_floors%><p><%= @property.no_of_floors%></p>
 <%= label_tag :no_of_bldgs%><p><%= @property.no_of_bldgs%></p>

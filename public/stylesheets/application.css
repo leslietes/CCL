@@ -203,7 +203,7 @@ ul#nav li.home a, ul#nav li.developers a, ul#nav li.properties a, ul#nav li.pre_
 .sections .featured .info { line-height:13px;padding-top: 10px;}
 
 /* featured section */
-hr { color: #efefef;margin: 20px 15px 5px 20px;}
+hr { color: #efefef;margin: 15px 15px 5px 20px;}
 .developer { float: left; font-size: 12px; margin-left: 20px;}
 .location  { font-size: 12px;}
 .info1 { width:110px; background-color: #FBE644;border-radius:5px;font-size: 12px;float:left;margin-left: 20px;padding: 10px 15px;margin-top: 10px;}
