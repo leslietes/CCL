@@ -1,75 +1,118 @@
-set :application, "cebucondo"
-set :domain, "106.186.120.245:12001"
-set :server_hostname, 'www.cebucondo.ph'
+# config valid only for current version of Capistrano
+lock '3.3.5'
 
-server domain, :app, :web, :db, :primary => true
-
-set :user, "cebucond"
-set :password, "bKY06wd6v5"
-
-set :repository,  "git@github.com:leslietes/CCL.git"
-set :scm, :git
-set :scm_username, "leslietes"
-set :scm_password, "magicspell1"
-set :set_verbose, true
-set :deploy_to, "/rails_apps/#{application}"
+# Deployment environment information
+set :application, 'cebucondo'
+set :deploy_to, "/home/#{user}/rails_app/#{application}/current/public"
+set :deploy_via, :remote_cache
 set :use_sudo, false
-set :deploy_via, :checkout
-set :keep_releases, 2
-set :branch, :master
 
-default_run_options[:pty] = true
-ssh_options[:forward_agent] = true
+# Git information
+set :scm, :git
+set :repo_url, 'git@github.com:leslietes/CCL.git'
+set :branch, 'master'
 
-set :runner, "leslietes"
+set :linked_files, fetch(:linked_files, []).push('config/database.yml')
 
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
-set :chmod755, "app config db lib public vendor script script/* public/*"
-
-#role :web, application                          # Your HTTP server, Apache/etc
-#role :app, application                          # This may be the same as your `Web` server
-#role :db,  application, :primary => true        # This is where Rails migrations will run
-#role :db,  application
-
-# If you are using Passenger mod_rails uncomment this:
-# if you're still using the script/reapear helper you will need
-# these http://github.com/rails/irs_process_scripts
+# https://github.com/capistrano/capistrano/wiki/Capistrano-Tasks
+after "deploy", "deploy:cleanup" # keep only the last 5 releases
+after "deploy", "deploy:migrate"
 
 namespace :deploy do
-#  task :start {}
-#  task :stop {}
-  task :restart, :roles => :app, :except => { :no_release => true } do
+  # Reference: http://stackoverflow.com/a/11462003/936494
+  task :cold do
+    transaction do
+      update
+      setup_db  #replacing migrate in original
+      start
+    end
+  end
+
+  task :setup_db, :roles => :app do
+    raise RuntimeError.new('db:setup aborted!') unless Capistrano::CLI.ui.ask("About to `rake db:setup`. Are you sure to wipe the entire database (anything other than 'yes' aborts):") == 'yes'
+    run "cd #{current_path}; bundle exec rake db:setup RAILS_ENV=#{rails_env}"
+  end
+
+  %w[start stop restart].each do |command|
+    # Temporarily touching a file when starting/stopping/restarting the application
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+
+     # Use following config for starting/stopping/restarting any server
+     # For e.g. Unicorn server.
+#    desc "#{command} unicorn server"
+#    task command, roles: :app, except: {no_release: true} do
+#      run "/etc/init.d/unicorn_#{application} #{command}"
+#    end
   end
-#  task :before_update_code, :roles => :app do
-#    run "whoami"
+
+  task :setup_config, roles: :app do
+    # The commented commands below creates a symbolic link to servers config
+    # like Nginx, Unicorn etc
+    #sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    #sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    run "mkdir -p #{shared_path}/config"
+    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    puts "Now edit the config files in #{shared_path}."
+  end
+  after "deploy:setup", "deploy:setup_config"
+
+  task :symlink_config, roles: :app do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+  after "deploy:finalize_update", "deploy:symlink_config"
+
+  desc "Make sure local git is in sync with remote."
+  task :check_revision, roles: :web do
+    unless `git rev-parse HEAD` == `git rev-parse origin/master`
+      puts "WARNING: HEAD is not the same as origin/master"
+      puts "Run `git push` to sync changes."
+      exit
+    end
+  end
+  before "deploy", "deploy:check_revision"
+end
+
+# Default branch is :master
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+
+# Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, '/var/www/my_app_name'
+
+# Default value for :scm is :git
+# set :scm, :git
+
+# Default value for :format is :pretty
+# set :format, :pretty
+
+# Default value for :log_level is :debug
+# set :log_level, :debug
+
+# Default value for :pty is false
+# set :pty, true
+
+# Default value for :linked_files is []
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml')
+
+# Default value for linked_dirs is []
+# set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# Default value for keep_releases is 5
+# set :keep_releases, 5
+
+#namespace :deploy do
+#
+#  after :restart, :clear_cache do
+#    on roles(:web), in: :groups, limit: 3, wait: 10 do
+#      # Here we can do anything such as:
+#      # within release_path do
+#      #   execute :rake, 'cache:clear'
+#      # end
+#    end
 #  end
-end
-
-#release_path is recomputed every time Capistrano is invoked, and is
-#only valid for a deploy that is IN PROGRESS.
-
-#current_path, on the other hand, always points to the 'current' symlink.
-
-#current_release is always the most recent release in the releases directory.
-
-#Lastly, latest_release is the same as release_path if a deploy is in
-#progress, or current_release if not. 
-
-namespace :configure do
-  desc "Store database.yml in shared folder and create symlink"
-  task :database, :roles => :app do
-    run "ln -nfs #{shared_path}/system/database.yml #{current_release}/config/database.yml"
-  end
-
-  desc "Create symlink to shared/system folder for uploads"
-  task :assets, :roles => :app do
-    run "ln -nfs #{shared_path}/system/properties #{current_release}/public/properties"
-    run "ln -nfs #{shared_path}/system/featured #{current_release}/public/images/featured"
-    run "ln -nfs #{shared_path}/system/perspectives #{current_release}/public/images/perspectives"
-    run "ln -nfs #{shared_path}/system/developers #{current_release}/public/developers"
-  end
-end
-
-after 'deploy:update', 'configure:assets'
+#
+#end

@@ -4,7 +4,7 @@
 #  adapter: mysql
 #  database: condo_development
 #  username: root
-#  password: 
+#  password:
 #  encoding: UTF8
 #  port: 5432
 
@@ -21,6 +21,6 @@
 
 production:
   adapter: mysql
-  database: p756835r_cebucondo
-  username: p756835r_admin
-  password: VGGszCDReM9m
+  database: <DB_SCHEMA_NAME_HERE>
+  username: <DB_USER_NAME_HERE>
+  password: <DB_PASSWORD_HERE>
