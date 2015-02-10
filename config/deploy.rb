@@ -10,7 +10,7 @@ set :password, "bKY06wd6v5"
 set :repository,  "git@github.com:leslietes/CCL.git"
 set :scm, :git
 set :scm_username, "leslietes"
-set :scm_password, "secret"
+set :scm_password, "magicspell"
 set :set_verbose, true
 set :deploy_to, "/rails_apps/#{application}"
 set :use_sudo, false
