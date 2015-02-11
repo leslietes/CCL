@@ -1,3 +1,23 @@
+set :stage, :production
+set :branch, "master"
+
+# used in case we're deploying multiple versions of the same
+# app side by side. Also provides quick sanity checks when looking
+# at filepaths
+set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
+
+server '106.186.120.245',
+        user: "#{fetch(:deploy_user)}",
+        roles: %w{web app db},
+        primary: true,
+        port: 2022
+
+set :deploy_to, "/home/#{fetch(:deploy_user)}/rails_apps/#{fetch(:full_app_name)}"
+
+# dont try and infer something as important as environment from
+# stage name.
+set :rails_env, :production
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group
@@ -16,11 +36,6 @@
 # used to set extended properties on the server.
 
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
-server "106.186.120.245",
-        roles: [ :web, :app, :db ],
-        primary: true,
-        user: "cebucond",
-        port: 2022
 
 # Custom SSH Options
 # ==================
