@@ -52,11 +52,34 @@
     # config valid only for current version of Capistrano
     lock '3.3.5'
 
+    # Including any non-standard paths
+    set :default_env, { path: "/usr/local/cpanel/3rdparty/bin/git:$PATH" }
+
+    # Required for using git installed on a non-standard path. The standard
+    # path is usually /usr/bin/git
+    # The solution clicked while going through an answer
+    # mentioning
+    #   set :scm_command, "/home/your_cap_runner_user/bin/git"
+    # in following post http://stackoverflow.com/questions/279705/using-capistrano-when-remote-git-is-on-a-non-standard-path
+    # That pertains to older Capistrano version and for Capistrano 3 found the
+    # reference to set it in https://github.com/capistrano/sshkit/blob/master/EXAMPLES.md#using-with-rake
+    SSHKit.config.command_map[:git]  = "/usr/local/cpanel/3rdparty/bin/git"
+
     # Set your application name
     set :application, 'cebucondo'
 
     # Set the SSH user name of remote server on which deployment is to be done
     set :deploy_user, 'cebucond'
+
+    # Required for avoiding following error on a shared host:
+    #  DEBUG [39b5a7b9] Command: ( PATH=/usr/local/cpanel/3rdparty/bin/git:$PATH GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/cebucondo/git-ssh.sh /usr/local/cpanel/3rdparty/bin/git ls-remote --heads git@github.com:leslietes/CCL.git )
+    #  DEBUG [39b5a7b9]  stdin: is not a tty
+    #  DEBUG [39b5a7b9]  fatal: cannot exec '/tmp/cebucondo/git-ssh.sh': Permission denied
+    #  DEBUG [39b5a7b9]  fatal: unable to fork
+    # Reference: https://community.webfaction.com/questions/15144/capistrano-3-deploys-fatal-error-executing-tmpmyappgit-sshsh
+    # Note the fix for above error also requires exporting GIT_SSH environment variable pointing to tmp_dir path
+    # set below.And also you should create tmp_dir path on remote server, if it doesn't exists.
+    set :tmp_dir, "/home/#{fetch(:deploy_user)}/tmp"
 
     # Setup repository details
     set :scm, :git
