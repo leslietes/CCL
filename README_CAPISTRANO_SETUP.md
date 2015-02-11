@@ -6,7 +6,7 @@
 
 ```
   $ gem install capistrano
-``
+```
 
 2. Capify the application by running following command:
 
