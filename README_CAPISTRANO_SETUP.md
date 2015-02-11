@@ -13,6 +13,7 @@
 ```
   $ cap install
 ```
+
   The output of above command should look like:
 
 ```
