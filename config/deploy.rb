@@ -1,5 +1,6 @@
 set :application, "cebucondo"
 set :domain, "106.186.120.245:12001"
+set :port, "2222"
 set :server_hostname, 'www.cebucondo.ph'
 
 server domain, :app, :web, :db, :primary => true
